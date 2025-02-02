@@ -1,0 +1,22 @@
+'use strict';import{syslog}from'./syslog.js';import{getMessage as dict}from'./sysdict.js';const body=document.querySelector('body'),cover=document.createElement('div');if(!cover)throw Error('.createElement?');cover.classList.add('locmodalsCover','ui-widget','ui-widget-content','ui-state-hover1'),cover.setAttribute('id','locmodalsCover');const container=document.createElement('div');if(!container)throw Error('.createElement?');container.innerHTML=`
+  <div class="customContent"></div>
+  <p class="error"></p>
+  <p class="buttons">
+    <button class="cancel ui-widget-content">${dict('cancel')}</button>
+    <button class="ok ui-widget-content">Ok</button>
+   </p>
+`,container.classList.add('ui-widget','ui-widget-content','ui-state-hover'),container.setAttribute('id','locmodalsContainer');const customContent=container.querySelector('div.customContent'),buttons=container.querySelector('p.buttons'),error=container.querySelector('p.error');if(!cover||!container||!customContent||!buttons||!error)throw Error('not all elements?');let okCB,cancelCB;const ui=(a,b,c)=>{if(okCB||cancelCB)return syslog.warn('2nd modal dialogue attempted'),-1;try{if(!a||'object'!=typeof a)throw Error(`${dict('badParms')}: node`);if(!b||'function'!=typeof b)throw Error(`${dict('badParms')}: ok`);if(c&&'function'!=typeof c)throw Error(`${dict('badParms')}: cancel`);customContent.innerHTML='',customContent.append(a),okCB=b,cancelCB=c,body.append(cover),body.append(container)}catch(a){return syslog.error(a),-1}},okHandler=()=>{const a=okCB();a&&(container.remove(),cover.remove(),okCB=cancelCB=null)};container.querySelector('button.ok').addEventListener('click',okHandler,!1);const cancelHandler=()=>{cancelCB&&cancelCB(),container.remove(),cover.remove(),okCB=cancelCB=null};container.querySelector('button.cancel').addEventListener('click',cancelHandler,!1),window.addEventListener('keydown',function(a){document.querySelector('#locmodalsContainer')&&('Enter'===a.key&&okHandler(),'Escape'===a.key&&cancelHandler())});export const localert=(a)=>{if(a&&'string'==typeof a){container.dataset.dialogue='localert';const b=document.createElement('div');if(!b)throw Error('.createElement?');b.innerHTML=a,ui(b,()=>!0)}};export const locprompt=(a,b)=>{if(a&&'string'!=typeof a)return;if(!b||'function'!=typeof b)return;container.dataset.dialogue='locprompt';const c=document.createElement('div');if(!c)throw Error('.createElement?');c.innerHTML=`
+    ${a||''}
+    <p class="input"><input type="text" placeholder="${dict('enterString')}"></input></p>
+  `;const d=c.querySelector('input');if(!d)throw Error('.querySelector?');d.addEventListener('input',()=>{error.innerHTML=''});ui(c,()=>{const a=d.value;return a?(b(a),!0):(error.innerHTML=dict('emptyString'),!1)})};export const locinterval=(a,b,c={})=>{if(a&&'string'!=typeof a)return;if(!b||'function'!=typeof b)return;const d=(a)=>{let b=null;if('object'==typeof a){if(!(a instanceof Date))return null;b=`${a.getFullYear()}-${(a.getMonth()+1+'').padStart(2,'0')}-${(a.getDate()+'').padStart(2,'0')}`}else if('string'==typeof a){const c=/([0-9]{4})-([0-9]{2})-([0-9]{2})/.exec(a);if(!c)return null;b=new Date(+c[1],+c[2]-1,+c[3])}return b};container.dataset.dialogue='locinterval';const e=d(new Date(c.fromepoch||0)),f=d(new Date(c.toepoch||Date.now())),g=document.createElement('div');if(!g)throw Error('.createElement?');g.innerHTML=`
+    ${a||''}
+     <p class="date">
+       <label>
+         <input type="text" readonly value="${dict('fromDate')}" size="${dict('fromDate').length}" tabindex="-1"></input><input type="date" value="${e}" max="${f}" class="from"></input>
+       </label>
+       <br class="channel-three-term"/>
+       <label>
+         <input type="text" readonly value="${dict('toDate')}" size="${dict('toDate').length}" tabindex="-1"></input><input type="date" value="${f}" max="${f}" class="to"></input>
+       </label>
+     </p>
+  `;const h=g.querySelector('input[type=date].from'),i=g.querySelector('input[type=date].to');if(!h||!i||h===i)throw Error('.querySelector?');h.addEventListener('input',()=>{error.innerHTML=''}),i.addEventListener('input',()=>{error.innerHTML=''});ui(g,()=>{const a=d(h.value),c=d(i.value);return a?c?0>c-a?(error.innerHTML=`${dict('fromDate')} &gt; ${dict('toDate')}`,!1):(b({fromepoch:a.valueOf(),fromdateString:a.toLocaleDateString(),toepoch:c.valueOf(),todateString:c.toLocaleDateString()}),!0):(error.innerHTML=`${dict('badUserInput')}: ${dict('toDate')}`,!1):(error.innerHTML=`${dict('badUserInput')}: ${dict('fromDate')}`,!1)})};

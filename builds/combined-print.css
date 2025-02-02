@@ -1,0 +1,103 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/progbau-ui-print.css
+// +  AutorIn: w dot doeringer ( at fh-worms dot de)
+// +  Beschreibung: CSS Ergänzung
+// +  KorrektorIn: 
+// +  Status: 2015/01/27 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2015/01/27 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+body section#control, #heaven, #statusBar, #navigator { display:none!important; }
+body section#themes { display:none!important; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/27   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-layout-print.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet für Vorlesungsfolien - Ideen auch nach
+// +    "www.AListAPart.com" und "jQueryUi.com" - äußere Form mit
+// +    responsive queries - "mobile first"
+// +  KorrektorIn: 
+// +  Status:   2016/03/31 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2016/03/31 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+/*
+// +----------------------------------------------------------------------------
+// + aus main.css von [h5bp]
+// + 2013/01/02, wd
+// +----------------------------------------------------------------------------
+*/
+/* --- no background etc. --- */
+* {
+    /* background: transparent !important; */
+    /* color: #000 !important; */ /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+.no-print { display:none!important; }
+.sidebutton { display:none!important; }
+blockquote { border:none!important; }
+a, a:visited { text-decoration:none; }
+/* a[href]:after { content: " (" attr(href) ")"; font-size:smaller; } */
+header a { font-size:30%!important; }
+abbr[title]:after { content: " (" attr(title) ")"; }
+/* Don't show links for images, or javascript/internal links  */
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+/* -- */
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; /* h5bp.com/t */ }
+tr, img { page-break-inside: avoid; }
+img { max-width: 100% !important; }
+/* @page { margin: 0.5cm; } */
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3 { page-break-after: avoid; }
+/*
+// +-------------------------------------------------------------------------
+// + generelle Voreinstellungen
+// + 2012/12/31, wd
+// +-------------------------------------------------------------------------
+*/
+/* --- font-size einstellen ---------------------------------------------- */
+/* ---  font-family wird vom aktuellen Theme übernommen ------------------ */
+html body { font-size:10.8pt!important; }
+
+/* --- Feste Größe für Querformat ---------------------------------------- */
+body section.ui-widget { width:62em!important; }
+body section.ui-widget div.ui-widget-content { height:37.5em!important; }  /* 37.5 */
+
+/* --- [inter-]aktive Elemente nicht anzeigen ---------------------------- */
+body section footer { display:none!important; }
+body section#search { display:none!important; }
+
+/* --- Darstellung nachbessern ------------------------------------------- */
+body section.ui-widget { margin:0em!important; padding-left:0em!important; border:none!important; }
+body section.ui-widget header.ui-widget-header { padding-left:0.8em!important; }
+body section.ui-widget div.ui-widget-content { padding-left:1em!important; padding-right:1em!important; }
+img { max-height:95%!important; }
+a { text-decoration:none; }
+
+/* --- no img in footer ---------------------- */
+section.ui-widget footer > img { display:none; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/26   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ 

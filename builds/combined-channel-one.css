@@ -1,0 +1,243 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/channel-one.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS für "channel one" - Details siehe channels.css
+// +  KorrektorIn:
+// +  Status:   2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2018/02/25 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+.channel-zero-term { display:none!important; }
+section[class~=channel-two] * { display:none!important; }
+section *[class~=channel-two] { display:none!important; }
+section[class~=channel-three] * { display:none!important; }
+section *[class~=channel-three] { display:none!important; }
+section[class~=channel-four] * { display:none!important; }
+section *[class~=channel-four] { display:none!important; }
+
+/* --- Debug responsive design --------------------------------------------- */
+body[data-debugCSS]::before { content:"channel-one"; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/26   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-layout-channel-one.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Ergänzung
+// +  KorrektorIn: 
+// +  Status: 2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2015/01/28 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+/*
+// +----------------------------------------------------------------------------
+// + font-size
+// + 2013/08/13, wd
+// +----------------------------------------------------------------------------
+*/
+body { font-size:80%!important; }
+
+/*
+// +----------------------------------------------------------------------------
+// + rest
+// + 2014/12/30, wd
+// +----------------------------------------------------------------------------
+*/
+
+h2 span[title]:after, h2 dfn[title]:after { display:inline-block; }
+h2 span.lsf { display:inline-block; } /* Kommentar ein */
+section footer > img { left:1em; }
+
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/26   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ /*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-content-channel-one.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Ergänzung
+// +  KorrektorIn: 
+// +  Status: 2015/05/01 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2015/05/91 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+section div.lab { padding:0.3em; padding-left:1.2em; margin-bottom:0em; }
+section div.lab:first-letter { margin-left:-0.8em; }
+section footer img { display:none; }
+
+table.packetheader tr td { width:2em; height:1.5em; }
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/27   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ /*
+// +---------------------------------------------------------------------------
+// +  Datei: css/toc-channel-one.css
+// +  AutorIn: w dot doeringer (at hs-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Ergänzung: toc als Liste
+// +  KorrektorIn:
+// +  Status:   2018/01/03 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2018/01/03 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+/* --- .toc ---------------------------------------------------------------- */
+section.toc > div.ui-widget-content { padding:0em; }
+section.ui-widget.toc h2[title]:after { display:none; }
+ul.toc > li p { padding:0.2em 0.5em; }
+ul.toc > li p[title]:after { font-size:75%; } /* Nummer */
+ul.toc > li p:nth-of-type(1) { width:12em; }  /* #### */
+ul.toc > li p:nth-of-type(-n+2) { display:table-cell;  }
+ul.toc > li p:nth-of-type(2) > span:nth-of-type(1) { display:block; }
+ul.toc > li p:nth-of-type(2) > span:nth-of-type(n+2) { display:inline-block; }
+ul.toc > li p:nth-of-type(2) > span:nth-of-type(n+3):before { content:"+ "; }
+ul.toc > li p:nth-of-type(n+2) > span:nth-of-type(n+2) { font-size:smaller; }
+ul.toc > li > span:nth-of-type(n+1) { display:none; }
+
+/* --- .content: Inhaltsverzeichnis ---------------------------------------- */
+ul.toc.content > li { border-bottom:1pt solid; }
+ul.toc.content > li p:nth-of-type(-n+2) {  border-bottom:none; border-top:none; }
+ul.toc.content > li > p[title] { margin-left:0em!important; }
+ul.toc.content > li > p[title] span.small { font-size:100%!important; }
+
+/* --- .exam: Prüfungssachen ----------------------------------------------- */
+ul.toc.exam { position:fixed; top:0.4em; right:5em; z-index:2; }
+ul.toc.exam li { display:inline-block; }
+ul.toc.exam li p { width:auto; height:2.25em; }
+ul.toc.exam li p:nth-of-type(n+2) { font-weight:normal; padding-left:0em; }
+ul.toc.exam li > p[class*="ui-state"] { padding-top:0.8em; }
+ul.toc.exam li > p[class*="ui-state"] ~ p { display:none; }
+ul.toc.exam li span { display:none; }
+ul.toc.exam > li > span:first-of-type { position:absolute; font-size:50%; left:2em; top:0.4em; display:inline-block; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/28   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +----------------------------------------------------------------------------
+// +  Datei: Internet/css/internet-channel-zero.css
+// +  AutorIn: w dot doeringer ( at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Erg�nzung
+// +  KorrektorIn: 
+// +  Status:   2017/01/30 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2017/01/30 - Details am Ende der Datei
+// +----------------------------------------------------------------------------
+*/
+
+/* -- -- */
+table.command td[data-comment] { display:none; }
+table.command td.comment { display:none; }
+
+/* --- customized FIB representatiion -------------------------------------- */
+table.customFIB th:nth-of-type(2), 
+table.customFIB td:nth-of-type(2) { display:none; }
+
+/* --- 01 ------------------------------------------------------------------ */
+table#zipcode th { font-size:420%; padding:0.3em; }
+dl#router dd { margin-top:0.25em; }
+
+/* --- 02 ------------------------------------------------------------------ */
+table.v24.compact { font-size:80%; }
+table.v24 tbody tr td, table.v24 tbody tr th { width:1.2em; padding:0.2em 1em; }
+table#t568a { font-size:60%; }
+table#baseT td, table#baseT th { padding:0.1em 1em; }
+table#durfreq td, table#durfreq th { padding:0.2em 0.2em; text-align:center; }
+table#leds td, table#leds th { padding:0.2em 0.2em; text-align:center; }
+table#t568a { display:none; }
+img[src*=ethernet] { width:100%; }      /* ??? */
+table.v24 tbody tr td, table.v24 tbody tr th { width:0.5em!important; }  
+table.v24.compact tbody tr td, table.v24.compact tbody tr th { width:0.5em!important; padding:0.1em 0.8em; }
+table#baseT > tbody > tr > td:nth-of-type(n+4) { padding:0em!important; }  
+table#baseT > tbody > tr > td:nth-of-type(3) { padding:0em!important; }
+
+table.hexdec td.comment { display:none; }
+
+/* --- 03 ------------------------------------------------------------------ */
+table#ipheader { font-size:smaller; }
+table#icmp-format { font-size:smaller; }
+dl.tshark.ip dd.not-relevant { display:none; }
+
+/* --- 04 ------------------------------------------------------------------ */
+table#icmppacket { font-size:smaller; }
+table#ipmuxer { font-size:smaller; }
+
+/* --- 05 ------------------------------------------------------------------ */
+table#prefix-ex1 { font-size:81%; }
+
+/* --- 07 ------------------------------------------------------------------ */
+table#failure { font-size:smaller; }
+table#aufgabe { font-size:smaller; }
+
+/* --- 08 ------------------------------------------------------------------ */
+table.konfplaner { font-size:smaller; }
+table#traceroute tbody.examples tr[data-out] { font-size:smaller; }
+
+/* --- 11 ------------------------------------------------------------------ */
+div#traceroute { font-size:smaller!important; }
+div#traceroute span.ui-icon { display:none; }
+table#udp-header { font-size:smaller; }
+
+/* --- 12 ------------------------------------------------------------------ */
+table#rel-to-abs { font-size:smaller!important; }
+table#uqf-dns { font-size:smaller!important; }
+table#dig-fh-worms { font-size:smaller!important; }
+table#dig-cs { font-size:smaller!important; }
+table#dig-e280 { font-size:smaller!important; }
+table.aus-dig-e280 { font-size:80%!important; }
+table#girigiri { font-size:smaller!important; }
+table.norec { font-size:smaller!important; }
+table#fqdn-format { font-size:90%!important; }
+table.dump { margin-left:-0.5em; }
+
+/* --- toc ----------------------------------------------------------------- */
+ul.toc > li > p[class*=ui-state] { margin-left:-0.85em; }
+ul.toc > li > p#architektur { margin-left:-1.25em; } 
+ul.toc:nth-of-type(4) li:nth-of-type(1) { background-color:#2ecc71; }
+ul.toc:nth-of-type(4) li:nth-of-type(1) p { background:#2ecc71; }
+ul.toc:nth-of-type(4) li:nth-of-type(2) { background-color:#0066ff; }
+ul.toc:nth-of-type(4) li:nth-of-type(2) p { background:#0066ff; }
+ul.toc:nth-of-type(4) li:nth-of-type(3) { background-color:#e67e22; }
+ul.toc:nth-of-type(4) li:nth-of-type(3) p { background:#e67e22; }
+
+/* --- ntools -------------------------------------------------------------- */
+body.ntools ul.toc > li:nth-of-type(1) > p[class*=ui-state] { margin-left:-1em; } 
+
+/*
+// +----------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +----------------------------------------------------------------------------
+// +  Modul              2015/01/28   w.doeringer   erste Version
+// +
+// +
+// --- Ende der Datei ----------------------------------------------------------
+*/
