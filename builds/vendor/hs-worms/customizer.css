@@ -1,0 +1,36 @@
+/*
+// +----------------------------------------------------------------------------
+// +  Datei: hs-worms/customizer.css
+// +  KorrektorIn:
+// +  Status:   2018/07/11 - jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2018/07/11 - Details am Ende der Datei
+// +----------------------------------------------------------------------------
+*/
+
+div.code {
+  background-image:linear-gradient(rgba(254,248,238,1) 50%, transparent 0);
+}
+
+table.code tbody tr:nth-of-type(2n+1) { background-color:rgba(254,248,238,1); }
+
+/*
+// +----------------------------------------------------------------------------
+// + Nachkorrekturen für staticView
+// + 2018/07/10, wd
+// +----------------------------------------------------------------------------
+*/
+html[data-static-view] body { font-family:ARIAL, sans-serif; background:transparent; }
+html[data-static-view] body * { background:transparent!important; }
+html[data-static-view] #background { display:none; }
+
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2017/01/10   w.doeringer   erste Version
+// +
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/

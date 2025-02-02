@@ -1,0 +1,26 @@
+/*
+// +----------------------------------------------------------------------------
+// +  Datei: le-frog/customizer.css
+// +  KorrektorIn: 
+// +  Status:   2017/01/12 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2017/01/12 - Details am Ende der Datei
+// +----------------------------------------------------------------------------
+*/
+
+div.code {
+  background-image:linear-gradient(rgba(251,245,208,0.25) 50%, transparent 0);
+}
+
+table.code tbody tr:nth-of-type(2n+1) { background-color:rgba(251,245,208,0.25); }
+
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2017/01/10   w.doeringer   erste Version
+// +
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
