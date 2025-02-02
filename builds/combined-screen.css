@@ -1,0 +1,67 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-layout.screen.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Ergänzung
+// +  KorrektorIn: 
+// +  Status:   2016/04/01 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2016/05/20 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// + footer - per page (mobile first: permanent), bei annot bordered
+// + 2014/07/15, wd
+// +---------------------------------------------------------------------------
+*/
+/* --- permanenter footer in section:not(.channel-four) -------------------- */
+section.ui-widget[role=main] { counter-reset:page; }  /* content only */
+section.ui-widget:not(.channel-four) { counter-increment:page; }
+section.ui-widget:not(.channel-four) footer:before { content: counter(page); font-weight:normal; float:right; }
+
+/* --- ui-tinted for selectivity: absolute stretched ----------------------- */
+section.ui-widget:not(.channel-four) footer.ui-widget-content {
+  position:absolute; width:auto; left:0; right:0; bottom:0em;
+  font-size:smaller;
+  padding:0.25em 0.8em;
+  background:transparent;
+  border:none;
+}
+section footer > img { position:absolute; height:1em; }
+
+/* --- ?annot -------------------------------------------------------------- */
+body:not(.annot) a[href^=\.annot] { display:none; }
+body.annot section footer.annot { border:1pt solid!important; }
+
+/*
+// +----------------------------------------------------------------------------
+// + #search - mehrere Suchmaschinen
+// + 2014/12/07, wd
+// +----------------------------------------------------------------------------
+*/
+#search { 
+  border-top:1pt solid; border-bottom:1pt solid;
+  margin:0.15em 0em;
+}
+#search form { margin:0em; }
+#search form:not(:last-of-type) { border-bottom:1pt solid; }
+#search input { 
+  width:100%;
+  border:1pt solid;
+  padding:0.8em 0.8em;
+  font-weight:bold;
+  /* background-color:rgb(255,255,255); */ /* OPERA */
+  outline:none;                            /* CHROME ?? */
+}
+#search input:focus { text-decoration:underline; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/26   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ 

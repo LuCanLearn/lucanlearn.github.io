@@ -1,0 +1,1265 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: modules/syslog/syslog.css
+// +  AutorIn: w dot doeringer ( at hs-worms dot de)
+// +  Beschreibung: syslog - include first, let cascade update
+// +  KorrektorIn:
+// +  Status:   2018/07/16 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2018/07/16 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+/* --- striping - cascaded over when including this file first ------------- */
+.ui-state-highlight { background-color:rgba(0,0,255,0.25); }
+
+/* --- LOG proper ---------------------------------------------------------- */
+ul.syslog { list-style-type:none; padding:0em; }
+ul.syslog li { padding:0.25em 0.5em; border:none; }
+ul.syslog li[data-type="panic"] { background-color:red; color:white; }
+ul.syslog p { padding:0em; margin:0em; }
+ul.syslog span:nth-of-type(1) { opacity:0.5; }
+ul.syslog span:nth-of-type(2) { display:inline-block; width:1.25ch; }
+ul.syslog[data-type="log"] li:not([data-type="log"]) { display:none; }
+ul.syslog[data-type="info"] li:not([data-type="info"]) { display:none; }
+ul.syslog[data-type="warn"] li:not([data-type="warn"]) { display:none; }
+ul.syslog[data-type="error"] li:not([data-type="error"]) { display:none; }
+ul.syslog[data-type="panic"] li:not([data-type="panic"]) { display:none; }
+ul.syslog li[data-type="panic"] { display:block!important; }
+ul.syslog li p[data-count]::after {
+  content:attr(data-count); display:inline-block;
+  border:1pt solid; border-radius:25%;
+  padding-left:0.25em; padding-right:0.25em; margin-left:0.5em;
+  opacity:0.5;
+}
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2018/02/08   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: modules/locmods/locmods.css
+// +  AutorIn: w dot doeringer ( at hs-worms dot de)
+// +  Beschreibung: css, expects vendor/...
+// +  KorrektorIn:
+// +  Status:   2019/02/12 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2019/02/12 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+/* --- cover (stretched) --- */
+#locmodalsCover {
+  position:fixed;
+  width:auto; left:0em; right:0em;
+  height:auto; top:0em; bottom:0em;
+  z-index:99;
+  opacity:0.75;
+}
+
+/* --- localertContainer: centered NOT shrink-wrapped ????? --- */
+/* https://stackoverflow.com/questions/2005954/center-a-positionfixed-element */
+#locmodalsContainer {
+  position:fixed; z-index:100;
+  padding:1em 1em;
+  top:20%; left:50%;
+  transform:translateX(-50%);
+}
+
+/*
+#locmodalsContainer { position:absolute; top:20%; z-index:100; width:min-content; margin:auto; max-width:min-content; }
+#locmodalsContainer p { display:inline-block!important;  }
+*/
+
+#locmodalsContainer p.buttons { position:relative; padding:1em 1em; margin-top:0.5em; }
+#locmodalsContainer p.buttons button { position:absolute; padding:0.5em; text-align:center; border:1pt solid; background:transparent; }
+#locmodalsContainer p.buttons button.cancel { left:0em; top:0em; }
+#locmodalsContainer p.buttons button.ok { right:0em; top:0em; }
+#locmodalsContainer p.buttons button:hover { border:1pt solid rgb(221,102,0); outline:1pt solid rgb(221,102,0); }
+
+
+/* --- HTML msgs können entsprechend aufgebaut sein --- */
+#locmodalsContainer p.msg { font-size:125%; font-weight:bold; }  /* small-caps ?? nowrap ?? */
+#locmodalsContainer p.expl { font-size:75%; }
+#locmodalsContainer p.expl::before { content: "[ "; }
+#locmodalsContainer p.expl::after { content: " ]"; }
+#locmodalsContainer p.desc { font-size:75%; margin-top:0.5em; }
+
+/* --- Fehleranzeige; ausblenden falls leer --- */
+#locmodalsContainer p.error { min-height:1.5em; padding:0.5em; padding-left:1em; margin-top:0.5em; color:rgb(221,102,0); }
+#locmodalsContainer p.error:empty { display:none; }
+
+/* --- Spezfika --- */
+/* #locmodalsContainer[data-dialogue=localert] div.customContent { min-width:50vw; }*/
+#locmodalsContainer[data-dialogue=localert] button.cancel { display:none; }
+#locmodalsContainer[data-dialogue=locprompt]  { min-width:50vw; }
+#locmodalsContainer[data-dialogue=locprompt]  input { width:100%; min-height:1.5em; padding:0.5em; margin-top:1em; }
+#locmodalsContainer[data-dialogue=locinterval] { min-width:0vw; }
+#locmodalsContainer[data-dialogue=locinterval] p.date { padding-top:0.5em; padding-bottom:0.5em; }
+#locmodalsContainer[data-dialogue=locinterval] p.date input { padding:0.5em; margin-top:0.25em; border:none; }
+#locmodalsContainer[data-dialogue=locinterval] p.date input { min-height:1.75em; }  /* chrome ... */
+#locmodalsContainer[data-dialogue=locinterval] p.date input:nth-of-type(2n) { opacity:0.95; cursor:pointer; }
+#locmodalsContainer[data-dialogue=locinterval] p.date input:nth-of-type(2n) { max-width:18ch; } /* chrome ... */
+#locmodalsContainer[data-dialogue=locinterval] p.date input:nth-of-type(2n+1) { min-width:1em; opacity:0.5; }
+#locmodalsContainer[data-dialogue=locinterval] label { white-space:nowrap; display:inline-block; }
+#locmodalsContainer[data-dialogue=locinterval] p.error:not(:empty) + p.buttons button.ok { display:none; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2018/03/17   w.doeringer   erste Version
+// +  Modul              2019/02/08   w.doeringer   dates
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/base.css ----> als base.css für ALLE Vorlesungen !!!!!!
+// +  AutorIn: w dot doeringer ( at hs-worms dot de)
+// +  Beschreibung: CSS Style-Sheet, Grundeinstellungen
+// +  KorrektorIn:
+// +  Status:   2017/09/26 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2017/09/26 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+// +  Normalisierung:
+// +    Quellen:
+// +      ui (jquery-ui): body.ui-helper-reset
+// +      h5bp (http://html5boilerplate.com: normalize.css)
+// +    Teile aus [h5bp] - entsprechend markiert
+// +----------------------------------------------------------------------------
+// + spezielle Zeichen
+// +   Anführungszeichen links unten: &#8222;
+// +   Anführungszeichen rechts oben: &#8220;
+// +----------------------------------------------------------------------------
+*/
+/*
+// +----------------------------------------------------------------------------
+// + aus normalize.css von [h5bp]
+// + 2012/12/31, wd
+// +----------------------------------------------------------------------------
+*/
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%;     /* 2 */
+}
+
+/* Addresses `font-family` inconsistency between `textarea` and other form elements. */
+textarea { font-family:inherit; }
+
+/* Addresses `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/* Improves readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* Addresses styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/* Improves readability of pre-formatted text in all browsers. */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* Addresses inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button, input, select, textarea {
+  font-size: 100%;           /* 1 */
+  margin: 0;                 /* 2 */
+  vertical-align: baseline;  /* 3 */
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;    /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;  /* 2 */
+  box-sizing: border-box;           /* wd: was econtent-box; */
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/*
+// +----------------------------------------------------------------------------
+// + font-size: Grundeinstellung für "mobile first" - bis 20em Breite ???
+// + 2013/08/15, wd
+// +----------------------------------------------------------------------------
+*/
+html { font-size:100%!important; }
+/* body { font-size:90%!important; } */  /* ?????? */
+
+/*
+// +----------------------------------------------------------------------------
+// + generelle Voreinstellungen
+// + 2017/09/25, wd
+// +----------------------------------------------------------------------------
+*/
+/* --- Lea Verou ------------------------------------------------------------*/
+/* --- Chapter 5, Secret 24 --- reset-value: normal; --- */
+body {
+  font-variant-ligatures:
+    common-ligatures
+    no-discretionary-ligatures
+    no-historical-ligatures;
+}
+/* --- Chapter 5, Secret 23 - html[lang] setzen! --- */
+body { hyphens: auto; }
+
+/* --- wd ------------------------------------------------------------------ */
+a { color:inherit; }
+ol, ul { margin:0px; padding:0px; }
+ul { list-style-type:none; }
+table { border:none; }
+p { margin: 0em; padding: 0em; }
+.relative { position:relative;}
+.mbox { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+
+/* --- fatale Fehlersituationen --- */
+.fatal { text-align:center; padding:3em; font-weight:bold; font-size:200%; }
+/*
+// +---------------------------------------------------------------------------
+// +   Disable chrome's font-boosting ??? (für kleine Bildschirme)
+// +   stackoverflow.com/questions/11694767/android-chrome-ignoring-webkit-text-size-adjustnone-property-text-is-being-sc
+// +   https://code.google.com/p/chromium/issues/detail?id=244773
+// +   https://gist.github.com/sethlilly/5880453
+// +   set on parent element only ??
+// + 2013/09/06, wd
+// +---------------------------------------------------------------------------
+*/
+body * { max-height:999999em; max-width:999999em; }
+body { -webkit-text-size-adjust:100%; }
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2011/07/18   w.doeringer   erste Version
+// +                     2012/12/31   w.doeringer   H5BP normalize.css
+// +                     2016/12/31   w.doeringer   hyphens, ligatures
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/progbau-ui.css
+// +  AutorIn: w dot doeringer ( at hs-worms dot de)
+// +  Beschreibung: CSS für progbau-ui.js (mobile first): Standard Bedien-
+// +    elemente und 'themes' Container ('search' wird personalisiert)
+// +  KorrektorIn:
+// +  Status:   2018/02/19 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2018/02/25 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+.hidden { display:none; }
+/*
+// +----------------------------------------------------------------------------
+// + Sichtbarkeit in Abhängigkeit von body[data-display]
+// + 2018/02/17, wd
+// +----------------------------------------------------------------------------
+*/
+/* --- #control immer "sichtbar" ------------------------------------------- */
+body section#control { display:block!important; }
+/* --- content, summary --- */
+body[data-display="content"] section#search { display:none; }
+body[data-display="content"] section#themes { display:none; }
+body[data-display="content"] section#syslog { display:none; }
+body[data-display="summary"] section#search { display:none; }
+body[data-display="summary"] section#themes { display:none; }
+body[data-display="summary"] section#syslog { display:none; }
+body[data-display="summary"] section:not(#control):not(.summary) > * { display:none; }
+/* --- search --- */
+body[data-display="search"] section:not(#search):not(#control) { display:none; }
+/* --- themes --- */
+body[data-display="themes"] section:not(#themes):not(#control) { display:none; }
+/* --- syslog --- */
+body[data-display="syslog"] section:not(#syslog):not(#control) { display:none; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  #control
+// +  2013/09/10, wd
+// +---------------------------------------------------------------------------
+*/
+#control { position:fixed; top:0em; width:100%; z-index:10; }
+
+/* --- heaven trigram &#9776; nicht in Fonts auf mobilen Geräten ----------- */
+/* --- http://css-tricks.com/three-line-menu-navicon/ */
+#control #heaven {
+  position:absolute; top:0em; right:0em; z-index:30;
+  padding:1em; padding-top:0.85em;
+  border:hidden;
+}
+#control #heaven td {
+  border-top:2.5pt solid; border-bottom:2.5pt solid;
+  width:1.5em; padding:0.15em;
+}
+
+/* --- #statusBar ---------------------------------------------------------- */
+#control #statusBar { font-weight:bold; }
+#control #statusBar li { position:relative; cursor:default; }
+/* --- Beschriftung abhängig von aktiven Container --- */
+/* margin-left ???? */
+#control #statusBar li p:after { opacity:0.5; }
+body[data-display="content"] #statusBar li p:after { content:"Inhalt"; }
+body[data-display="summary"] #statusBar li p:after { content:"Zusammenfassung"; }
+body[data-display="search"] #statusBar li p:after { content:"Suchen"; }
+body[data-display="themes"] #statusBar li p:after { content:"Themes"; }
+body[data-display="syslog"] #statusBar li p:after { content:"syslog"; }
+
+/* --- #navigator ---------------------------------------------------------- */
+/* ---  box-shadow hebt #navigator von #content ab - nicht bei nav ??    --- */
+#control #navigator { padding:0em; margin:0em; border:none; }
+#control #navigator > ul > li { cursor:default; }
+
+/* --- Buttons ------------------------------------------------------------- */
+#control ul li {
+  padding:0.75em 1em; border-bottom:1pt solid;
+  outline:none; font-weight:bold;
+}
+#control #statusBar li { padding:1em 1em; }
+
+/* --- Sichtbarkeit -------------------------------------------------------- */
+#statusBar, #navigator { display:none; }
+body[data-control="active"] #statusBar { display:block; }
+body[data-control="active"] #navigator { display:block; }
+body[data-control="active"] #themes { opacity:0.25; }
+
+/* --- background passend zum theme garantiert auch Sichtbarkeit von ------- */
+/* ----  #heaven - etwa als div#background --------------------------------- */
+#background {
+  position:fixed;
+  width:auto; left:0em; right:0em;
+  height:auto; top:0em; bottom:0em;
+  z-index:-10;
+}
+
+/*
+// +----------------------------------------------------------------------------
+// + higlighting after tap in Webkit abschalten - wird beim verzögerten
+// +    synthetisierten 'click'-Event aktiviert auch zur Anzeige, welcher
+// +    'button' aktiviert wurde - ok for Chrome
+// + http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+// + 2013/08/15, wd
+// +----------------------------------------------------------------------------
+*/
+body * { -webkit-tap-highlight-color: rgba(0,0,0,0)!important; }
+body * { -webkit-tap-highlight-color: transparent!important; }
+
+/*
+// +----------------------------------------------------------------------------
+// + #themes submenue
+// + 2013/08/15, wd
+// +----------------------------------------------------------------------------
+*/
+#themes > ul { padding:0em; }
+#themes > ul > li { padding:0.8em 0.6em; border-bottom:1pt solid; }
+#themes > ul > li[class*=ui-state] { outline:1pt solid red; font-weight:bold; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  DEBUG - show channel; channel-xxx.css adds content; enable per
+// +    body[data-debugCSS]
+// +  2017/05/07, wd
+// +---------------------------------------------------------------------------
+*/
+body::before {
+  position:fixed; top:5em; right:1em; z-index:100;
+  font-weight:bold; font-size:150%;
+  opacity:0.5; color:blue;
+}
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2013/08/29   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-layout.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet für Vorlesungsfolien - Ideen auch nach
+// +    "www.AListAPart.com" und "jQueryUi.com" - äußere Form mit
+// +    responsive queries - "mobile first"
+// +  KorrektorIn: 
+// +  Status: 2015/02/01 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2015/02/13 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+/*
+// +----------------------------------------------------------------------------
+// + #control Nachjustierung <= Tablet  ??? Erhöht die Trefferquote ?????????
+// + 2013/09/21, wd
+// +----------------------------------------------------------------------------
+*/
+#control #heaven { 
+  padding-left:3em; padding-right:1.5em; 
+  right:-0.2em; 
+}
+
+/*
+// +----------------------------------------------------------------------------
+// + * vollflächig über dem Offset-parent (Elternelement ??)
+// + 2014/12/27, wd
+// +----------------------------------------------------------------------------
+*/
+*.stretched {
+  position:absolute; z-index:1;
+  height:auto; top:0em; bottom:0em;
+  width:auto; left:0em; right:0em;
+}
+a.stretched {
+  text-decoration:none;
+  cursor:pointer;
+  outline:none;
+}
+
+/*
+// +---------------------------------------------------------------------------
+// +  Die Folien als <section>s:
+// +    Folie insgesamt: section.ui-widget
+// +    Kopfzeile:       header.ui-widget-header
+// +    Inhalt:          div.ui-widget-content
+// +  Revision: 2015/05/19, wd
+// +---------------------------------------------------------------------------
+*/
+/* --- SEO in h1 headers --------------------------------------------------- */
+body > h1 { display:none; }
+section > h2 { display:none; }  /* w3c validator */
+
+/* ???? center content */
+body > section.ui-widget { position:relative; }
+body > section.ui-widget  { padding:0em; margin:0.25em 0em; margin-top:0em; }
+
+/* --- div.ui-widget-content shrinkwrapped in der Höhe  -------------------- */
+section.ui-widget div.ui-widget-content {  height:auto; padding-bottom:1em; }
+
+/* --- Platz sparen -------------------------------------------------------- */
+section.ui-widget header.ui-widget-header { padding:0.1em 0.8em; }
+section.ui-widget div.ui-widget-content { padding:0.4em 1em; }
+
+/* --- Überschrift: h2 ----------------------------------------------------- */
+section.ui-widget header.ui-widget-header h2 {
+  position:relative; margin:0em; padding:0.65em 0.2em;
+  font-size:110%!important;
+}
+h2 span { font-size:inherit!important; }
+h2 span[title]:after, h2 dfn[title]:after { /* Platz für #heaven */
+  content:attr(title); position:absolute; right:2.5em; opacity:0.5;
+  font-size:inherit!important;
+}
+header h2 span.sidebutton:first-of-type { margin-right:2.5em; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2011/07/18   w.doeringer   erste Version
+// +  Modul              2012/07/06   w.doeringer   jQueryUI als Basis
+// +  h5bp.com           2013/01/02   w.doeringer   print styles
+// +  control            2013/07/06   w.doeringer   control buttons
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ /*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-content.css
+// +  AutorIn: w dot doeringer (at hs-worms dot de)
+// +  Beschreibung: CSS Style-Sheet für Vorlesungsfolien - Ideen auch nach
+// +    "www.AListAPart.com" und "jQueryUi.com" - die Inhalte
+// +    "mobile first"
+// +  KorrektorIn:
+// +  Status:   2018/06/20 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2018/06/20 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  :target für #xxx URLs
+// +  Revision: 2014/12/29, wd
+// +---------------------------------------------------------------------------
+*/
+:target { outline:1pt dotted red; }
+section:target { border:1pt dotted red; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  seo mittels ausgeblendeter section > h1: siehe lectures-layout.css
+// +  Revision: 2014/04/09, wd
+// +---------------------------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Grundeinstellungen
+// +  Revision: 2017/02/04, wd
+// +---------------------------------------------------------------------------
+*/
+a[data-events="default"]:active { outline:1pt dotted; color:#dd6600; }
+dl dt { font-weight:bold; }
+dl dd { margin-left:1.2em; margin-bottom:0.6em; }
+dl.compact dd { margin-bottom:0.25em; }
+.small { font-size:smaller; }
+
+/* --- große einzelne Zeichen ---------------------------------------------- */
+.bigSym { font-size:120%!important; line-height:0.8; }
+
+/* --- dfn: definitions ---------------------------------------------------- */
+dfn { font-style: normal; font-weight: bold; }
+
+/* --- generated content --------------------------------------------------- */
+blockquote:not(.raw) { margin-left:0em; }
+blockquote:not(.raw) > p { margin-left:1em; }
+blockquote[title]:before { content: attr(title) ":"; font-weight:bold; }
+
+/* --- spans mit verschiedenen Eigenschaften ------------------------------- */
+span.not-visible { visibility: hidden; }      /* --- Platzhalter ----------- */
+span.ui-icon { display:inline-block; }        /* --- keine Zeilenumbrüche -- */
+
+/* --- uls ----------------------------------------------------------------- */
+ul.marker { list-style-type:square; list-style-position:inside; }
+ul.marker.outside { list-style-position:outside; margin-left:1em; }
+
+/* --- center content (e.g. images) ---------------------------------------- */
+*.center { text-align:center; }
+
+/* --- default box-sizing to border-box ------------------------------------ */
+body { box-sizing:border-box; }
+body * { box-sizing:inherit; }
+
+/* --- Emulierte Buttons floated ------------------------------------------- */
+.sidebutton { position:relative; }
+aside.sidebutton { float:right; padding:0em 0.3em; margin-right:0.3em; margin-left:0.3em; }
+span.sidebutton { float:right; padding:0.1em 0.6em; margin-right:0.2em; }
+p.sidebutton { float:right; padding:0.1em 0.6em; font-size:90%; }
+.sidebutton a { outline:none; }
+.sidebutton:hover { background-color:rgb(221,102,0); color:white; }
+header a.stretched:hover + h2 span.sidebutton {
+  background-color:rgb(211,102,0); color:rgb(255,255,255);
+}
+
+
+
+/* --- img volle Breite ?? ------------------------------------------------- */
+img { max-width:95%; } /* max-height:100%; ??? */
+figure { padding:0em; margin:0em; }
+figure.center { text-align:center; }
+figure > figcaption:first-child { margin-bottom:1em; }
+/*  * { transition: all 0.1s; }   */
+
+/* --- inline dl's --------------------------------------------------------- */
+.inline-dl { margin-left:1em; }
+.inline-dl:first-letter { margin-left:-1em; }
+.inline-dl + .inline-dl { margin-top:0.5em; }
+
+/* --- Praktikumsaufgaben -------------------------------------------------- */
+section div.lab { padding:0.3em; padding-left:1.5em; }
+section div.lab:first-letter { margin-left:-1em; }
+section div.lab > span:first-child { font-weight:bold; }
+
+/* --- article: Literaturhinweise ------------------------------------------ */
+.bibliography > article  { margin-bottom:0.5em; margin-left:0.5em; }
+.bibliography > article > h2 { font-size:100%; margin:0em; padding:0em; }
+.bibliography > article > h2 { display:inline-block; }
+.bibliography > article h2 + span { font-style:italic; }
+
+/* --- ui-state- ... mit padding ??? --------------------------------------- */
+p[class*="ui-state-"] { padding:0.25em 0.5em; }
+
+/* --- a.stretched mit outline --------------------------------------------- */
+a.stretched:hover { outline:1pt dotted red; }
+
+/* --- sub's in h2's ------------------------------------------------------- */
+header h2 sub { opacity:0.5; }
+
+
+/* --- .hl: nice headlines ------------------------------------------------- */
+dt.hl { padding:0.25em 0.5em; border:none!important; }
+dt.hl + dd[class*="ui-state-"] { border:none; }
+
+/*
+// +----------------------------------------------------------------------------
+// + table:not(.raw) - generelle Voreinstellungen (non-intrusive)
+// +  :not(.raw) für Ausnahmen wie etwa #heaven table
+// + 2017/02/13, wd
+// +----------------------------------------------------------------------------
+*/
+table:not(.raw) th { text-align:left; }
+table:not(.raw) th, table:not(.raw) td { vertical-align:top; }
+table:not(.raw) th, table:not(.raw) td { padding:0.1em 0.5em; }
+table:not(.raw) tr:last-of-type td:only-child:empty { /* white-space */
+  height:0.75rem;
+}
+
+/* --- striping mittels ui ------------------------------------------------- */
+table:not(.raw) .striped tr[class*="ui-state-"] { border:none; }
+table:not(.raw) .striped tr td[class*="ui-state-"] { border:none; }
+
+/* --- .hl: nice headlines ------------------------------------------------- */
+table:not(.raw) tr.hl th, table:not(.raw) tr.hl td {
+    padding:0.25em 0.5em; border-left:none; border-right:none; border-top:none;
+}
+table:not(.raw) tr.hl ~ tr td { padding-left:0.5em; }
+table:not(.raw).columns tr.hl th, table:not(.raw).columns tr.hl td {
+  border-left:1pt solid;
+}
+
+/* --- indentation --------------------------------------------------------- */
+table:not(.raw) > .indent > tr:not(.hl) > td:first-of-type { padding-left:1.5em; }
+
+/* --- sonstige "andere" --------------------------------------------------- */
+table:not(.with-border) { border:hidden; }
+
+/*
+// +----------------------------------------------------------------------------
+// + tables.xxx mit speziellen Eigenschaften
+// + 2017/02/13, wd
+// +----------------------------------------------------------------------------
+*/
+/* --- compact - weniger padding ------------------------------------------- */
+table.compact th, table.compact td { padding-left:0.25em; padding-right:0.15em; }
+
+/* --- table mit column-lines ----------------------------------------------- */
+table.columns > thead > tr > th, table.columns > tbody > tr > td,
+table.columns > thead > tr > td, table.columns > tbody > tr > th,
+table.columns > tr > th, table.columns > tr > td {
+  border-right: 1pt solid rgba(128,128,128,0.5);
+  border-left:  1pt solid rgba(128,128,128,0.5);
+}
+table.columns th, table.columns td { padding-right:0.5em; padding-left:0.5em; }
+
+/* --- table mit Trennlinien für thS | tdS --------------------------------- */
+table.thbottom tr > th { border-bottom:1pt solid rgba(128,128,128,0.5); }
+table.tdbottom tr > td { border-bottom:1pt solid rgba(128,128,128,0.5); }
+
+/* --- table mit centered tdS | tdS  --------------------------------------- */
+table.centerth tr th { text-align: center; }
+table.centertd tr td { text-align: center; }
+
+/* --- table right-aligned thS | tdS --------------------------------------- */
+table.rightth tr th { text-align: right; }
+table.righttd tr td { text-align: right; }
+
+/* --- table ganze Breite  ------------------------------------------------- */
+table.fullwidth { width:100%; }
+
+/* --- table.command ------------------------------------------------------- */
+table.command tr:not(.hl) td:first-of-type { padding-left:1.5em; }
+table.command td.comment { opacity:0.75; }
+table.command td kbd { font-weight:bold; }
+
+table.command tbody tr:nth-last-of-type(n+3) td { border-bottom:none; }
+table.command tbody tr.ui-state-hover td { border:none; }
+table.command tbody tr td { border:none; } /* ??? */
+
+/* --- Leerzeichen besser bei Kommandos ------------------------------------ */
+kbd, table.command th { word-spacing:0.1em; }
+
+/* --- table.clisession: transcript of cli input/output -------------------- */
+table.clisession tbody:nth-of-type(odd) tr th { color:#dd6600; }
+table.clisession tbody:nth-of-type(odd) { color:#dd6600; }
+table.clisession tbody:nth-of-type(even) { color:#0066ff; }
+table.clisession tbody tr strong { color:inherit; }
+
+/*
+// +----------------------------------------------------------------------------
+// + dl.grammatik
+// + 2013/04/20, wd
+// +----------------------------------------------------------------------------
+*/
+dl.grammatik { font-style:italic; color:#0066ff; }
+dl.grammatik dt { color:#0066ff; }
+dl.grammatik dd > span { color:#dd6600; font-weight:bold; font-style:normal; }
+
+/*
+// +----------------------------------------------------------------------------
+// + Darstellung von "Eingaben" per Tastatur - <div class="kbd">, <kbd>
+// +  Font Source+Sans+Pro von google
+// + 2017/12/13, wd
+// +----------------------------------------------------------------------------
+*/
+/* greek */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlC7-kXQoo3swP0nQ6K7J6xc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlIa1YDtoarzwSXxTHggEXMw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGO4s1Ux4PuImWPk5fSr6HPL3rGVtsTkPsbDajuO5ueQw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGJkF8H8ye47wsfpWywda8og.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* --- manual hyphens only ??? --------------------------------------------- */
+code, kbd { hyphens:manual; }
+
+/* --- Lea Verou, CSS Secrets, Secret #22 Zebra-striped text lines --------- */
+/*     vgl. JavaScript/css/javascript.css::div.code                          */
+div.code {
+  margin:0em;
+  padding:0em; padding-left:1em;
+  font-size:1rem; line-height:1.4;
+  color:currentColor;
+  background-size:auto 2.8rem;   /* FF diff. from Chrome, Opera; Safari -unless rem's are used!!!?? */
+  background-origin:content-box;
+}
+div.code.pro, div.code.pro div.code { font-family:"Source Sans Pro"; }
+
+/* div.code { background-image: linear-gradient(rgba(255,255,255,0.15) 50%, transparent 0); } */
+/*   in den css/vendor/jquery-ui/.../customizer.css Dateien                                   */
+div.code :not(.code) { padding:0em; }
+div.code div.code { font-size:inherit; border-left:1pt solid rgba(0,0,0,0); background:transparent; }
+div.code div.code.bordered { border-left:1pt dotted; }
+div.code p.comment, div.code span.comment { opacity:0.75; color:currentColor; }
+div.code span.comment { margin-left:1em; }
+
+table.code .comment { opacity:0.75; }
+table.code tbody.striped td { border:none; }
+table.code tbody td { padding-left:1em; }
+
+/* --- */
+code, kbd { color:#dd6600; font-family:inherit; }
+samp, samp > em, code em, kbd em { color:#0066ff; font-family:inherit; }
+code a { color:inherit; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  GAME OVER - Shutting down
+// +  Revision: 2018/06/21, wd
+// +---------------------------------------------------------------------------
+*/
+#govr {
+  position:fixed;
+  width:auto; left:0em; right:0em;
+  height:auto; top:0em; bottom:0em;
+  z-index:99;
+  background:rgb(24,24,24);
+  color:rgb(116,243,72);
+  font-family:VT323;
+  font-size:250%;
+  padding:1em 1em;
+}
+#govr .blink { animation:0.5s blinker linear infinite; }
+@keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+body:not(.govr) #govr { display:none; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2011/07/18   w.doeringer   erste Version
+// +  Modul              2012/07/06   w.doeringer   jQueryUI als Basis
+// +  h5bp.com           2013/01/02   w.doeringer   print styles
+// +  control            2013/07/06   w.doeringer   control buttons
+// +  media              2015/01/27   w.doeringer   no resp. design -> channel
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +----------------------------------------------------------------------------
+// +  Datei: css/lectures-networking.css
+// +  AutorIn: w dot doeringer ( at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet f�r "networking" - gemeinsam f�r IPv[46] 
+// +    und Routing.
+// +  KorrektorIn: 
+// +  Status:   2017/02/12 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2017/02/12&nbsp; - Details am Ende der Datei
+// +----------------------------------------------------------------------------
+*/
+
+/* --- Liste emuliert wireshark Anzeige ------------------------------------ */
+ul.shark li { padding: 0.2em; margin-bottom: 0.2em; margin-top: 0.2em; color:#000; }
+ul.shark li:nth-of-type(1) { background-color:#eee; }
+ul.shark li:nth-of-type(2) { background-color:#ccee99; }
+ul.shark li:nth-of-type(3) { background-color:#ddee66; }
+ul.shark li:nth-of-type(4) { background-color:#ccddff; }
+ul.shark li:nth-of-type(5) { background-color:#ffcc66; }
+ul.shark li:before { content:'+'; background-color:#fff; padding:0em 0.2em; }
+
+/* --- Paketinhalt in wireshark/tshark Format ------------------------------ */
+dl.tshark { padding:0.2em 0.5em; margin:0.2em; margin-left:0em; }
+dl.tshark dt { font-weight:normal; }
+dl.tshark dd { padding:0em; margin-bottom:0em; }
+dl.tshark dl { margin-top:0em; margin-bottom:0em; }
+dl.tshark dd code { font-weight:normal; }
+dl.tshark > dt:first-of-type { padding:0.25em 0.5em; border:1pt solid; }
+dl.tshark.mac > dt:first-of-type { background-color:rgba(153,204,102,0.5); }
+dl.tshark.ip > dt:first-of-type { background-color:rgba(196,225,76,0.75); }
+dl.tshark.transport > dt:first-of-type { background-color:rgba(000,102,255,0.5); }
+dl.tshark.application > dt:first-of-type { background-color:rgba(221,102,0,0.75); }
+
+/* --- Lineflow in wireshark Format ---------------------------------------- */
+table.line-flows tr.info { opacity:0.5; font-size:90%; }
+table.line-flows tr.info td { padding-bottom:1em; }
+
+/* --- table: line-traces -------------------------------------------------- */
+table.dump tr th, table.dump tr td { text-align:center; }
+table.dump tr td { border:1px solid; }
+table.dump tbody tr.mac td, section table.dump tbody tr td.mac { 
+  background-color:rgba(204,238,153,0.5);
+}
+table.dump tbody tr.ip td, section table.dump tbody tr td.ip { 
+  background-color:rgba(221,238,102,0.9);
+}
+table.dump tbody tr.transport td, section table.dump tbody tr td.transport {
+  background-color:rgba(204,221,255,0.8);
+}
+table.dump tbody tr.application td, section table.dump tbody tr td.application {
+  background-color:rgba(255,204,102,0.6);
+}
+table.dump tbody tr.raw td, table.dump tbody tr td.raw {
+  background:transparent;
+}
+table.dump tbody tr.none td, table.dump tbody tr td.none {
+  background:transparent; border:none;
+}
+
+/* --- table: packetheader ------------------------------------------------- */
+table.packetheader { hyphens:manual; }
+table.packetheader tr td { padding:0em; width:1em; height:1em; }  /* 2 1.5 */
+table.packetheader thead tr td {
+  height:1em; font-size:smaller; padding-left:0.4em;
+  border-left:hidden;  border-right:hidden;  border-top:hidden; 
+}
+table.packetheader tbody tr td { padding:0.25em; border-top:0.1em solid; text-align:center; }
+table.packetheader > tbody > tr:first-of-type > td { border-top:0.2em solid; }
+table.packetheader > tbody > tr:last-of-type > td { border-bottom:0.2em solid; }
+table.packetheader tbody > tr > td:nth-of-type(n+2) {
+  border-left-width:0.1em;  border-left-style:solid;  border-left-color:rgba(0,0,0,0.2);
+}
+table.packetheader tbody tr td:first-of-type { border-left: 0.2em solid; }
+table.packetheader tbody tr td:last-of-type { border-right: 0.2em solid; }
+table.packetheader tbody tr td.ellipsis:first-of-type { border-left: 0.2em dotted; }
+table.packetheader tbody tr td.ellipsis:last-of-type { border-right: 0.2em dotted; }
+table.packetheader tbody tr td.sep { border-left: 0.2em solid rgba(0,0,0,0.5); }
+table.packetheader tr td div { position:relative; }
+table.packetheader tr td div > p {
+  position:absolute;  width:auto; left:0em; right:0em; height:auto; top:0em; bottom:0em;
+  margin-top:0.2em; color:rgba(0,0,0,0.5); font-size:smaller;
+}
+table.packetheader tr td div > p > strong { color:#ff6666; font-weight:bold; }
+/* --- ip --- */
+table.packetheader.ip tbody { background-color: #ddee66; }
+table.packetheader tbody.ip { background-color: #ddee66; }
+/* --- transport --- */
+table.packetheader.transport tbody { background-color: #ccddff; }
+table.packetheader tbody.transport { background-color: #ccddff; }
+/* --- application --- */
+table.packetheader.application tbody { background-color: #ffcc66; }
+table.packetheader tbody.application { background-color: #ffcc66; }
+
+/* --- hexa-dezimale Paketdarstellung -------------------------------------- */
+table.hexdec { border:0.15em solid; hyphens:manual; }
+table.hexdec tr td { 
+  border:0.15em solid; 
+  padding:0.2em; padding-left:0.5em; padding-right:0.5em;
+  width:4em; height:2.1em;
+  vertical-align:middle;
+}
+table.hexdec tr td p { color:#000; } 
+table.hexdec tr td.comment { 
+  border:hidden; border-left:0.15em solid; width:10%;
+  text-align:left; vertical-align:top;
+  padding-left:2em; padding-right:0em;
+  background:transparent!important;
+  opacity:0.75;
+  font-size:smaller;
+}
+table.hexdec tbody[class] { border-top:0.2em solid; }
+table.hexdec tbody[class]:first-of-type { border-top:none; }
+table.hexdec tr td div { position:relative; } 
+table.hexdec tr td div span {
+  position:absolute; top:-0.7em; left:-0.1em; 
+  font-size:60%; color:rgb(128,128,128);
+} 
+
+/* --- physical --- */
+table.hexdec tbody.physical tr td[data-comment] { background-color:transparent; }
+table.hexdec tbody.physical tr td { background-color:rgb(128,128,128); } 
+
+/* --- mac --- */
+table.hexdec tbody.mac tr td[data-comment] { background-color:transparent; } 
+table.hexdec tbody.mac tr td { background-color:#ccee99; } 
+
+/* --- ip --- */
+table.hexdec tbody.ip tr td[data-comment] { background-color:transparent; }
+table.hexdec tbody.ip tr td { background-color: #ddee66; } 
+
+/* --- udp/tcp --- */ 
+/* ???? */
+
+/* --- application --- */
+table.hexdec tbody.application tr td[data-comment] { background-color:transparent; }
+table.hexdec tbody.application tr td { background-color: #ffcc66; } 
+table.hexdec tr.align td { background-color:transparent; border:none; }
+
+/* --- data --- */
+table.hexdec tbody.data tr td.comment { background-color:transparent; }
+table.hexdec tbody.data tr:last-of-type td[data-comment] { border-bottom:hidden; }
+table.hexdec tbody.data tr td { background-color:transparent; }
+table.hexdec tbody.data tr td  { height:1em; border-bottom:1pt solid; } 
+
+/* --- table.allfibs  (.annot) --------------------------------------------- */
+table.allfibs { font-size: 0.75em; }
+table.allfibs tr th, table.allfibs tr td {
+  padding:0em; padding-left:0.5em;
+  border-bottom: 0.1em solid;
+}
+table.allfibs tr.ringtobbone { background-color: #ccddff; }
+table.allfibs tr td.ringtobbone { background-color: #ccddff; }
+table.allfibs tr.bbone { background-color: #ff99bb; }
+table.allfibs tr td.bbone { background-color: #ff99bb; }
+table.allfibs tr.ring { background-color: #ddee66; }
+table.allfibs tr td.ring { background-color: #ddee66; }
+table.allfibs tr.tohost { background-color: #ffff99; }
+table.allfibs tr td.tohost { background-color: #ffff99; }
+table.allfibs tr.tunnel { background-color: rgba(221,102,0,0.7); }
+table.allfibs tr td.tunnel { background-color: rgba(221,102,0,0.7); }
+
+/*
+// +----------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +----------------------------------------------------------------------------
+// +  Modul              2011/07/18   w.doeringer   erste Version
+// +
+// +
+// --- Ende der Datei ----------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/toc.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet: table of contents
+// +  KorrektorIn: 
+// +  Status:   2017/01/18 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2017/01/18 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+section.ui-widget.toc { border:hidden; }
+section.ui-widget.toc h2[title]:after { content:" ["attr(title)"]"; }
+ul.toc > li { position:relative; }
+ul.toc > li.tapped { opacity:0.25; }
+ul.toc > li p { padding:0.5em 0.5em; }
+ul.toc > li p[title]:after { content:attr(title); opacity:0.5; float:right; margin-right:0.8em; }
+ul.toc > li p > span:nth-of-type(1) { font-weight:bold; }
+ul.toc > li a:active { opacity:0; }
+ul.toc > li.filler * { opacity:0.25; }
+ul.toc > li.filler a { display:none; }
+
+/* --- main headline not hyphenated ---------------------------------------- */
+ul.toc > li p  { hyphens:manual; }
+ul.toc > li p[class*=ui-state] { hyphens:none; }
+
+/* --- ohne JS ------------------------------------------------------------- */
+html:not(.js-active) body ul.toc li { cursor:default; }
+html:not(.js-active) body ul.toc li a { cursor:default; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/02/01   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ 
+/*
+// +----------------------------------------------------------------------------
+// +  Datei: Internet/css/internet.css
+// +  AutorIn: w dot doeringer ( at hs-worms dot de)
+// +  Beschreibung: Personalisiertes CSS Style-Sheet f�r diese Vorlesung.
+// +  KorrektorIn:
+// +  Status:   2018/06/18 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2018/06/18 - Details am Ende der Datei
+// +----------------------------------------------------------------------------
+*/
+/* --- a:hover.stretched --------------------------------------------------- */
+a:hover.stretched { outline:1pt dotted red; }
+
+/* --- packetheader erg�nzt ------------------------------------------------ */
+table.packetheader tr.sep td { border-top:2pt solid; }
+table.header-fields tr td:first-of-type { font-weight:bold; }
+table.header-fields tr td:first-of-type span { font-size:smaller; font-weight:normal; }
+
+/* --- Lineflow in wireshark Format ---------------------------------------- */
+table.line-flows tr.info { opacity:0.5; font-size:90%; }
+table.line-flows tr.info td { padding-bottom:1em; }
+table.line-flows tr.header { border:1pt solid !important; }
+table.line-flows tr.header td { padding:0.25em 0.5em; }
+table.line-flows tr.info td { padding-bottom:0em; }
+table.line-flows tr.column-headers { opacity:0.5; font-size:90%; }
+
+/* --- customized FIB representatiion -------------------------------------- */
+table.customFIB td { white-space:pre; }
+table.customFIB td:nth-of-type(n+3) { border-left:1pt solid; }
+table.customFIB td:first-of-type { width:1em; }
+table.customFIB td:nth-of-type(3) { width:25%; }
+table.customFIB td:last-of-type { width:17.5%; text-align:center; }   /* iface */
+table.customFIB tr td:nth-of-type(2) { opacity:0.5; border-left:hidden; }
+
+/* --- Konfigurationsplaner ------------------------------------------------ */
+/* --- generell --- */
+table.kplan td { hyphens:manual; }
+/* --- innere tables --- */
+table.kplan tbody tr td tbody.legend { font-size:75%; }
+table.kplan tbody tr td tbody.legend td { border-bottom:hidden; }
+table.kplan tbody tr td tbody.striped td { border-left:1pt solid; padding-left:0.25em; }
+table.kplan tbody tr td tbody.striped.cmd td:first-of-type { width:0.1em; }
+table.kplan tbody tr td tbody.striped.cmd td:last-of-type { border-left:hidden; }
+/* --- �u�ere table --- */
+table.kplan > tbody > tr > td { padding:0em; }
+table.kplan { border-bottom:1pt dotted rgba(128,128,128,0.5); }
+table.kplan > tbody > tr > td:empty { width:0.1em; border-bottom:hidden; }
+table.kplan > tbody.sep > tr > td { height:1.25em; }
+table.kplan > tbody > tr > td { border-bottom:1pt dotted rgba(128,128,128,0.5); }
+
+/* --- contenteditable's --------------------------------------------------- */
+table td[contenteditable] { color:rgb(221,102,0); font-weight:bold; }
+
+/* --- 01 ------------------------------------------------------------------ */
+table#zipcode th { font-size:260%!important; padding:0.3em; padding-left:0.15em; }
+table#zipcode th:last-of-type { padding-right:0.15em; }
+table#zipcode th:nth-of-type(1) { color:rgb(255,102,102); }
+table#zipcode th:nth-of-type(3) { color:rgb(221,102,0); }
+table#zipcode th:nth-of-type(4) { color:rgb(0,102,255); }
+
+/* -- */
+section#solar-system div:nth-of-type(1) {
+  min-height:20em;
+  color:rgb(255,255,255);
+  background: url(../01/images/solar-system2.jpg) no-repeat;
+  background-position:bottom left;
+  background-size:cover;
+}
+section#milky-way div:nth-of-type(1) {
+  min-height:20em;
+  color:rgb(255,255,255);
+  background: url(../01/images/milky-way.jpg) no-repeat;
+  background-position:0% 50%;
+  background-size:cover;
+}
+
+/* --- dl#router --- */
+dl#router dt { padding:0.25em 0.5em; border:1pt solid; }
+/* dl#router dt span { color:rgb(255,255,255); } */
+
+/* --- hexdigits --- */
+table#hexdigits th:nth-of-type(4) { width:0.1em; padding:0em; }
+table#hexdigits td:nth-of-type(1), table#hexdigits td:nth-of-type(5) {
+  font-weight:bold; text-align:center;
+}
+
+/* --- reste-methode --- */
+table#reste-methode tbody td:nth-of-type(-n+4) { border-left:hidden; width:1em; }
+
+/* --- glyphs --- */
+table#glyphs tr td:first-of-type {
+  text-align:center; font-weight:bold; color:#dd6600;
+}
+
+/* --- dashboards --- */
+img[src*=dashboard] { max-height:30em; }
+
+/* --- 02 ------------------------------------------------------------------ */
+section#P > div { padding:0em; }
+section#P > div > p {
+  font-size:2200%;
+  text-align:center;
+  text-shadow: 0.1em 0.1em 0.05em rgba(221,102,0,0.5);
+}
+dl.hacking dd { padding-left:0em; margin-left:0em; }
+table#rfc-archive td { text-align:center; width:33.3%; padding:0em!important; }
+table#rfc-archive td div { position:relative; padding:0.5em 1.5em; margin:0.05em; }
+
+/* --- 03 ------------------------------------------------------------------ */
+table#wireshark-filter { border:1pt solid rgba(128,128,128,0.5); }
+table#wireshark-filter td { padding:0.25em 0.5em; }
+table#wireshark-filter td:first-of-type { padding-right:0.25em; width:4em!important; }
+table#wireshark-filter td.expression {
+  border:1pt solid!important; width:15em!important; background-color:rgb(221,238,102);
+}
+dl.tshark dd { padding-left:0.5em; }
+dl.tshark dd.not-relevant { text-decoration:line-through; opacity:0.5; }
+
+/* --- 04 ------------------------------------------------------------------ */
+table#prefix-ex1 tbody tr td:nth-of-type(-n+10) { font-weight:bold; }
+table#prefix-ex1 tbody:first-of-type tr:first-of-type td { border-top:0.25em solid; }
+table#traceroute tbody.indent td { padding-left:2em; }
+
+/* --- 06 ------------------------------------------------------------------ */
+table.CIDRnotation tbody tr td:nth-of-type(n+2) span:first-of-type { border-right:1pt solid rgb(221,102,0); }
+table.CIDRnotation tbody tr td:nth-of-type(n+2) span:nth-of-type(2) { color:rgba(128,128,128,0.8); }
+table.CIDRnotation tbody tr td:first-child span:first-of-type { color:rgb(224,102,0); }
+table.operation tbody tr.result td { border-top: 0.1em solid; }
+
+/* --- 07 ------------------------------------------------------------------ */
+table#fib-semantics { border:1pt solid; }
+table#fib-semantics th { border-left:1pt solid; }
+table#fib-semantics td { padding:0.25em 0.5em; }
+table#fib-semantics th:first-of-type { border-left:hidden; }
+table#fib-semantics td.sep { height:2em; border-left:hidden!important; border-right:hidden!important; }
+table#fib-semantics tr.route td:nth-of-type(n+2) { border:1pt solid blue!important; border-top:1.5pt solid blue!important; }
+table#fib-semantics tbody.route td:first-of-type { border:hidden; border-right:none; }
+table#fib-semantics tbody.route td:nth-of-type(2) { border-left:1pt solid; }
+
+/* --- 08 ------------------------------------------------------------------ */
+aside a[href*=ring] { font-size:150%; padding:0em 0.4em!important; }
+table.kplan.fibonly table tbody.legend td:nth-of-type(-n+2) {
+    width:40%;
+}
+
+
+/* --- 09 ------------------------------------------------------------------ */
+dl#ziel dd { margin-bottom:0.5em; }
+dl#ziel dd + dt { margin-top:1em; }
+
+/* --- 11 ------------------------------------------------------------------ */
+table#packetanalysis  { border:1pt solid; }
+table#packetanalysis tbody:first-of-type { background-color:rgba(221,238,102,0.5); }
+table#packetanalysis tbody:last-of-type { background-color:rgba(204,221,255,0.5); }
+table#packetanalysis td { padding:0.3em 0.6em; }
+table#packetanalysis tr:first-of-type td:first-of-type { width:3em; }
+table#packetanalysis tr:first-of-type td:first-of-type { width:3em; }
+table#packetanalysis tr:first-of-type td:nth-of-type(2) { width:10em; }
+
+/* --- 12 ------------------------------------------------------------------ */
+table#rel2abs td { padding:0.3em 0.5em; }
+table#rel2abs td:first-of-type { width:1.5em; }
+table#unq2fqn td { padding:0.3em 0.5em; }
+table#unq2fqn td:first-of-type { width:1.5em; }
+table#manual-trace tr.bp td { border-bottom:1pt solid; }
+table#manual-trace td:first-of-type { border-right:1pt solid; text-align:center; }
+table#manual-trace td:nth-of-type(n+2) { border-left:1pt dotted; }
+table#manual-trace td:nth-last-of-type(-n+2) { width:0em; white-space:nowrap; }
+
+/* --- 13 ------------------------------------------------------------------ */
+span.strong { color:rgb(255,102,102); font-weight:bold; }
+dl.compact dd { margin-bottom:0.2em; }
+
+/* --- 14 ------------------------------------------------------------------ */
+div#packet-traces p.sidebutton { float:left; margin-right:1em; }
+
+/* --- H ------------------------------------------------------------------- */
+table.semester-termine td[colspan] { padding-left:0em; padding-right:0em; }
+table.semester-termine td span { padding-left:0.5em; }
+
+/* --- ntools -------------------------------------------------------------- */
+body.ntools div.ui-widget-content { min-height:0!important; }
+body.ntools section#content div ul li { position:relative; }
+
+body.ntools #menue {
+  position:absolute; z-index:25;  /* 20 */
+  width:auto; left:0em; right:0em;
+  height:auto; top:0em; bottom:0em;
+  margin:0em; padding:0em;
+  border:hidden;
+}
+body.ntools #menue table { width:100%; height:100%; }
+body.ntools #menue table td {
+  text-align:center; vertical-align:middle;
+  cursor:pointer;
+}
+body.ntools #menue table td.ui-state-hover { width:30%; }
+body.ntools #menue table td.ui-state-active { width:40%; }
+body.ntools #menue table td.filler { display:none; }
+
+/*
+// +----------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +----------------------------------------------------------------------------
+// +  Modul              2011/07/18   w.doeringer   erste Version
+// +  Modul              2013/01/28   w.doeringer   responsive design
+// +  Modul              2015/01/28   w.doeringer   @media in *channel*
+// +
+// --- Ende der Datei ----------------------------------------------------------
+*/

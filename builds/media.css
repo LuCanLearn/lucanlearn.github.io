@@ -1,0 +1,60 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/media.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: Driver CSS Style-Sheet für media-abhängige css-Dateien
+// +  KorrektorIn: 
+// +  Status: 2015/01/27 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2015/01/27 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+// + Responsive design für "multi-channel publishing".
+// +   basierend auf display:none da robuster als sukzessives Einblenden
+// +   overflow:hidden ruiniert die .packetheader (in lectures...)
+// +
+// +   + ------------------------------------------------------------------
+// +   | 
+// +   | channel-zero als default -------------------------------------
+// +   | section.channel-four:none # not counted
+// +   |     |
+// +   |     | channel-one --------------------------------------
+// +   |     | channel-zero-term: none
+// +   |     |
+// +   |   28       | channel-two -------------------------------
+// +   |            | channel-one-term: none
+// +   |            |
+// +   |          42       | channel-three ---------------------             
+// +   |                   | channel-two-term: none
+// +   |                   |
+// +   |                 58       | channel-four --------------
+// +   |                          | channel-three-term: none
+// +   |                          | section.channel-four counting
+// +   |                        68
+// +   |                  
+// +   + ------------------------------------------------------------------
+// +
+// +   channel-one: ab SmartPhone landscape
+// +   channel-two: ab Tablet portrait
+// +   channel-three: Laptop - breit, einseitig
+// +   channel-four: ab Tablet landscape, zweiseitig
+// +
+// + 2015/01/26, wd
+// +---------------------------------------------------------------------------
+*/
+@import "combined-screen.css" screen;
+@import "combined-channel-zero.css" screen and (max-width:27.99em);
+@import "combined-channel-one.css" screen and (min-width:28em) and (max-width:41.99em);
+@import "combined-channel-two.css" screen and (min-width:42em) and (max-width:57.99em);
+@import "combined-channel-three.css" screen and (min-width:58em) and (max-width:67.99em);
+@import "combined-channel-four.css" screen and (min-width:68em);
+@import "combined-print.css" print;
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2014/03/17   w.doeringer   erste Version
+// +  Modul              2015/01/26   w.doeringer   @import
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ 

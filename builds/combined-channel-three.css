@@ -1,0 +1,189 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/channel-three.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS für "channel three" - Details in channels.css
+// +  KorrektorIn:
+// +  Status:   2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2018/02/25 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+.channel-zero-term { display:none!important; }
+.channel-one-term { display:none!important; }
+.channel-two-term { display:none!important; }
+
+section[class~=channel-four] * { display:none!important; }
+section *[class~=channel-four] { display:none!important; }
+
+/* --- Debug responsive design --------------------------------------------- */
+body[data-debugCSS]::before { content:"channel-three"; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/26   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-layout-channel-three.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Ergänzung
+// +  KorrektorIn: 
+// +  Status: 2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2015/01/28 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+/*
+// +----------------------------------------------------------------------------
+// + font-size - auf ursprüngliche 100% zurück. ???
+// + 2013/08/13, wd
+// +----------------------------------------------------------------------------
+*/
+body { font-size:100%!important; }
+
+/*
+// +-------------------------------------------------------------------------
+// +  data
+// +  2013/08/13, wd
+// +-------------------------------------------------------------------------
+*/
+/* --- section mit "Foliencharakter" --------------------------------------*/
+body section.ui-widget  { margin:0.5em 0em; margin-top:0em;}
+body section#control  { margin:0em; border:none; }
+body section.ui-widget div.ui-widget-content { min-height:26em; max-height:36em; }
+body section.ui-widget footer.ui-widget-content { font-size:70%; }
+
+/* --- basics (UI-inted)  -------------------------------------------------- */
+section.ui-widget div.ui-widget-content { padding:1em 1.5em; }
+
+/* --- h2 mit Platz für #heaven -------------------------------------------- */
+section.ui-widget header.ui-widget-header h2 { padding:0.65em 1em; }
+
+/* --- footer mit a und img ------------------------------------------------ */
+section.ui-widget footer > img { left:1em; }
+section.ui-widget footer > a[href].ui-icon { top:0.15em; }
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/26   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ /*
+// +---------------------------------------------------------------------------
+// +  Datei: css/lectures-content-channel-three.css
+// +  AutorIn: w dot doeringer (at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Ergänzung
+// +  KorrektorIn: 
+// +  Status: 2015/01/27 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2015/01/27 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/27   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+ /*
+// +---------------------------------------------------------------------------
+// +  Datei: css/toc-channel-three.css
+// +  AutorIn: w dot doeringer (at hs-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Ergänzung: .toc als Tabelle
+// +  KorrektorIn:
+// +  Status:   2018/01/07 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2018/01/07 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+/* --- .toc ---------------------------------------------------------------- */
+section.ui-widget.toc > div.ui-widget-content {
+  display:table; width:100%; border-collapse:collapse;
+  min-height:0em; height:auto;                    /* CHROME, OPERA */
+}
+ul.toc.content { display:table-row; }
+ul.toc.content > li { display:table-cell; width:25%; padding-bottom:0em; border-right:1pt solid; border-bottom:2pt solid; height:7.5em; }
+ul.toc.content > li > span { display:none; }
+ul.toc.content > li p:first-of-type { border:hidden; border-bottom:1pt solid; }
+ul.toc.content > li p:nth-of-type(n+2) { padding:0.25em 0.5em; }
+ul.toc.content > li p:nth-of-type(n+2) > span { font-size:85%; display:block; }
+ul.toc.content > li p:nth-of-type(2) > span:first-of-type { font-size:100%; display:block; }
+ul.toc.content > li > p[title] { margin-left:0em!important; }
+ul.toc.content > li > p[title] span.small { font-size:100%!important; }
+
+/* --- .exam: Prüfungssachen ----------------------------------------------- */
+ul.toc.exam { position:fixed; top:0.15em; right:6em; z-index:2; }
+ul.toc.exam li { display:inline-block; padding:0.5em 0.25em; margin-left:-0.25em; }
+ul.toc.exam > li > span:first-of-type { position:absolute; font-size:50%; left:2.5em; top:0.75em; }
+ul.toc.exam > li p:nth-of-type(n+2) { position:absolute; right:1em; bottom:0.25em; font-size:50%; font-weight:normal; padding:0.25em 0.5em; }
+ul.toc.exam > li.open div a { cursor:default; }
+
+/* --- animation --- */
+@keyframes slidedown {
+  0% {
+    top:-4em;
+  }
+  100% {
+    top:0.15em;
+  }
+}
+ul.toc.exam {
+  transition-property:top;
+  animation: 1s ease-out 0s 1 slidedown;
+}
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2015/01/28   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/
+/*
+// +----------------------------------------------------------------------------
+// +  Datei: Internet/css/internet-channel-three.css
+// +  AutorIn: w dot doeringer ( at fh-worms dot de)
+// +  Beschreibung: CSS Style-Sheet Erg�nzung
+// +  KorrektorIn: 
+// +  Status:   2016/03/28 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2016/10/24 - Details am Ende der Datei
+// +----------------------------------------------------------------------------
+*/
+/* --- Hinweise: Testat1 --------------------------------------------------- */
+section#testat1 div.container { font-size:85%!important; }
+section#testat1 div.container table#arp { font-size:smaller!important; }
+
+/* --- ntools -------------------------------------------------------------- */
+body.ntools  #menue table { 
+  width:60%; height:100%; border-collapse:separate; margin-left:20%;
+  background:transparent!important;
+}
+body.ntools #menue table td.filler { display:table-cell; border:hidden; background:none; }
+
+/* --- 01 ------------------------------------------------------------------ */
+section#solar-system div:nth-of-type(1) { height:36em; }
+section#milky-way div:nth-of-type(1) { height:36em; }
+table#zipcode tr th { font-size:560%!important; }
+
+/*
+// +----------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +----------------------------------------------------------------------------
+// +  Modul              2016/04/09   w.doeringer   erste Version
+// +
+// +
+// --- Ende der Datei ----------------------------------------------------------
+*/
