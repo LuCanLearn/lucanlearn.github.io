@@ -5,7 +5,7 @@
 // +  Beschreibung: CSS für "channel zero", Details siehe channels.css
 // +  KorrektorIn:
 // +  Status:   2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2018/02/25 - Details am Ende der Datei
+// +  Revision: 2025/02/04 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 section[class~=channel-one] * { display:none!important; }
@@ -33,7 +33,7 @@ body[data-debugCSS]::before { content:"channel-zero"; }
 // +---------------------------------------------------------------------------
 // +  Datei: css/lectures-layout-channel-zero.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
-// +  Beschreibung: CSS Style-Sheet Ergänzungen
+// +  Beschreibung: CSS Style-Sheet Ergﾃ､nzungen
 // +  KorrektorIn: 
 // +  Status: 2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/02/19 - Details am Ende der Datei
@@ -58,7 +58,7 @@ section.ui-widget header.ui-widget-header h2 { padding:0.5em 0.2em; }
 // +---------------------------------------------------------------------------
 // +  Datei: css/lectures-content-channel-zero.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
-// +  Beschreibung: CSS Style-Sheet Ergänzung
+// +  Beschreibung: CSS Style-Sheet Ergﾃ､nzung
 // +  KorrektorIn:
 // +  Status: 2017/10/08 jigsaw.w3.org/css-validator/validator as CSS3
 // +  Revision: 2017/10/08 - Details am Ende der Datei
@@ -102,8 +102,8 @@ div.bibliography > article span:first-of-type { display:block; }
 // +---------------------------------------------------------------------------
 // +  Datei: css/toc-channel-zero.css
 // +  AutorIn: w dot doeringer (at hs-worms dot de)
-// +  Beschreibung: CSS Style-Sheet Ergänzungen
-// +  KorrektorIn: Übersicht analog zu Opera's Speed Dial
+// +  Beschreibung: CSS Style-Sheet Ergﾃ､nzungen
+// +  KorrektorIn: ﾃ彙ersicht analog zu Opera's Speed Dial
 // +  Status:   2018/01/03 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2018/01/03 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
@@ -161,7 +161,7 @@ ul.toc:nth-of-type(7) li:nth-of-type(2) { background-color:#cc3300; }
 ul.toc:nth-of-type(7) li:nth-of-type(3) { background-color:#ff3333; }
 ul.toc:nth-of-type(7) li:nth-of-type(4) { background-color:#0066ff; }
 
-/* --- .exam: Prüfungssachen ----------------------------------------------- */
+/* --- .exam: Prﾃｼfungssachen ----------------------------------------------- */
 ul.toc.exam li { outline:1pt solid rgb(255,0,0); }
 
 /*
@@ -177,7 +177,7 @@ ul.toc.exam li { outline:1pt solid rgb(255,0,0); }
 // +----------------------------------------------------------------------------
 // +  Datei: Internet/css/internet-channel-zero.css
 // +  AutorIn: w dot doeringer ( at fh-worms dot de)
-// +  Beschreibung: CSS Style-Sheet Erg�nzung
+// +  Beschreibung: CSS Style-Sheet Erg舅zung
 // +  KorrektorIn: 
 // +  Status:   2017/01/30 jigsaw.w3.org/css-validator/validator as CSS3
 // +  Revision: 2017/01/30 - Details am Ende der Datei

@@ -5,7 +5,7 @@
 <!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
 <!-- Beschreibung: Skript; local gihub repo                                  -->
 <!-- Status: -->
-<!-- Revision: 2025/02/03 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Revision: 2025/02/04 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -27,11 +27,12 @@
     <!-- ol: long li-text left-aligned in text-box - no overflow into ::marker space -->
     <style>
       math { font-family:lato,sans-serif; }
-      ol { list-style-position:outside; margin-left:1.22em;  }
+      ol { list-style-position:inside; }
       span.loesung.ui-state-highlight {
         border:none; background:transparent; font-size:x-small;
         white-space:nowrap; overflow:hidden;
       }
+      .nowrap { white-space:nowrap; }
       body:not(.show-loesungen) span.loesung.ui-state-highlight { display:none; }
       h2::after {
         content: attr(data-version); font-size:x-small!important; opacity:0.5;
@@ -489,7 +490,7 @@
        </header>
       <!-- -->
       <div class="ui-widget-content ">
-        <p>Lösen Sie in tabellarischer Form folgende Aufgaben zu proportionalen Zuordnungen.</p>
+        <p>Lösen Sie in tabellarischer Form folgende Aufgaben zu proportio&shy;na&shy;len Zuordnungen.</p>
         <ol type="a">
           <li>
             Ein LKW fährt
@@ -501,17 +502,12 @@
               <mn>3</mn><mi mathvariant="normal" class="MathML-Unit">h</mi>
             </math>.
             Wie weit fährt er in
-            <math>
-              <mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
-                <mi mathvariant="normal" class="MathML-Unit">h</mi>
-            </math>?
+            <math><mn>3,5</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>
             <span class="loesung ui-state-highlight">(240 / 3) * 3,5 = 280</span>
           </li>
           <li>
-            <math><mn>9</mn></math>
-            Lampen kosten
-            <math><mn>14,40</mn></math> Euro.
-            Wie viele Lampen erhält man für
+            Für <math><mn>14,40</mn></math> Euro erhält man
+            <math><mn>9</mn></math> Lampen. Und für
             <math><mn>8</mn></math> Euro?
             <span class="loesung ui-state-highlight">(9 / 14,4) * 8 = 5</span>
           </li>
@@ -522,7 +518,7 @@
           <li>
             Ein Regal fasst <math><mn>24</mn></math> Kartons mit
             <math><mn>10</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
-            Breite und maximal  wie viele Kartons mit
+            Breite und entsprechend ma&shy;xi&shy;mal wie viele Kar&shy;tons mit
             <math><mn>18</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
             Breite?
             <span class="loesung ui-state-highlight">(24 * 10) / 18 = 13,333</span>
@@ -535,7 +531,7 @@
           </li>
         </ol>
         <p>&nbsp;</p>
-        <p>Lösen Sie in tabellarischer Form folgende Aufgaben zur Prozentrechnung.</p>
+        <p>Lösen Sie in tabellarischer Form folgende Aufgaben zur Pro&shy;zent&shy;rech&shy;nung.</p>
         <ol type="a">
           <li>
             <math><mn>8</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
@@ -548,12 +544,6 @@
             Wieviel Prozent sind <math><mn>48</mn></math> Euro von
             <math><mn>40</mn></math> Euro?
             <span class="loesung ui-state-highlight">(40/48) * 100 = 83,333</span>
-          </li>
-          <li>
-            Wieviel kostet ein <math><mn>218</mn></math> Euro teures Handy nach einer
-            Preiserhöhung von
-            <math><mn>12,5</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>?
-            <span class="loesung ui-state-highlight">218 * (1 + 12,5/100) = 245,25</span>
           </li>
         </ol>
         <p>&nbsp;</p>
@@ -860,13 +850,13 @@
             lang ist?
           </li>
           <li>
-            Umfang bzw. Fläche eines Rechtecks mit den Seiten
-            <math><mi>a</mi><mo>=</mo><mn>35</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>,
-            <math><mi>b</mi><mo>=</mo><mn>40</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>?
+            Umfang bzw.Fläche eines Quadrats mit Seite
+            <math><mi>a</mi><mo>=</mo><mn>17</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>,
           </li>
           <li>
-            Umfang bzw. Fläche eines Quadrates mit Seite
-            <math><mi>a</mi><mo>=</mo><mn>17</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>?
+            Umfang bzw.Fläche eines Rechtecks mit den Seiten
+            <math><mi>a</mi><mo>=</mo><mn>35</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>,
+            <math><mi>b</mi><mo>=</mo><mn>40</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>?
           </li>
           <li>
             Für ein Rechteck mit frei gewählten Seitenlängen Umfang und Fläche berechnen.
@@ -1358,7 +1348,7 @@
             <math><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">m³</mi></math>
             Sand laden und muss <math><mn>24</mn></math>-mal fahren. Wie oft muss ein LKW
             fahren, der
-            <math style="white-space:nowrap;"><mn>9</mn><mi mathvariant="normal" class="MathML-Unit">m³</mi></math>
+            <math class="nowrap"><mn>9</mn><mi mathvariant="normal" class="MathML-Unit">m³</mi></math>
             Sand laden kann?
           </li>
         </ol>
@@ -1887,7 +1877,7 @@
           <li title="???" style="position:relative;">
             Ein Rechteck mit ganzzahlig meterlangen Seiten
             hat einen Umfang von
-            <math><mn>20</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>.
+            <math class="nowrap"><mn>20</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>.
             Wie viele formverschiedene solche Rechtecke gibt es?
           </li>
         </ol>
@@ -2412,8 +2402,8 @@
           <li title="SP7:175:27a">
             Hauke tauscht für eine Sprachreise nach London
             <math><mn>120</mn></math> Euro ein und erhält
-            <math><mn>85</mn></math>&pound;. Wie viel Britische Pfund erhält
-            Nele für <math><mn>100</mn></math> Euro?
+            <math class="nowrap"><mn>85</mn><mi>&pound;</mi></math>.
+            Wie viel Britische Pfund erhält Nele für <math><mn>100</mn></math> Euro?
             <span class="loesung ui-state-highlight"></span>
           </li>
           <li title="SP7:175:27b">
@@ -3399,7 +3389,7 @@
             <span class="loesung ui-state-highlight">4m</span>
           </li>
           <li title="COR:146:">
-            Flächeninhalt eines Dreiecks mit Grundseite von
+            Fläche eines Dreiecks mit Grundseite von
             <math><mn>2,5</mn><mi mathvariant="normal" class="MathML-Unit">dm</mi></math>
             und Höhe von
             <math><mn>30</mn><mi mathvariant="normal" class="MathML-Unit">mm</mi></math>?

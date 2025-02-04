@@ -2,7 +2,7 @@
 // +---------------------------------------------------------------------------
 // +  Datei: css/channel-four.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
-// +  Beschreibung: CSS für "channel four" - Details in channels.css
+// +  Beschreibung: CSS fÃ¼r "channel four" - Details in channels.css
 // +  KorrektorIn:
 // +  Status:   2025/02/04 jigsaw.w3.org/css-validator/validator as CSS3 + SVG
 // +  Revision: 2025/02/04 - Details am Ende der Datei
@@ -30,35 +30,39 @@ body[data-debugCSS]::before { content:"channel-four"; }
 // +---------------------------------------------------------------------------
 // +  Datei: css/lectures-layout-channel-four.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
-// +  Beschreibung: Erg�nzung f�r "channel four"
-// +    Neuer breakpoint bei 80rem f�r iPad - su.
+// +  Beschreibung: Ergänzung für "channel four" - 80rem breakpoint für  iPad
 // +  KorrektorIn:
 // +  Status:   2015/02/01 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2025/02/03 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
-/* --- wie Tablet portrait: 2x --------------------------------------------- */
+/* --- wie Tablet portrait ----------------------------------------------- */
 @media screen and (min-width:80rem) {
   body { font-size:92.5%!important; }
+}    
+/* --- Näher an SmartPhone wenn zweiseitig ------------------------------- */
+@media screen and (max-width:79.99rem) {
+  body { font-size:85%!important; }
+}    
+
+/* --- volle Breite bleibt erhalten -------------------------------------- */
+section.ui-widget.fullwidth { clear:both; }
+
+/* --- zweiseitig -------------------------------------------------------- */
+/* ---  Nachbesserung wegen iPad: Höhe der Seiten bei max-width:80rem ---- */
+section.ui-widget:not(.fullwidth) { float:left; width:49.9%; }
+section.ui-widget:not(.fullwidth) div.ui-widget-content { padding:2em; }
+@media screen and (min-width:80rem) {
   section.ui-widget:not(.fullwidth) div.ui-widget-content { height:36rem!important; }
 }
-/* --- N�her an SmartPhone: 2x landscape ----------------------------------- */
 @media screen and (max-width:79.99rem) {
-  body { font-size:80%!important; background-color:yellow; }
   section.ui-widget:not(.fullwidth) div.ui-widget-content { height:44rem!important; }
 }
 
-/* --- volle Breite bleibt erhalten ---------------------------------------- */
-section.ui-widget.fullwidth { clear:both; }
-
-/* --- zweiseitig ---------------------------------------------------------- */
-/* ---  Nachbesserung wegen iPad: H�he der Seiten bei max-width:80rem ------ */
-section.ui-widget:not(.fullwidth) { float:left; width:49.9%; }
-section.ui-widget:not(.fullwidth) div.ui-widget-content { padding:2em; }
 section.ui-widget:not(.fullwidth) div.ui-widget-content > *:first-child{ margin-top:0em!important; }
 
-/* --- positionsabh�ngig: data-display=content: alle Seiten (auch ohne JavaScript! --- */
+/* --- positionsabhängig: data-display=content: alle Seiten (auch ohne JavaScript! --- */
 body[data-display=content] section.ui-widget:not(.fullwidth):nth-of-type(2n+1) { clear:both; } /* links */
 body[data-display=content] section.ui-widget:not(.fullwidth):nth-of-type(2n+1) div.ui-widget-content { padding-left:3em; }
 body[data-display=content] section.ui-widget:not(.fullwidth):nth-of-type(2n) div.ui-widget-content { padding-right:3em; }
@@ -66,7 +70,7 @@ body[data-display=content] section.ui-widget:not(.fullwidth):nth-of-type(2n+1) f
 body[data-display=content] section.ui-widget:not(.fullwidth):nth-of-type(2n+1) footer > img { right:1em; }
 body[data-display=content] section.ui-widget:not(.fullwidth):nth-of-type(2n) footer > img { left:1em;  }
 
-/* --- positionsabh�ngig: data-display=summary (nur mit JavaScript) --- */
+/* --- positionsabhängig: data-display=summary (nur mit JavaScript) --- */
 body[data-display=summary] section.ui-widget:not(.summary) { margin-bottom:0em; }
 body[data-display=summary] section.ui-widget.summary-left { clear:both; }
 body[data-display=summary] section.ui-widget.summary-left div.ui-widget-content{ padding-left:3em; }
@@ -87,7 +91,7 @@ body[data-display=summary] section.ui-widget.summary-left footer > img { left:95
 // +---------------------------------------------------------------------------
 // +  Datei: css/lectures-content-channel-four.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
-// +  Beschreibung: CSS Style-Sheet Ergänzung
+// +  Beschreibung: CSS Style-Sheet ErgÃ¤nzung
 // +  KorrektorIn:
 // +  Status: 2015/01/27 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/01/27 - Details am Ende der Datei
@@ -107,7 +111,7 @@ body[data-display=summary] section.ui-widget.summary-left footer > img { left:95
 // +---------------------------------------------------------------------------
 // +  Datei: css/toc-channel-three.css
 // +  AutorIn: w dot doeringer (at hs-worms dot de)
-// +  Beschreibung: CSS Style-Sheet Ergänzung: .toc als Tabelle
+// +  Beschreibung: CSS Style-Sheet ErgÃ¤nzung: .toc als Tabelle
 // +  KorrektorIn:
 // +  Status:   2018/01/07 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2018/01/07 - Details am Ende der Datei
@@ -128,7 +132,7 @@ ul.toc.content > li p:nth-of-type(2) > span:first-of-type { font-size:100%; disp
 ul.toc.content > li > p[title] { margin-left:0em!important; }
 ul.toc.content > li > p[title] span.small { font-size:100%!important; }
 
-/* --- .exam: Prüfungssachen ----------------------------------------------- */
+/* --- .exam: PrÃ¼fungssachen ----------------------------------------------- */
 ul.toc.exam { position:fixed; top:0.15em; right:6em; z-index:2; }
 ul.toc.exam li { display:inline-block; padding:0.5em 0.25em; margin-left:-0.25em; }
 ul.toc.exam > li > span:first-of-type { position:absolute; font-size:50%; left:2.5em; top:0.75em; }
@@ -162,7 +166,7 @@ ul.toc.exam {
 // +----------------------------------------------------------------------------
 // +  Datei: Internet/css/internet-channel-four.css
 // +  AutorIn: w dot doeringer ( at fh-worms dot de)
-// +  Beschreibung: CSS Style-Sheet Erg�nzung
+// +  Beschreibung: CSS Style-Sheet Ergänzung
 // +  KorrektorIn:
 // +  Status:   2016/11/02 jigsaw.w3.org/css-validator/validator as CSS3
 // +  Revision: 2016/11/02 - Details am Ende der Datei

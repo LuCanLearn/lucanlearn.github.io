@@ -5,7 +5,7 @@
 // +  Beschreibung: Driver CSS Style-Sheet für media-abhängige css-Dateien
 // +  KorrektorIn: 
 // +  Status: 2015/01/27 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2015/01/27 - Details am Ende der Datei
+// +  Revision: 2025/02/03 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 // + Responsive design für "multi-channel publishing".
 // +   basierend auf display:none da robuster als sukzessives Einblenden
@@ -41,11 +41,11 @@
 // +---------------------------------------------------------------------------
 */
 @import "combined-screen.css" screen;
-@import "combined-channel-zero.css" screen and (max-width:27.99em);
-@import "combined-channel-one.css" screen and (min-width:28em) and (max-width:41.99em);
-@import "combined-channel-two.css" screen and (min-width:42em) and (max-width:57.99em);
-@import "combined-channel-three.css" screen and (min-width:58em) and (max-width:67.99em);
-@import "combined-channel-four.css" screen and (min-width:68em);
+@import "combined-channel-zero.css" screen and (max-width:27.99rem);
+@import "combined-channel-one.css" screen and (min-width:28rem) and (max-width:41.99rem);
+@import "combined-channel-two.css" screen and (min-width:42rem) and (max-width:57.99rem);
+@import "combined-channel-three.css" screen and (min-width:58rem) and (max-width:67.99rem);
+@import "combined-channel-four.css" screen and (min-width:68rem);
 @import "combined-print.css" print;
 /*
 // +---------------------------------------------------------------------------
