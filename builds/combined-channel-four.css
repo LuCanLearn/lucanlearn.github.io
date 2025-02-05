@@ -2,10 +2,10 @@
 // +---------------------------------------------------------------------------
 // +  Datei: css/channel-four.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
-// +  Beschreibung: CSS fÃ¼r "channel four" - Details in channels.css
+// +  Beschreibung: CSS für "channel four" - Details in channels.css
 // +  KorrektorIn:
-// +  Status:   2025/02/04 jigsaw.w3.org/css-validator/validator as CSS3 + SVG
-// +  Revision: 2025/02/04 - Details am Ende der Datei
+// +  Status:   2025/02/05 jigsaw.w3.org/css-validator/validator as CSS3 + SVG
+// +  Revision: 2025/02/05 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
@@ -41,12 +41,12 @@ body[data-debugCSS]::before { content:"channel-four"; }
 /* --- wie Tablet portrait: 2x --------------------------------------------- */
 @media screen and (min-width:80rem) {
   body { font-size:92.5%!important; }
-  section.ui-widget:not(.fullwidth) div.ui-widget-content { height:36rem!important; }
+  section.ui-widget:not(.fullwidth) div.ui-widget-content { height:42rem!important; }
 }
 /* --- Näher an SmartPhone: 2x landscape ----------------------------------- */
 @media screen and (max-width:79.99rem) {
   body { font-size:80%!important; background-color:yellow; }
-  section.ui-widget:not(.fullwidth) div.ui-widget-content { height:44rem!important; }
+  section.ui-widget:not(.fullwidth) div.ui-widget-content { height:42rem!important; }
 }
 
 /* --- volle Breite bleibt erhalten ---------------------------------------- */
