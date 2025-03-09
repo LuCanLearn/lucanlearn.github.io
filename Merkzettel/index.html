@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- Datei: lucanlearn.github.io/Merkzettel/index.html                       -->
+<!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
+<!-- Beschreibung: Merkzettel (cheat sheets)  Mathematik; local github repo  -->
+<!-- Status: w3-checked: 2025/03/06                                          -->
+<!-- Revision: 2025/03/06 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"     content="width=device-width,initial-scale=1">
+    <!-- -->
+    <meta name="description"  content="LuCanLearn Mathematik Prüfung Merkzettel">
+    <meta name="keywords"     content="LuCanLearn">
+    <meta name="keywords"     content="Mathematik">
+    <meta name="keywords"     content="Merkzettel">
+    <meta name="keywords"     content="Prüfung">
+    <!-- -->
+    <base target="_blank">
+    <link href="../builds/vendor/start/jquery-ui.custom.css" rel="stylesheet">
+    <link href="../builds/vendor/start/customizer.css" rel="stylesheet">
+    <link href="../builds/combined.css" rel="stylesheet">
+    <link href="../builds/media.css" rel="stylesheet">
+
+    <!-- HACKs ?? -->
+    <link href="../css/lcl.css" rel="stylesheet">
+
+    <!-- HACKs ?? -->
+    <style>
+      dl > dd { margin-left:0.5em; }
+      mn.em, mo.em { font-weight:bold; color:red; }
+      math ~ span.comment { opacity:0.5; margin-left:3em; }
+    </style>
+    <!-- -->
+    <title>Merkzettel</title>
+  </head>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- body                                                                 -->
+  <!-- 2025/02/18, wd                                                       -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <body class="ui-helper-reset" data-display="content">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- h1 für Suchmaschinen ???                                           -->
+    <!-- 2025/02/18, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <h1>LuCanLearn</h1>
+    <h1>Mathematik</h1>
+    <h1>Merkzettel</h1>
+    <h1>Prüfung</h1>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Inhalt data aus den sections pro "Seite"                           -->
+    <!-- 2025/01/04, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    <!-- Foto der VHS Version - - - - - - - - - - - - - - - - - - - - - - - -->
+    <a href="vhs.cheatsheet.jpg" class="ui-state-active">#VHS</a>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Bruchrechnen                                                       -->
+    <!-- 2025/02/18, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/02/20">Bruchrechnen 1|2</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <dl>
+          <dt>Erweitern</dt>
+          <dd class="text">
+            Zähler und Nenner mit derselben
+            Zahl (ungleich Null) multiplizieren.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:31:9">
+            <math>
+              <mfrac><mn>4</mn><mn>5</mn></mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mrow><mn>4</mn><mo>&times;</mo><mn class="em">3</mn></mrow>
+                <mrow><mn>5</mn><mo>&times;</mo><mn class="em">3</mn></mrow>
+              </mfrac>
+              <mo>=</mo>
+              <mfrac><mn>12</mn><mn>15</mn></mfrac>
+            </math>
+            <span class="comment"># Der Wert des Bruches bleibt gleich.</span>
+          </dd>
+          <!-- -->
+          <dt>Kürzen</dt>
+          <dd class="text">
+            Zähler und Nenner durch dieselbe Zahl dividieren.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:31:1">
+            <math>
+              <mfrac><mn>96</mn><mn>120</mn></mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mrow><mn>96</mn><mo>&div;</mo><mn class="em">24</mn></mrow>
+                <mrow><mn>120</mn><mo>&div;</mo><mn class="em">24</mn></mrow>
+              </mfrac>
+              <mo>=</mo>
+              <mfrac><mn>4</mn><mn>5</mn></mfrac>
+            </math>
+            <span class="comment"># Der Wert des Bruches bleibt gleich.</span>
+          </dd>
+          <!-- -->
+          <dt>Brüche vergleichen</dt>
+          <dd class="text">
+            Brüche erweitern auf denselben Nenner.
+            Der Bruch mit dem größeren Zähler ist dann der größere.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:31:14">
+            <math>
+              <mfrac><mn>5</mn><mn>6</mn></mfrac>
+            </math>
+            und
+            <math>
+              <mfrac><mn>7</mn><mn>8</mn></mfrac>
+            </math>
+            vergleichen:
+            <math>
+              <mfrac><mn>5</mn><mn>6</mn></mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mrow><mn>5</mn><mo>&times;</mo><mn>4</mn></mrow>
+                <mrow><mn>6</mn><mo>&times;</mo><mn>4</mn></mrow>
+              </mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mn class="em">20</mn>
+                <mn class="em">24</mn>
+              </mfrac>
+            </math>,
+            <math>
+              <mfrac><mn>7</mn><mn>8</mn></mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mrow><mn>7</mn><mo>&times;</mo><mn>3</mn></mrow>
+                <mrow><mn>8</mn><mo>&times;</mo><mn>3</mn></mrow>
+              </mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mn class="em">21</mn>
+                <mn class="em">24</mn>
+              </mfrac>
+            </math>,
+            also gilt
+            <math>
+              <mfrac><mn>7</mn><mn>8</mn></mfrac>
+              <mo>&gt;</mo>
+              <mfrac><mn>5</mn><mn>6</mn></mfrac>
+            </math>
+          </dd>
+          <!-- -->
+          <dt>Gemischte Zahl in unechten Bruch umwandeln</dt>
+          <dd class="text">
+            Die ganze Zahl mit dem Nenner multiplizieren und das
+            Ergebnis zum Zähler addieren.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:30:13+">
+            <math>
+              <mn>4</mn><mfrac><mn>2</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>+</mo>
+                  <mrow>
+                    <mn class="em">4</mn><mo class="em">&times;</mo><mn class="em">3</mn>
+                  </mrow>
+                </mrow>
+                <mn>3</mn>
+              </mfrac>
+              <mo>=</mo>
+              <mfrac><mn>14</mn><mn>3</mn></mfrac>
+            </math>
+            <span class="comment"># Der Nenner bleibt gleich.</span>
+          </dd>
+          <!-- -->
+          <dt>Unechten Bruch in gemischte Zahl umwandeln</dt>
+          <dd class="text">
+            Zähler durch Nenner dividieren. Den ganzzahlige Teil
+            des Ergebnisses vor den Bruch schreiben, den Rest in
+            den Zähler.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:30:22+">
+            <math><mfrac><mn>19</mn><mn>4</mn></mfrac></math>
+            wird umgeformt:
+            <math>
+              <mn>19</mn> <mo>&div;</mo> <mn>4</mn>
+              <mo>=</mo>
+              <mn class="em">4</mn>
+              <mi>&nbsp;Rest&nbsp;</mi>
+              <mn class="em">3</mn>
+            </math>,
+            also:
+            <math>
+              <mfrac><mn>19</mn><mn>4</mn></mfrac>
+              <mo>=</mo>
+              <mn class="em">4</mn>
+                <mfrac><mn class="em">3</mn><mn>4</mn></mfrac>
+            </math>
+          </dd>
+          <!-- -->
+          <dt>Addition und Subtraktion</dt>
+          <dd class="text">
+            Brüche auf denselben Nenner erweitern, dann die Zähler
+            addieren bzw. subtrahieren.
+            Nun kürzen und eventuell in eine
+            gemischte Zahl umwandeln.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:32:+">
+            <math>
+              <mfrac><mn>6</mn><mn>9</mn></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>15</mn><mn>18</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn class="em">12</mn><mn class="em">18</mn></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>15</mn><mn>18</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn class="em">27</mn><mn>18</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn class="em">3</mn><mn class="em">2</mn></mfrac>
+              <mo>=</mo>
+              <mn>1</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+            </math>, oder
+            <math>
+              <mfrac><mn>17</mn><mn>32</mn></mfrac>
+              <mo>-</mo>
+              <mfrac><mn>1</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn class="em">51</mn><mn class="em">96</mn></mfrac>
+              <mo>-</mo>
+              <mfrac><mn class="em">32</mn><mn class="em">96</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn class="em">19</mn><mn>96</mn></mfrac>
+            </math>
+          </dd>
+          <!-- -->
+        </dl>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- Bruchrechnen 2/2 -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/02/0">Bruchrechnen 2|2</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <dl>
+          <dt>Addition und Subtraktion von gemischten Zahlen</dt>
+          <dd class="text">
+            Die Zahlen in unechte Brüche umwandeln und dann weiter
+            wie oben.
+          </dd>
+          <dd class="beispiel channel-one">
+          </dd>
+          <!-- -->
+          <dt>Multiplikation</dt>
+          <dd class="text">
+            Brüche kürzen soweit möglich, dann
+            Zähler mit Zähler und Nenner mit Nenner multiplizieren.
+            Das Ergebnis falls möglich kürzen und
+            in eine gemischte Zahl umwandeln.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:33:3">
+            <math>
+              <mfrac><mn>7</mn><mn>20</mn></mfrac>
+              <mo>&times;</mo>
+              <mfrac><mn>4</mn><mn>5</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn class="em">28</mn><mn class="em">100</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn>7</mn><mn>25</mn></mfrac>
+            </math>
+          </dd>
+          <dt>Kehrbruch bilden</dt>
+          <dd class="text">
+            Ich vertausche Zähler und Nenner.
+          </dd>
+          <dd class="beispiel channel-one">
+          </dd>
+          <!-- -->
+          <dt>Division</dt>
+          <dd class="text">
+            Den ersten Bruch mit dem Kehrbruch des zweiten Bruches multiplizieren.
+          </dd>
+          <dd class="beispiel channel-one" title="COR:34:9">
+            <math>
+              <mfrac><mn>7</mn><mn>10</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>2</mn><mn>5</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn>7</mn><mn>10</mn></mfrac>
+              <mo class="em">&times;</mo>
+              <mfrac><mn class="em">5</mn><mn class="em">2</mn></mfrac>
+              <mo>=</mo>
+              <mfrac><mn>7</mn><mn>4</mn></mfrac>
+              <mo>=</mo>
+              <mn>1</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>
+            </math>
+          </dd>
+          <!-- -->
+          <dt>Bruchteile bestimmen</dt>
+          <dd class="text">
+            Ich zähle zunächst, aus wie vielen Teilen das Ganze besteht.
+            Das ist der <em>Nenner</em>. Danach zähle ich die
+            markierten Anteile, das ist der <em>Zähler</em>.
+            Nun kann ich eventuell noch kürzen.
+          </dd>
+          <dd class="beispiel channel-one">
+          </dd>
+          <!-- -->
+          <dt>Bruchanteile einfärben</dt>
+          <dd class="text">
+            Ich zähle zunächst, aus wie vielen Teilen das Ganze besteht.
+            Danach erweitere oder kürze ich den Bruch so, dass der Nenner
+            mit der Anzahl der Teile übereinstimmt. Nun färbe ich so viele
+            Teile ein, wie die Anzahl des erweiterten Zählers angibt.
+            <br>
+            Falls das Ganze noch nicht in Teile eingeteilt ist: Ich
+            teile das Ganze zunächst in so viele gleich große Teile ein,
+            wie die Anzahl der Nenners ist. Danach färbe ich von diesen
+            Teilen genau so viele ein, wie die Anzahl des Zählers ist.
+          </dd>
+          <dd class="beispiel channel-one">
+          </dd>
+        </dl>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- -->
+  </body>
+  <!-- -->
+</html>
+<!-- Eof -->

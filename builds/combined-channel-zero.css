@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS für "channel zero", Details siehe channels.css
 // +  KorrektorIn:
-// +  Status:   2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2025/02/04 - Details am Ende der Datei
+// +  Status:   2025/02/17 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2025/02/17 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 section[class~=channel-one] * { display:none!important; }
@@ -103,17 +103,21 @@ div.bibliography > article span:first-of-type { display:block; }
 // +  Datei: css/toc-channel-zero.css
 // +  AutorIn: w dot doeringer (at hs-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Ergﾃ､nzungen
-// +  KorrektorIn: ﾃ彙ersicht analog zu Opera's Speed Dial
+// +  KorrektorIn: Übersicht analog zu Opera's Speed Dial
 // +  Status:   2018/01/03 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2018/01/03 - Details am Ende der Datei
+// +  Revision: 2025/02/17 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 /* --- keine Balken -------------------------------------------------------- */
 section, div, p { border:none!important; }
 
+
+section.ui-widget.toc div.ui-widget-content { padding:0rem!important; margin:0rem!important; }
+
+
 /* --- speed dials --------------------------------------------------------- */
-ul.toc { font-size:72.5%!important; display:inline; }
-ul.toc > li { width:10.5em; height:10.5em; padding:2.5em; margin:0.25em; }
+ul.toc { font-size:72.5%!important; display:flex; justify-content:center; }
+ul.toc > li { width:32vw; height:32vw; padding:2.5em; margin:0.25em; }
 ul.toc > li { float:left; text-align:left; color:rgb(255,255,255); }
 ul.toc > li > p { padding:0em;  color:rgb(255,255,255)!important; }
 ul.toc > li > p[class*=ui-state] { font-size:1.5em; margin-left:-0.65em; font-weight:bold; }

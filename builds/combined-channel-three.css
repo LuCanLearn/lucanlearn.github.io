@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS für "channel three" - Details in channels.css
 // +  KorrektorIn:
-// +  Status:   2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2018/02/25 - Details am Ende der Datei
+// +  Status:   2025/02/19 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2025/02/19 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 .channel-zero-term { display:none!important; }
@@ -32,7 +32,7 @@ body[data-debugCSS]::before { content:"channel-three"; }
 // +  Datei: css/lectures-layout-channel-three.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Ergänzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status: 2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/01/28 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
@@ -41,10 +41,10 @@ body[data-debugCSS]::before { content:"channel-three"; }
 /*
 // +----------------------------------------------------------------------------
 // + font-size - auf ursprüngliche 100% zurück. ???
-// + 2013/08/13, wd
+// + 2025/02/19, wd
 // +----------------------------------------------------------------------------
 */
-body { font-size:100%!important; }
+body { font-size:92.5%!important; }
 
 /*
 // +-------------------------------------------------------------------------
@@ -81,7 +81,7 @@ section.ui-widget footer > a[href].ui-icon { top:0.15em; }
 // +  Datei: css/lectures-content-channel-three.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Ergänzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status: 2015/01/27 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/01/27 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
@@ -156,7 +156,7 @@ ul.toc.exam {
 // +  Datei: Internet/css/internet-channel-three.css
 // +  AutorIn: w dot doeringer ( at fh-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Erg�nzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status:   2016/03/28 jigsaw.w3.org/css-validator/validator as CSS3
 // +  Revision: 2016/10/24 - Details am Ende der Datei
 // +----------------------------------------------------------------------------
@@ -166,7 +166,7 @@ section#testat1 div.container { font-size:85%!important; }
 section#testat1 div.container table#arp { font-size:smaller!important; }
 
 /* --- ntools -------------------------------------------------------------- */
-body.ntools  #menue table { 
+body.ntools  #menue table {
   width:60%; height:100%; border-collapse:separate; margin-left:20%;
   background:transparent!important;
 }

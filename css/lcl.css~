@@ -1,0 +1,78 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: lucanlearn.github.io/css/lcl.css
+// +  AutorIn: w dot doeringer ( at protonmail dot com)
+// +  Beschreibung: CSS Ergänzung für LuCanLearn
+// +  KorrektorIn:
+// +  Status: 2025/03/06 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2025/03/06 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+/*
+// +-------------------------------------------------------------------------
+// + generelle Voreinstellungen
+// + 2025/02/19, wd
+// +-------------------------------------------------------------------------
+*/
+math { font-family:lato,sans-serif; }
+
+/* --- Übungsblätter Liste ------------------------------------------------- */
+ol { list-style-position:inside; }
+
+/* --- Probeprüfungen Liste ------------------------------------------------ */
+dd > ol.embedded { list-style-position:outside; }
+
+/* --- Lösungen; Einblenden über "mit-loesungen" in body ------------------- */
+span.loesung {
+  border:none; color:red;
+  white-space:nowrap; overflow:hidden;
+}
+/*   padding:0.15em; padding-left:0.5em; padding-right:0.5em; */
+
+/* --- math und weitere not wrapping --------------------------------------- */
+math, math * { white-space:nowrap; }
+
+
+body:not(.mit-loesungen) span.loesung { display:none; }
+body.mit-loesungen span.loesung:empty { display:none; }
+
+/* --- Versionsangabe klein einblenden ------------------ ------------------ */
+h2::after {
+  content: attr(data-version); font-size:x-small!important; opacity:0.5;
+  position:absolute; right:0em;
+}
+
+/* --- a Elemente gleich behandeln - buttons (bisher??) -------------------- */
+/* --- min-* for UI --- */
+a, button {
+  position:fixed; z-index:1; top:3rem; right:3rem;
+  padding:0em;
+  min-height:1cm; min-width:1cm;
+}
+a[href] { padding:0.25em; padding-top:0.5em; text-decoration:none!important; }
+body:not(.mit-loesungen) button > span#minus { display:none;; }
+body.mit-loesungen button > span#plus { display:none; }
+
+/*
+// +-------------------------------------------------------------------------
+// + print - page-break at every other section; etc...
+// + 2025/02/19, wd
+// +-------------------------------------------------------------------------
+*/
+@media print {
+  section:nth-of-type(2n) { break-after:page; }
+  section:nth-of-type(2n+1) > div { margin-bottom:2rem!important; }
+  section > header { border:3.5pt solid!important; }
+  section > div { border:none!important; }
+  a { display:none; }
+}
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2025/02/18   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/

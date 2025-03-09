@@ -1,0 +1,4112 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- Datei: lucanlearn.github.io/Uebungsblaetter/index.html                  -->
+<!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
+<!-- Beschreibung: Übungsblätter Mathematik; local github repo               -->
+<!-- Status: w3-checked: 2025/03/07                                          -->
+<!-- Revision: 2025/03/07 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"     content="width=device-width,initial-scale=1">
+    <!-- -->
+    <meta name="description"  content="LuCanLearn Mathematik Prüfung Muster">
+    <meta name="keywords"     content="LuCanLearn">
+    <meta name="keywords"     content="Mathematik">
+    <meta name="keywords"     content="Uebungsblatt">
+    <meta name="keywords"     content="Muster">
+    <!-- -->
+    <base target="_blank">
+    <link href="../builds/vendor/start/jquery-ui.custom.css" rel="stylesheet">
+    <link href="../builds/vendor/start/customizer.css" rel="stylesheet">
+    <link href="../builds/combined.css" rel="stylesheet">
+    <link href="../builds/media.css" rel="stylesheet">
+
+    <!-- with HACKs ??? - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <link href="../css/lcl.css" rel="stylesheet">
+
+    <style>
+      math.strong, mn.strong, mi.strong, mo.strong { font-weight:bold; }
+      abbr { font-style:italic; color:chocolate; }
+
+      *[data-keywords*="vermehrter grundwert" i] { border:2pt solid orange; }
+      *[data-keywords*="vermehrter grundwert" i]::after {
+        content:attr(data-keywords); font-size:x-small;
+        position:absolute; right:1rem;
+      }
+    </style>
+
+    <!-- utilities -->
+    <script src="../js/lcl.js" defer></script>
+
+    <!-- -->
+    <title>Übungsblätter</title>
+  </head>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- body                                                                 -->
+  <!-- 2025/01/02, wd                                                       -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- class mit-loesungen zeigt die Lösungen an -->
+  <body id="uebungsblaetter" class="ui-helper-reset sbm" data-display="content">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- h1 für Suchmaschinen ???                                           -->
+    <!-- 2025/01/02, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <h1>LuCanLearn</h1>
+    <h1>Mathematik</h1>
+    <h1>Uebungsblaetter</h1>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Inhalt data aus den sections pro "Seite"                           -->
+    <!-- 2025/01/04, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    <!-- button -->
+    <button type="button" class="ui-state-active" title="Lösungen anzeigen" data-js="sbm">
+      &nbsp;<strong>L</strong><span id="plus">+</span><span id="minus">&minus;</span>&nbsp;
+    </button>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 1                                                     -->
+    <!-- 2025/02/19, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/01/04">Übungsblatt 1, Teil A</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>  <!-- class="ui-state-hover" -->
+        <ol type="a">
+          <li>   <!-- class="ui-state-highlight" -->
+            <math><mn>436</mn><mo>+</mo><mn>25</mn> <mo>=</mo></math>
+            <span class="loesung" style="color:red;">461</span>
+          </li>
+          <li>
+            <math><mn>177</mn><mo>&minus;</mo><mn>35</mn> <mo>=</mo></math>
+            <span class="loesung">142</span>
+          </li>
+          <li>
+            <math><mn>19</mn><mo>&times;</mo><mn>42</mn> <mo>=</mo></math>
+            <span class="loesung">798</span>
+          </li>
+          <li>
+            <math><mn>108</mn><mo>&div;</mo><mn>12</mn> <mo>=</mo></math>
+            <span class="loesung">9</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Erweitern Sie
+          <math><mfrac><mn>2</mn><mn>3</mn></mfrac></math>
+          auf den Nenner
+          <math><mn>15</mn></math> bzw. <math><mn>57</mn></math>
+          <span class="loesung">
+            <math><mo>=</mo></math>
+            <math><mfrac><mn>10</mn><mn>15</mn></mfrac></math> bzw.
+            <math><mfrac><mn>38</mn><mn>57</mn></mfrac></math>
+          </span>
+        </p>
+        <p>
+          Kürzen Sie soweit wie möglich:
+         <!-- bevelled="true" for a/b display??? -->
+          <math><mfrac bevelled="true"><mn>36</mn><mn>48</mn></mfrac></math>,
+          <math><mfrac><mn>17</mn><mn>48</mn></mfrac></math>,
+          <math><mfrac><mn>51</mn><mn>34</mn></mfrac></math>
+          <span class="loesung">
+            <math><mo>=</mo></math>
+            <math><mfrac bevelled="true"><mn>3</mn><mn>4</mn></mfrac></math>,
+            <math><mfrac><mn>17</mn><mn>48</mn></mfrac></math>,
+            <math><mfrac><mn>3</mn><mn>2</mn></mfrac></math>
+          </span>
+        </p>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mfrac><mn>2</mn><mn>5</mn></mfrac>
+                <mo>+</mo>
+                <mfrac><mn>1</mn><mn>5</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>3</mn><mn>5</mn></mfrac></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mfrac><mn>7</mn><mn>9</mn></mfrac>
+                <mo>&minus;</mo>
+                <mfrac><mn>1</mn><mn>3</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>4</mn><mn>9</mn></mfrac></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mfrac><mn>5</mn><mn>7</mn></mfrac>
+                <mo>&times;</mo>
+                <mfrac><mn>2</mn><mn>3</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>10</mn><mn>21</mn></mfrac></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mfrac><mn>5</mn><mn>7</mn></mfrac>
+                <mo>&div;</mo>
+                <mfrac><mn>15</mn><mn>14</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>2</mn><mn>3</mn></mfrac></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+              <mn>18</mn><mi>x</mi><mo>+</mo><mn>14</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>32</mn><mi>x</mi> <mo>+</mo> <mn>2</mn><mi>y</mi></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>9</mn><mi>r</mi><mo>+</mo><mn>14</mn><mo>&minus;</mo><mn>7</mn><mi>r</mi>
+                <mo>+</mo><mn>13</mn><mo>+</mo><mi>r</mi>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>3</mn><mi>r</mi> <mo>+</mo> <mn>27</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>4</mn><mi>x</mi><mo>&minus;</mo><mn>3</mn><mo>+</mo><mn>7</mn><mo>&minus;</mo><mi>x</mi>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>3</mn><mi>x</mi> <mo>+</mo> <mn>4</mn></math></span>
+          </li>
+          <li title="???">
+            <math>
+              <mrow>
+                <mn>2</mn><mi>z</mi>
+                <mo>+</mo>
+                <mn>20</mn>
+                <mo>&minus;</mo>
+                <mi>z</mi>
+                <mo>+</mo>
+                <mo>(</mo>
+                  <mn>8</mn>
+                  <mo>&minus;</mo>
+                  <mi>z</mi>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>28</mn></math></span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/05">Übungsblatt 1, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>Ergänzen Sie passend zu proportionalen Zuordnungen.</p>
+        <ol type="a">
+          <li>Je mehr, desto: <span class="loesung">mehr</span>
+          </li>
+          <li>Je weniger, desto: <span class="loesung">weniger</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li>
+            <math><mn>2</mn></math>
+            Dosen Lack reichen für
+            <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            Fläche. Für wie viele <math><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            reichen <math><mn>7</mn></math> Dosen?
+            <span class="loesung">(7 / 2) * 15 = 52,5</span>
+          </li>
+          <li>
+            <math>
+              <mn>0,8</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi>
+            </math>
+            Mehl reichen für
+            <math><mn>4</mn></math>
+            Pizzen.
+            Für wie viele Pizzen reichen
+            <math>
+              <mn>2,6</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi>
+            </math>
+            Mehl?
+            <span class="loesung">(4 / 0,8) * 2,6 = 13</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Ergänzen Sie passend zu antiproportionalen Zuordnungen.</p>
+        <ol type="a">
+          <li>Je mehr, desto: <span class="loesung">weniger</span>
+          </li>
+          <li>Je weniger, desto: <span class="loesung">mehr</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a" class="outside">
+          <li>
+            <math><mn>4</mn></math> An&shy;gestellte erledigen ihre Aufgabe in
+            <math><mn>6</mn></math> Stunden. Wie lange brauchen
+            <math><mn>6</mn></math> An&shy;gestellte?
+            <span class="loesung">(4 * 6) / 6 = 4</span>
+          </li>
+          <li>
+            Bei einem Tagesverbrauch von <math><mn>12</mn></math> Paketen Papier
+            reicht der Vorrat <math><mn>36</mn></math> Tage. Wie lange reicht er
+            bei einem Verbrauch von <math><mn>16</mn></math> Paketen pro Tag?
+            <span class="loesung">(12 * 36) / 16 = 27</span>
+          </li>
+         </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lauten bei den folgenden Aufgaben jeweils
+          <abbr>GW</abbr> (Grundwert),
+          <abbr>PW</abbr> (Prozentwert) und
+          <abbr>ps</abbr> (Prozentsatz)?
+          Berechnen Sie fehlende Werte auch in tabellarischer Form.
+        </p>
+        <ol type="a"> <!-- getrennte span.loesung, um Umbruch zu ermöglichen - overflow:hidden in lcl.css -->
+          <li>
+            Frau Luther verdient <math><mn>1250</mn></math> Euro im
+            Monat und bezahlt
+            <math><mn>24</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            , dh. <math><mn>300</mn></math> Euro Miete.
+            <span class="loesung">&nbsp; GW: <math><mn>1250</mn></math> Euro,</span>
+            <span class="loesung">PW: <math><mn>300</mn></math> Euro,</span>
+            <span class="loesung">ps: <math><mn>24</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math></span>
+          </li>
+          <li>
+            <math><mn>70</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            von
+            <math><mn>200</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            <span class="loesung">&nbsp; GW: <math><mn>200</mn></math> Euro,</span>
+            <span class="loesung">PW: <math><mn class="strong">140</mn></math> Euro,</span>
+            <span class="loesung">ps: <math><mn>70</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math></span>
+          </li>
+          <li>
+            <math><mn>40,5</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            von
+            <math><mn>90</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            <span class="loesung">&nbsp; GW: <math><mn>90</mn><mi>m²</mi></math> Euro,</span>
+            <span class="loesung">PW: <math><mn>40,5</mn><mi>m²</mi></math> Euro,</span>
+            <span class="loesung">ps: <math class="strong"><mn>45</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math></span>
+          </li>
+          <li>
+            <math><mn>20</mn></math> Personen sind
+            <math><mn>25</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            aller Besucher:innen.
+            <span class="loesung">&nbsp; GW: <math class="strong"><mn>80</mn></math> Personen,</span>
+            <span class="loesung">PW: <math><mn>20</mn></math> Personen,</span>
+            <span class="loesung">ps: <math><mn>25</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math></span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 1 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 2                                                     -->
+    <!-- 2025/02/28, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">Übungsblatt 2, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li>
+            <math><mn>145</mn><mo>+</mo><mn>363</mn><mo>+</mo><mn>432</mn><mo>=</mo></math>
+            <span class="loesung">940</span>
+          </li>
+          <li>
+            <math><mn>9386</mn><mo>&minus;</mo><mn>8735</mn> <mo>=</mo></math>
+            <span class="loesung">651</span>
+          </li>
+          <li>
+            <math><mn>339</mn><mo>&times;</mo><mn>409</mn> <mo>=</mo></math>
+            <span class="loesung">138651</span>
+          </li>
+          <li>
+            <math><mn>2214</mn><mo>&div;</mo><mn>18</mn> <mo>=</mo></math>
+            <span class="loesung">123</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.
+        </p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+                <mo>+</mo>
+                <mn>2</mn><mfrac><mn>2</mn><mn>17</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>7</mn><mn>2</mn></mfrac> <mo>+</mo> <mfrac><mn>36</mn><mn>17</mn></mfrac>
+                <mo>=</mo>
+                <mfrac><mn>191</mn><mn>34</mn></mfrac>
+                <mo>=</mo>
+                <mn>5</mn><mfrac><mn>21</mn><mn>34</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>16</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+                <mo>+</mo>
+                <mn>2</mn><mfrac><mn>3</mn><mn>40</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>16</mn> <mo>+</mo> <mfrac><mn>1</mn><mn>2</mn></mfrac>
+                <mo>+</mo> <mn>2</mn> <mo>+</mo> <mfrac><mn>3</mn><mn>40</mn></mfrac>
+                <mo>=</mo>
+                <mn>18</mn> <mo>+</mo> <mfrac><mn>1</mn><mn>2</mn></mfrac> <mo>+</mo> <mfrac><mn>3</mn><mn>40</mn></mfrac>
+                <mo>=</mo>
+                <mn>18</mn><mfrac><mn>23</mn><mn>40</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mfrac>
+                  <mrow><mo form="prefix">-</mo><mn>4</mn></mrow>
+                  <mn>5</mn>
+                </mfrac>
+                <mo>&times;</mo>
+                <mn>10</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>8</mn></math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mo form="prefix">-</mo><mn>27</mn>
+              <mo>&div;</mo>
+              <mrow>
+                <mfrac><mn>3</mn><mn>4</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>36</mn></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>3</mn><mfrac><mn>1</mn><mn>8</mn></mfrac>
+                <mo>&minus;</mo>
+                <mfrac><mn>4</mn><mn>16</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>2,875</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mfrac><mn>150</mn><mn>12</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>12,5</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mo>(</mo>
+                  <mn>36</mn><mi>a</mi>
+                  <mo>+</mo>
+                  <mn>24</mn><mi>b</mi>
+                  <mo>&minus;</mo>
+                  <mn>13</mn>
+                <mo>)</mo>
+                <mo>&div;</mo>
+                <mn>6</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>36</mn> <mo>&times;</mo> <mi>a</mi>
+                  </mrow>
+                  <mn>6</mn>
+                </mfrac>
+                <mo>+</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>24</mn> <mo>&times;</mo> <mi>b</mi>
+                  </mrow>
+                  <mn>6</mn>
+                </mfrac>
+                <mo>&minus;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>13</mn>
+                  </mrow>
+                  <mn>6</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>6</mn><mi>a</mi> <mo>+</mo> <mn>4</mn><mi>b</mi>
+                <mo>&minus;</mo> <mn>2</mn><mfrac><mn>1</mn><mn>6</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mo>(</mo>
+                  <mn>24</mn><mi>b</mi>
+                  <mo>&minus;</mo>
+                  <mn>21</mn>
+                <mo>)</mo>
+                <mo>&times;</mo>
+                <mn>3</mn>
+                <mo>+</mo>
+                <mn>5</mn>
+                <mo>+</mo>
+                <mi>x</mi>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>72</mn><mi>b</mi> <mo>+</mo> <mi>x</mi>  <mo>&minus;</mo> <mn>48</mn></math>
+            </span>
+          </li>
+          <li title="wd">
+            <math>
+              <mrow>
+                <mn>2</mn><mi>x</mi>
+                <mo>+</mo>
+                <mn>20</mn>
+                <mo>&minus;</mo>
+                <mn>2</mn><mi>y</mi>
+                <mo>+</mo>
+                <mn>17</mn><mi>x</mi>
+                <mo>+</mo>
+                <mn>8</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>19</mn><mi>x</mi> <mo>&minus;</mo> <mn>2</mn><mi>y</mi> <mo>+</mo><mn>28</mn></math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mo>(</mo>
+                  <mn>17</mn>
+                  <mo>&minus;</mo>
+                  <mn>3</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mi>y</mi>
+                  <mo>+</mo>
+                  <mn>5</mn>
+                <mo>)</mo>
+                <mo>&times;</mo>
+                <mi>y</mi>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>22</mn><mi>y</mi> <mo>&minus;</mo> <mn>3</mn><mi>x</mi><mi>y</mi>
+              <mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></math>
+            </span>
+
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/28">Übungsblatt 2, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Proportio&shy;na&shy;le Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li>
+            Ein LKW fährt
+            <math>
+              <mn>240</mn><mi mathvariant="normal" class="MathML-Unit">km</mi>
+            </math>
+            in
+            <math>
+              <mn>3</mn><mi mathvariant="normal" class="MathML-Unit">h</mi>
+            </math>.
+            Wie weit fährt er in
+            <math><mn>3,5</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>?
+            <span class="loesung">(240 / 3) * 3,5 = 280</span>
+          </li>
+          <li>
+            Für <math><mn>14,40</mn></math> Euro erhält man
+            <math><mn>9</mn></math> Lampen. Und für
+            <math><mn>8</mn></math> Euro?
+            <span class="loesung">(9 / 14,4) * 8 = 5</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a" class="outside">
+          <li>
+            Ein Regal fasst <math><mn>24</mn></math> Kartons mit
+            <math><mn>10</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            Breite und entsprechend ma&shy;xi&shy;mal wie viele Kar&shy;tons mit
+            <math><mn>18</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            Breite?
+            <span class="loesung">(24 * 10) / 18 = 13,333, also 13</span>
+          </li>
+          <li>
+            <math><mn>5</mn></math> Maurer benötigen zum Bau einer Mauer
+            <math><mn>4</mn></math> Tage. Wie viele Tage brauchen
+            <math><mn>2</mn></math> Maurer?
+            <span class="loesung">(5 * 4) / 2 = 10</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Pro&shy;zent&shy;rech&shy;nung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li>
+            <math><mn>8</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            einer Fahrstrecke sind
+            <math><mn>4</mn><mi mathvariant="normal" class="MathML-Unit">km</mi></math>.
+            Wie lang ist die ganze Strecke?
+            <span class="loesung">4 * (100/8) = 50</span>
+          </li>
+          <li>
+            Wieviel Prozent sind <math><mn>48</mn></math> Euro von
+            <math><mn>40</mn></math> Euro?
+            <span class="loesung">(40/48) * 100 = 83,333</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Übersetzen Sie die folgenden Begriffe aus der Prozent- in die Zinsrechnung.</p>
+        <ol type="a">
+          <li>
+            Grundwert:
+            <span class="loesung">&nbsp;Kapital</span>
+          </li>
+          <li>
+            Prozentwert:
+            <span class="loesung">&nbsp;Zins</span>
+          </li>
+          <li>
+            Prozentsatz:
+            <span class="loesung">&nbsp;Zinssatz</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Zinsrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li>
+            Zinssatz für
+            <math><mn>18</mn></math> Euro Jahreszinsen auf <math><mn>450</mn></math> Euro Kapital?
+
+            <span class="loesung">(18/450) * 100 = 4%</span>
+          </li>
+          <li>
+            Jahreszins für <math><mn>18340</mn></math> Kapital
+            bei einem Zinssatz von
+            <math><mn>2,75</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>?
+            <span class="loesung">504,35</span>
+          </li>
+          <li>
+            Kredithöhe bei jährlichen Schuldzinsen von
+            <math><mn>150</mn></math> Euro und
+            <math><mn>8</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Zinssatz?
+            <span class="loesung">1875</span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 2 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 3                                                     -->
+    <!-- 2025/02/28, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">Übungsblatt 3, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>760</mn>
+                <mo>+</mo>
+                <mo fence="true">(</mo>
+                  <mrow>
+                    <mn>33</mn><mo>+</mo><mn>195</mn>
+                  </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>988</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>189</mn>
+                <mo>&minus;</mo>
+                <mn>153</mn><mo>&div;</mo><mn>3</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>138</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mo form="prefix">-</mo><mn>6</mn>
+                <mo>&times;</mo>
+                <mo>(</mo><mo form="prefix">-</mo><mn>11</mn><mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>66</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mo form="prefix">-</mo><mn>28</mn>
+                <mo>&div;</mo>
+                <mn>7</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>4</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.
+        </p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>2</mn><mfrac><mn>8</mn><mn>9</mn></mfrac>
+                <mo>&div;</mo>
+                <mn>2</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>1</mn><mfrac><mn>4</mn><mn>9</mn></mfrac></math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>16</mn>
+                <mo>&minus;</mo>
+                <mfrac><mn>3</mn><mn>40</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>15</mn> <mo>+</mo> <mn>1</mn> <mo>&minus;</mo> <mfrac><mn>3</mn><mn>40</mn></mfrac>
+                <mo>=</mo>
+                <mn>15</mn><mfrac><mn>37</mn><mn>40</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>5</mn>
+                <mo>+</mo>
+                <mfrac><mn>1</mn><mn>17</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>5</mn><mfrac><mn>1</mn><mn>17</mn></mfrac></math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mo form="prefix">-</mo><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>&div;</mo>
+              <mrow>
+                <mn>2</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>1</mn><mfrac><mn>3</mn><mn>11</mn></mfrac></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>31</mn><mfrac><mn>10</mn><mn>16</mn></mfrac>
+                <mo>&times;</mo>
+                <mfrac><mn>4</mn><mn>10</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>12,65</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mfrac><mn>120</mn><mn>625</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>0,129</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>34</mn><mi>y</mi>
+                <mo>&times;</mo>
+                <mn>3</mn><mi>y</mi>
+                <mo>&div;</mo>
+                <mn>2</mn>
+                <mo>=</mo>
+              </mrow>
+            </math>
+            <span class="loesung"><math><mn>51</mn><msup><mi>y</mi><mn>2</mn></msup></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>8</mn><mi>x</mi>
+                <mo>+</mo>
+                <mn>85</mn>
+                <mo>&minus;</mo>
+                <mn>5</mn><mi>x</mi>
+                <mo>+</mo>
+                <mn>7</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>3</mn><mi>x</mi> <mo>+</mo> <mn>92</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mo>(</mo>
+                  <mn>9</mn><mi>x</mi>
+                  <mo>&minus;</mo>
+                  <mn>15</mn>
+                <mo>)</mo>
+                <mo>&div;</mo>
+                <mn>3</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>3</mn><mi>x</mi> <mo>&minus;</mo> <mn>5</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>5</mn><mi>b</mi>
+                <mo>&minus;</mo>
+                <mn>2</mn>
+                <mo>&times;</mo>
+                <mo>(</mo>
+                  <mi>b</mi>
+                  <mo>+</mo>
+                  <mn>6</mn>
+                <mo>)</mo>
+                <mo>&times;</mo>
+                <mn>0</mn><mi>z</mi>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>5</mn><mi>b</mi></math></span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/28">Übungsblatt 3, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a" class="outside">
+          <li>  <!-- pro Kuh und Tag im Winter: ca. 15 - 25kg Heu -->
+            <math><mn>36</mn><mi mathvariant="normal" class="MathML-Unit">t</mi></math>
+            Heu reichen für <math><mn>20</mn></math> Kühe drei Monate. Wie lange reicht es für
+            <math><mn>10</mn></math> Kühe?
+            <span class="loesung">(20 * 3) / 10 = 6</span>
+          </li>
+          <li>
+            Eine Leiste wird in <math><mn>5</mn></math> Stücke zu je
+            <math><mn>24</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            geteilt. Wie lange ist ein Stück bei Teilung in <math><mn>6</mn></math> Stücke?
+            <span class="loesung">(5 * 24) / 6 = 20</span>
+           </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li>
+            <math><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Trauben kosten <math><mn>4,80</mn></math> Euro. Wieviel kosten
+            <math><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>kg</mi></math> oder
+            <math><mn>2,5</mn><mi>kg</mi></math> bzw.
+            <math><mn>3</mn><mfrac><mn>1</mn><mn>4</mn></mfrac><mi>kg</mi></math>.
+            <span class="loesung">(4,8 / 6) * [1/2, 2.5, 3 1/4] = [0.4, 2, 2.6]</span>
+          </li>
+          <li>  <!-- pro Kuh und Tag im Winter: ca. 15 - 25kg Heu -->
+            <math><mn>36</mn><mi mathvariant="normal" class="MathML-Unit">t</mi></math>
+            Heu reichen für <math><mn>20</mn></math> Kühe drei Monate. Wie lange reichen
+            <math><mn>72</mn><mi mathvariant="normal" class="MathML-Unit">t</mi></math>?
+            <span class="loesung">(3 / 36) * 72 = 6</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li>
+            <math><mn>92</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            von <math><mn>200</mn></math> Plätzen im Kino sind belegt.
+            Wie viele Personen schauen den Film an?
+            <span class="loesung">
+              PW:<math><mn class="strong">184</mn> <mi>,&nbsp;GW:</mi><mn>200</mn><mi>&nbsp;(100%)</mi></math>
+            </span>
+          </li>
+          <li>
+            Tomatenketchup besteht zu
+            <math><mn>70</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            aus Wasser, zu
+            <math><mn>25</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            aus Kohlenhydraten und zu
+            <math><mn>5</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            aus sonstigen Inhaltsstoffen. Berechnen Sie die Gewichtsanteile von
+            <math><mn>250</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>
+            Ketchup.
+            <span class="loesung">PW:250 * [70, 25, 5]/100 = [175, 62.5, 12.5]</span>
+            <span class="loesung channel-one">; Summation zur Probe</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie &ndash; Lösung bitte auch mit proportionalen Skizzen.</p>
+        <ol type="a">
+          <li>
+            Welchen Umfang hat ein Dreieck mit den Seiten
+            <math><mi>a</mi><mo>=</mo><mn>3</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>,
+            <math><mi>b</mi><mo>=</mo><mn>4</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            und
+            <math><mi>c</mi><mo>=</mo><mn>5</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>?
+            <span class="loesung">
+              <math><mn>12</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            </span>
+          </li>
+          <li>
+            Wie groß ist sein Flächeninhalt, wenn die  Höhe zur Seite <math><mi>a</mi></math>
+            <math><mn>4</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            lang ist?
+            <span class="loesung">
+              <math><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            </span>
+          </li>
+          <li>
+            Umfang bzw.Fläche eines Quadrats mit Seite
+            <math><mi>a</mi><mo>=</mo><mn>17</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>?
+            <span class="loesung">
+              <math><mn>68</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math> bzw.
+              <math><mn>289</mn><mi mathvariant="normal" class="MathML-Unit">cm²</mi></math>
+            </span>
+          </li>
+          <li>
+            Umfang bzw.Fläche eines Rechtecks mit den Seiten
+            <math><mi>a</mi><mo>=</mo><mn>35</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>,
+            <math><mi>b</mi><mo>=</mo><mn>40</mn><mi mathvariant="normal" class="MathML-Unit">cm?</mi></math>
+            <span class="loesung">
+              <math><mn>150</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math> bzw.
+            </span>
+            <span class="loesung">
+              <math><mn>1400</mn><mi mathvariant="normal" class="MathML-Unit">cm²</mi></math>
+            </span>
+          </li>
+          <li>
+            Umfang und Fläche eines Rechtecks mit frei gewählten Seitenlängen.
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 3 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 4                                                     -->
+    <!-- 2025/01/08, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">Übungsblatt 4, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>34</mn>
+                <mo>&minus;</mo>
+                <mo form="prefix">(</mo>
+                  <mrow>
+                    <mn>6</mn>
+                    <mo>+</mo>
+                    <mo form="prefix">(</mo>
+                      <mo form="prefix">-</mo><mn>2</mn>
+                    <mo form="postfix">)</mo>
+                  </mrow>
+                <mo form="postfix">)</mo>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>34</mn>
+                <mo>+</mo>
+                <mo>(</mo>
+                  <mo form="prefix">&minus;</mo><mn>6</mn> <mo>+</mo><mn>2</mn>
+                <mo>)</mo>
+                <mo>=</mo>
+                <mn>34</mn> <mo>&minus;</mo> <mn>4</mn>
+                <mo>=</mo>
+                <mn>30</mn>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mo form="prefix">&minus;</mo><mn>153</mn>
+                <mo>+</mo>
+                <mn>500</mn><mo>&div;</mo><mn>10</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>103</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>877</mn>
+                <mo>&minus;</mo>
+                <mrow>
+                  <mo form="prefix">(</mo><mn>27</mn><mo>&times;</mo><mn>26</mn><mo form="postfix">)</mo>
+                  <mo>&div;</mo>
+                  <mn>27</mn>
+                </mrow>
+                <mo>+</mo>
+                <mn>365</mn>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>877</mn> <mo>&minus;</mo> <mn>26</mn> <mo>+</mo> <mn>365</mn>
+                <mo>=</mo>
+                <mn>916</mn>
+              </math>
+            </span>
+          <li>
+            <math>
+              <mrow>
+                <mn>34</mn>
+                <mo>&times;</mo>
+                <mrow>
+                  <msup>
+                    <mrow>
+                      <mo>(</mo>
+                        <mn>46</mn><mo>+</mo><mn>15</mn>
+                      <mo>)</mo>
+                    </mrow>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>34</mn> <mo>&times;</mo> <msup><mn>61</mn><mn>2</mn></msup>
+                <mo>=</mo>
+                <mn>126514</mn>
+              </math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mn>5</mn>
+              <mo>&minus;</mo>
+              <mn>6</mn>
+              <mo>&times;</mo>
+              <mfrac><mn>3</mn><mn>4</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>1</mn><mn>2</mn></mfrac></math> </span>
+          </li>
+          <li>
+            <math>
+              <mo>(</mo>
+                <mn>3</mn>
+                <mo>&times;</mo>
+                <mn>2</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>
+                  <mi mathvariant="normal" class="MathML-Unit">h</mi>
+                <mo>+</mo>
+                <mn>2</mn>
+                <mo>&times;</mo>
+                <mn>3</mn><mfrac><mn>1</mn><mn>4</mn></mfrac>
+                  <mi mathvariant="normal" class="MathML-Unit">h</mi>
+                <mo>+</mo>
+                <mfrac><mn>1</mn><mn>4</mn></mfrac>
+                  <mi mathvariant="normal" class="MathML-Unit">h</mi>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mn>58</mn>
+                <mfrac>
+                  <mi mathvariant="normal" class="MathML-Unit">Euro</mi>
+                  <mi mathvariant="normal" class="MathML-Unit">h</mi>
+                </mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mo>(</mo>
+                  <mfrac><mn>33</mn><mn>4</mn></mfrac>
+                  <mi mathvariant="normal" class="MathML-Unit">h</mi>
+                  <mo>+</mo>
+                  <mfrac><mn>26</mn><mn>4</mn></mfrac>
+                  <mi mathvariant="normal" class="MathML-Unit">h</mi>
+                  <mo>+</mo>
+                  <mfrac><mn>1</mn><mn>4</mn></mfrac>
+                  <mi mathvariant="normal" class="MathML-Unit">h</mi>
+                <mo>)</mo>
+                <mo>&times;</mo>
+                <mn>58</mn>
+                  <mfrac>
+                    <mi mathvariant="normal" class="MathML-Unit">Euro</mi>
+                    <mi mathvariant="normal" class="MathML-Unit">h</mi>
+                  </mfrac>
+                <mo>=</mo>
+                <mn>855,5</mn><mi mathvariant="normal" class="MathML-Unit">&nbsp;Euro</mi>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mn>4</mn><mfrac><mn>3</mn><mn>10</mn></mfrac>
+                <mi mathvariant="normal" class="MathML-Unit">cm</mi>
+              <mo>&times;</mo>
+              <mn>2</mn><mfrac><mn>27</mn><mn>50</mn></mfrac>
+                <mi mathvariant="normal" class="MathML-Unit">cm</mi>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>5461</mn><mn>500</mn></mfrac><mi>cm²</mi>
+                <mo>=</mo>
+                <mn>10</mn><mfrac><mn>461</mn><mn>500</mn></mfrac> <mi>cm²</mi>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mn>1</mn>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mfrac><mn>1</mn><mn>4</mn></mfrac>
+                <mo>+</mo>
+                <mfrac><mn>1</mn><mn>5</mn></mfrac>
+                <mo>+</mo>
+                <mfrac><mn>1</mn><mn>8</mn></mfrac>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>1</mn>
+                <mo>&minus;</mo>
+                <mfrac>
+                  <mrow><mn>10</mn> <mo>+</mo> <mn>8</mn> <mo>+</mo> <mn>5</mn></mrow>
+                  <mn>40</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac><mn>17</mn><mn>40</mn></mfrac>
+              </math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>10331</mn><mfrac><mn>4</mn><mn>5</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>10331,8</mn></math></span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mo form="prefix">-</mo><mn>1257</mn><mfrac><mn>12</mn><mn>48</mn></mfrac>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>1257,25</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li>
+            <math>
+              <mrow>
+                <mn>14</mn><mi>x</mi>
+                <mo>&minus;</mo>
+                <mo>(</mo>
+                  <mn>3</mn><mi>a</mi>
+                  <mo>+</mo>
+                  <mn>6</mn>
+                <mo>)</mo>
+                <mo>+</mo>
+                <mn>5</mn><mi>a</mi>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>14</mn><mi>x</mi> <mo>+</mo> <mn>2</mn><mi>a</mi> <mo>&minus;</mo> <mn>6</mn>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>2</mn><mi>a</mi>
+                <mo>&minus;</mo>
+                <mo>(</mo>
+                  <mn>7</mn>
+                  <mo>&minus;</mo>
+                  <mn>3</mn><mi>b</mi>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>2</mn><mi>a</mi> <mo>+</mo> <mn>3</mn><mi>b</mi> <mo>&minus;</mo> <mn>7</mn>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>2</mn>
+                <mo>&times;</mo>
+                <mo>(</mo>
+                  <mn>2</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mn>3</mn><mi>y</mi>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>4</mn><mi>x</mi> <mo>+</mo> <mn>6</mn><mi>y</mi>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mrow>
+                <mn>9</mn><mi>a</mi>
+                <mo>&minus;</mo>
+                <mo>(</mo>
+                  <mo form="prefix">-</mo><mn>8</mn><mi>b</mi>
+                  <mo>&minus;</mo>
+                  <mn>7</mn><mi>a</mi>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>16</mn><mi>a</mi> <mo>+</mo> <mn>8</mn><mi>b</mi>
+              </math>
+            </span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">Übungsblatt 4, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="COR:115:6">
+            Neun Farbstifte kosten <math><mn>18</mn></math> Euro. Wieviele Stifte
+            erhält man für acht Euro?
+            <span class="loesung"><math><mn>8</mn></math></span>
+          </li>
+          <li title="COR">
+            Wieviele Schweizer Franken erhält man heute für <math><mn>735</mn></math> Euro?
+          </li>
+          <li title="COR:94:9">
+            Wie viele Gramm Kirschen sind in
+            <math><mn>400</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>
+            einer Marmelade, die aus <math><mn>3</mn></math>
+            Teilen Erdbeeren und <math><mn>2</mn></math> Teilen Kirschen besteht?
+             <span class="loesung">
+               <math>
+                <mfrac><mn>2</mn><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow></mfrac>
+                <mo>&times;</mo> <mn>400</mn><mi>gr</mi>
+                <mo>=</mo>
+                <mn>80</mn><mi>gr</mi>
+              </math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:169:4a">
+            Zehn Kinder geben je <math><mn>4,80</mn></math> Euro für ein
+            gemeinsames Geschenk. Es kommen dann noch zwei Kinder hinzu.
+            Wieviel muss jetzt jedes Kind beisteuern?
+            <span class="loesung"><math><mn>4</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="SP7:169:6b">
+            Für den Abtransport von Aushub braucht ein LKW von
+            zehn Tonnen Ladegewicht <math><mn>36</mn></math> Fahrten.
+            Wieviele Fahrten braucht ein LKW mit neun Tonnen Ladegewicht?
+            <span class="loesung"><math><mn>40</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="COR:135:5">
+            Wie hoch ist der Preis eines T-Shirts zu netto <math><mn>17</mn></math> Euro inklusive
+            <math><mn>19</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Umsatzsteuer?
+            <span class="loesung"><math><mn>20,23</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="COR:137:3">
+            Eine Bohrmaschine kostet inklusive
+            <math><mn>19</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Umsatzsteuer <math><mn>130,90</mn></math> Euro. Wie hoch ist der Nettopreis?
+            <span class="loesung"><math><mn>110</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="COR:177:2">
+            Umfang und Fläche eines Rechtecks mit den Seitenlängen
+            <math><mn>5,4</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            und
+            <math><mn>3,2</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>?
+            <span class="loesung">
+              <math><mn>17,2</mn><mi>m&nbsp;bzw.&nbsp;</mi></math>
+              <math><mn>17,28</mn><mi>m²,&nbsp;</mi></math>
+            </span>
+          </li>
+          <li title="COR:137:3">
+            Fläche eines Dreiecks mit
+            <math><mn>5</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            Höhe und
+            <math><mn>7</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            Grund&shy;seite?
+            <span class="loesung"><math><mn>17,5</mn><mi>cm²</mi></math></span>
+          </li>
+         </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 4 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 5                                                     -->
+    <!-- 2025/03/01, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/01">Übungsblatt 5, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="COR:23:14">
+            <math><mn>47</mn><mo>&minus;</mo><mo>(</mo><mo form="prefix">-</mo><mn>12</mn><mo>)</mo> <mo>=</mo></math>
+            <span class="loesung"><math><mn>59</mn></math></span>
+          </li>
+          <li title="COR:23:17">
+            <math><msup><mn>5</mn><mn>4</mn></msup> <mo>=</mo></math>
+            <span class="loesung"><math><mn>625</mn></math></span>
+          </li>
+          <li title="COR:23:11">
+            <math>
+              <mo form="prefix">-</mo><mn>34</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mn>46</mn><mo>+</mo><mn>15</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>2074</mn></math></span>
+          </li>
+          <li title="">
+            <math><mn>23646</mn><mo>&div;</mo><mn>42</mn> <mo>=</mo></math>
+            <span class="loesung"><math><mn>563</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="COR:28:15">
+            <math>
+              <mfrac><mn>5</mn><mn>9</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>3</mn><mn>4</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>20</mn><mn>27</mn></mfrac></math></span>
+          </li>
+          <li title="COR:28:18">
+            <math>
+              <mn>4</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>&div;</mo>
+              <mn>3</mn><mfrac><mn>1</mn><mn>4</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>18</mn><mn>13</mn></mfrac></math></span>
+          </li>
+          <li title="COR:28:10">
+            <math>
+              <mn>5</mn><mfrac><mn>7</mn><mn>15</mn></mfrac>
+              <mo>&minus;</mo>
+              <mfrac><mn>1</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>77</mn><mn>15</mn></mfrac></math></span>
+          </li>
+          <li title="COR:28:7">
+            <math>
+              <mn>13</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>+</mo>
+              <mn>2</mn><mfrac><mn>2</mn><mn>7</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>221</mn><mn>14</mn></mfrac></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:43:40">
+            <math>
+              <mfrac>
+                <mn>6</mn>
+                <mrow><mo form="prefix">-</mo><mn>12</mn></mrow>
+              </mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>0,5</mn></math></span>
+          </li>
+          <li title="COR:43:32">
+            <math>
+              <mn>1789</mn><mfrac><mn>99</mn><mn>3000</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>1789,033</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:93:2c">
+            <math>
+              <mo form="prefix">&minus;</mo>
+              <msup>
+                <mrow>
+                  <mo>(</mo>
+                    <mn>4</mn><mi>y</mi><mo>&minus;</mo><mn>3</mn><mi>z</mi>
+                  <mo>)</mo>
+                </mrow>
+                <mn>2</mn>
+              </msup>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mo form="prefix">&minus;</mo>
+                <mo>(</mo>
+                  <mn>16</mn><msup><mi>y</mi><mn>2</mn></msup>
+                  <mo>&minus;</mo>
+                  <mn>24</mn><mi>y</mi><mi>z</mi>
+                  <mo>+</mo>
+                  <mn>9</mn><msup><mi>z</mi><mn>2</mn></msup>
+                <mo>)</mo>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:93:4c">
+            <math>
+              <mn>80</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>40</mn><mi>x</mi> <mo>+</mo> <mn>30</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>40</mn><mi>x</mi> <mo>&minus;</mo> <mn>30</mn>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:93:4f">
+            <math>
+              <mn>80</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>40</mn><mi>x</mi> <mo>&minus;</mo> <mn>30</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>120</mn><mi>x</mi> <mo>+</mo> <mn>30</mn>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:93:4e">
+            <math>
+              <mn>80</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>40</mn><mi>x</mi> <mo>+</mo> <mn>30</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>120</mn><mi>x</mi> <mo>&minus;</mo> <mn>30</mn>
+              </math>
+            </span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/05">Übungsblatt 5, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:162:5a">
+            Sven braucht auf dem Fahrrad für die
+            <math><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">km</mi></math>
+            zur Schule
+            <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">min</mi></math>.
+            Bei gleicher Geschwindigkeit braucht er zu seinen Großeltern
+            <math><mn>5</mn><mi mathvariant="normal" class="MathML-Unit">min</mi></math>
+            länger. Wie lang ist die Strecke?
+            <span class="loesung">
+              <math><mn>8</mn><mi mathvariant="normal" class="MathML-Unit">km</mi></math>
+            </span>
+          </li>
+          <li title="COR">
+            <math><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Mehl
+            kosten in der Mühle <math><mn>1,20</mn></math> Euro. Wieviel kosten
+            <math><mn>2500</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>?
+            <span class="loesung">
+              <math><mn>3</mn><mi mathvariant="normal" class="MathML-Unit">&nbsp;Euro</mi></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:168:1b">
+            <math><mn>6</mn></math> Fensterputzer reinigen die Schulfenster in
+            <math><mn>32</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>.
+            Wie lange brauchen <math><mn>4</mn></math> Fensterputzer?
+            <span class="loesung">
+              <math><mn>48</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>
+            </span>
+          </li>
+          <li title="SP7:168:2b">
+            Ein LKW kann
+            <math><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">m³</mi></math>
+            Sand laden und muss <math><mn>24</mn></math>-mal fahren. Wie oft muss ein LKW
+            fahren, der
+            <math><mn>9</mn><mi mathvariant="normal" class="MathML-Unit">m³</mi></math>
+            Sand laden kann?
+            <span class="loesung"><math><mn>16</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="SP7:186:7">
+            An einer Skifreizeit nehmen 120 Kinder teil. Davon sind
+            <math><mn>36</mn></math>
+            Mädchen. Geben Sie den Anteil der Jungen und Mädchen in Prozent an.
+            <span class="loesung">
+              M:<math><mn>30</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>,
+              J:<math><mn>70</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>,
+            </span>
+          </li>
+           <li title="COR:126:9">
+             Frau Stoll verdient monatlich <math><mn>1867,49</mn></math> Euro.
+             Wieviel verdient sie nach einer Gehaltserhöhung von
+             <math><mn>3,8</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>?
+            <span class="loesung">
+              <math><mn>1938,45</mn><mi mathvariant="normal" class="MathML-Unit">&nbsp;Euro</mi></math>,
+            </span>
+           </li>
+           <li title="COR:140:3">
+             Wieviel Kapital bringt einen Jahreszins von <math><mn>150</mn></math> Euro
+             bei einem Zinssatz von
+             <math><mn>4,8</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>?
+            <span class="loesung">
+              <math><mn>3125</mn><mi mathvariant="normal" class="MathML-Unit">&nbsp;Euro</mi></math>
+            </span>
+           </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="???"> <!-- ??? -->
+            Wie groß ist der Umfang eines Quadrates mit
+            <math><mn>81</mn><mi mathvariant="normal" class="MathML-Unit">km²</mi></math>
+            Fläche?
+            <span class="loesung">
+              <math><mn>36</mn><mi mathvariant="normal" class="MathML-Unit">km</mi></math>
+            </span>
+          </li>
+          <!-- Braucht Pythagoras
+          <li title="">
+            Gibt es ein Dreieck mit
+            <math><mn>48</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            Fläche und
+            <math><mn>24</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            Umfang?
+          </li>
+          -->
+          <li title="???">
+            Flächeninhalt eines Dreieckes mit
+            <math><mn>4,5</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            Grundlinie und
+            <math><mn>81</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            Höhe.
+            <span class="loesung">
+              <math><mn>1,8225</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            </span>
+
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 5 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 6                                                     -->
+    <!-- 2025/03/02, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/02">Übungsblatt 6, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="SP7:41:18a">
+            <math>
+              <mo form="prefix">&minus;</mo><mn>6</mn> <mo>&minus;</mo> <mn>55</mn><mo>&div;</mo><mn>11</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>11</mn></math></span>
+          </li>
+          <li title="SP7:41:18b">
+            <math>
+              <mo form="prefix"></mo><mn>10</mn>
+              <mo>&minus;</mo>
+              <mn>25</mn>
+              <mo>&div;</mo>
+              <mo>(</mo><mo form="prefix">&minus;</mo><mn>5</mn><mo>)</mo>
+              <mo>+</mo>
+              <mn>4</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>19</mn></math></span>
+          </li>
+          <li title="SP7:41:18c+">
+            <math>
+              <mo form="prefix">&minus;</mo><mn>10</mn>
+              <mo>+</mo>
+              <mn>3</mn><mo>&div;</mo><mn>7</mn>
+              <mo>+</mo>
+              <mn>18</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>8</mn><mfrac><mn>3</mn><mn>7</mn></mfrac></math></span>
+          </li>
+          <li title="SP7:41:18e+">
+            <math>
+              <mn>19</mn>
+              <mo>+</mo>
+              <mn>27</mn>
+              <mo>&div;</mo>
+              <mo>(</mo><mo form="prefix">&minus;</mo><mn>3</mn><mo>)</mo>
+              <mo>&minus;</mo>
+              <mn>12</mn> <mo>&times;</mo> <mn>2</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>14</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="COR:28:17">
+            <math>
+              <mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>&div;</mo>
+              <mn>2</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>7</mn><mn>4</mn></mfrac> <mo>=</mo>
+                <mn>1</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li title="COR:28:9">
+            <math>
+              <mn>5</mn>
+              <mo>&minus;</mo>
+              <mfrac><mn>4</mn><mn>9</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>4</mn><mfrac><mn>5</mn><mn>9</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li title="COR:28:14">
+            <math>
+              <mfrac><mn>7</mn><mn>8</mn></mfrac>
+              <mo>&times;</mo>
+              <mn>1</mn><mfrac><mn>4</mn><mn>5</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>63</mn><mn>40</mn></mfrac>
+                <mo>=</mo>
+                <mn>1</mn><mfrac><mn>23</mn><mn>40</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li title="???">
+            Die Hälfte von
+            <math>
+              <mfrac><mn>1</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>1</mn><mn>6</mn></mfrac></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:58:1a">
+            <math>
+              <mfrac><mn>7</mn><mn>8</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>0,875</mn></math></span>
+          </li>
+          <li title="COR:58:1c">
+            <math>
+              <mn>1</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>1,75</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:93:Aa">
+            <math>
+              <mn>80</mn><mi>x</mi>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mn>40</mn><mi>x</mi> <mo>+</mo> <mn>30</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>120</mn><mi>x</mi> <mo>+</mo> <mn>30</mn></math>
+            </span>
+          </li>
+          <li title="SP7:93:Ab">
+            <math>
+              <mn>80</mn><mi>x</mi>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mn>40</mn><mi>x</mi> <mo>&minus;</mo> <mn>30</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>120</mn><mi>x</mi> <mo>&minus;</mo> <mn>30</mn></math>
+            </span>
+          </li>
+          <li title="SP7:93:Ad">
+            <math>
+              <mn>80</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>40</mn><mi>x</mi> <mo>&minus;</mo> <mn>30</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>80</mn><mi>x</mi> <mo>+</mo> <mn>30</mn></math>
+            </span>
+          </li>
+          <li title="SP7:93:Af">
+            <math>
+              <mn>80</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">-</mo><mn>40</mn><mi>x</mi> <mo>&minus;</mo> <mn>30</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>120</mn><mi>x</mi> <mo>+</mo> <mn>30</mn></math>
+            </span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/02">Übungsblatt 6, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="COR:100:1">
+            Eine Treppe mit <math><mn>14</mn></math> Stufen ist
+            <math><mn>252</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            hoch. Wie hoch ist eine Treppe mit <math><mn>5</mn></math> Stufen?
+            <span class="loesung"><math><mn>90</mn><mi>cm</mi></math></span>
+          </li>
+          <li title="COR:100:5">
+            Vier DVDs kosten <math><mn>31,60</mn></math> Euro. Wie viel Euro kosten
+            drei DVDs?
+            <span class="loesung"><math><mn>23,70</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="COR:100:2">
+            In <math><mn>3</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>
+            werden <math><mn>240</mn></math> Teile gefertigt. Wie viele Stunden werden
+            für <math><mn>600</mn></math> Teile benötigt?
+            <span class="loesung">
+              <math><mn>7,5</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="COR:104:1">
+            Aus einem Baumstamm werden <math><mn>20</mn></math> Bretter von
+            <math><mn>24</mn><mi mathvariant="normal" class="MathML-Unit">mm</mi></math>
+            Dicke geschnitten. Wie viele Bretter erhält man bei
+            <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">mm</mi></math>
+            dicken Brettern?
+            <span class="loesung"><math><mn>32</mn></math></span>
+          </li>
+          <li title="COR:104:4">
+            Eine Einfahrt wird mit <math><mn>64</mn></math> je
+            <math><mn>21</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            langen Randsteinen befestigt. Wie viele Randsteine mit einer Länge von
+            <math><mn>28</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            wären nötig?
+            <span class="loesung">(64 * 21) / 28 = 48</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="SP7:199:36">
+            Wie hoch ist der Salzgehalt in Prozent im Toten Meer, wenn dort
+            <math><mn>1</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Wasser
+            <math><mn>280</mn><mi mathvariant="normal" class="MathML-Unit">gr</mi></math>
+            Salz enthält?
+            <span class="loesung">
+              <math><mn>28</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            </span>
+          </li>
+          <li title="SP7:199:37">
+            Fichtenholz verliert beim Trocknen
+            <math><mn>7,8</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            seiner Länge. Wie lang war ein Brett vor dem Trocknen, wenn es um
+            <math><mn>27,3</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            geschrumpft ist?
+            <span class="loesung">
+              <math><mn>380</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="???">
+            Gibt es ein Rechteck von
+            <math><mn>20</mn><mi mathvariant="normal" class="MathML-Unit">cm²</mi></math>
+            Fläche und
+            <math><mn>18</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></math>
+            Umfang?
+            <span class="loesung">
+              <math>
+                <mi>a</mi><mo>=</mo><mn>5</mn><mi>cm,&nbsp;</mi>
+                <mi>b</mi><mo>=</mo><mn>4</mn><mi>cm</mi>
+              </math>
+            </span>
+          </li>
+          <li title="COR:164:11">
+            Wie lang ist die Grundlinie eines Dreiecks mit
+            <math><mn>30</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            Fläche und einer Höhe von
+            <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>.?
+            <span class="loesung">
+              <math><mn>4</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            </span>
+          </li>
+        </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 6 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 7                                                     -->
+    <!-- 2025/03/02, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/03/02">Übungsblatt 7, Teil A</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="SP7:41:19a">
+            <math>
+              <mn>3</mn>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>17</mn> <mo>&minus;</mo> <mn>24</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>10</mn></math></span>
+          </li>
+          <li title="SP7:41:19b">
+            <math>
+              <mo form="prefix">&minus;</mo><mn>37</mn>
+              <mo>+</mo>
+              <mo>(</mo>
+                 <mn>12</mn> <mo>&minus;</mo> <mn>35</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mn>16</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>76</mn></math></span>
+          </li>
+
+          <li title="SP7:41:19c">
+            <math>
+              <mn>97</mn>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                 <mn>48</mn> <mo>+</mo> <mn>22</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                 <mn>39</mn> <mo>&minus;</mo> <mn>45</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>33</mn></math></span>
+          </li>
+          <li title="SP7:41:22a">
+            <math>
+              <mo form="prefix">&minus;</mo><mn>4</mn>
+              <mo>+</mo>
+              <mo>(</mo>
+                 <mn>10</mn> <mo>&minus;</mo> <mn>72</mn><mo>&div;</mo><mn>6</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>6</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="???">
+            <math>
+              <mfrac>
+                <mrow><mn>3</mn><mo>&times;</mo><mn>3</mn></mrow>
+                <mn>27</mn>
+              </mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>1</mn><mn>3</mn></mfrac></math>
+            </span>
+          </li>
+          <li title="COR:40:17">
+            <math>
+              <mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mfrac><mn>7</mn><mn>8</mn></mfrac>
+                <mo>&minus;</mo>
+                <mfrac><mn>3</mn><mn>4</mn></mfrac>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>1</mn><mn>16</mn></mfrac></math>
+            </span>
+          </li>
+          <li title="COR:40:13">
+            <math>
+              <mfrac><mn>8</mn><mn>9</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>2</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>4</mn><mn>3</mn></mfrac></math>
+            </span>
+          </li>
+          <li title="COR:40:15">
+            <math>
+              <mfrac><mn>2</mn><mn>9</mn></mfrac>
+              <mo>&div;</mo>
+              <mn>3</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>2</mn><mn>27</mn></mfrac></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:43:20">
+            <math>
+              <mfrac><mn>8</mn><mn>125</mn></mfrac>
+              <mo>=</mo>
+            </math>
+           <span class="loesung"><math><mn>0,064</mn></math></span>
+           </li>
+          <li title="COR:43:18">
+            <math>
+              <mfrac><mn>115</mn><mn>500</mn></mfrac>
+              <mo>=</mo>
+            </math>
+           <span class="loesung"><math><mn>0,23</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:93:3a">
+            <math>
+              <mn>5</mn><mi>x</mi>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mn>8</mn><mi>x</mi> <mo>+</mo> <mn>15</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>13</mn><mi>x</mi> <mo>+</mo> <mn>15</mn></math>
+            </span>
+          </li>
+          <li title="SP7:93:3b">
+            <math>
+              <mn>4</mn><mi>x</mi>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mn>6</mn> <mo>&minus;</mo> <mn>2</mn><mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>2</mn><mi>x</mi> <mo>+</mo> <mn>6</mn></math>
+            </span>
+          </li>
+          <li title="SP7:93:3c">
+            <math>
+              <mn>13</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>3</mn><mi>x</mi> <mo>&minus;</mo> <mn>10</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>10</mn><mi>x</mi> <mo>+</mo> <mn>10</mn></math>
+            </span>
+          </li>
+          <li title="SP7:93:3d">
+            <math>
+              <mn>11</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>9</mn><mi>x</mi> <mo>&minus;</mo> <mn>10</mn><mi>y</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>2</mn><mi>x</mi> <mo>+</mo> <mn>10</mn><mi>y</mi></math>
+            </span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/02">Übungsblatt 7, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:162:4a">
+             <math><mn>3</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+             Orangen kosten <math><mn>3,45</mn></math> Euro. Wie viel kosten
+             <math><mn>2</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+             Orangen?
+             <span class="loesung">
+               <math><mn>2,30</mn><mi>&nbsp;Euro</mi></math>
+             </span>
+          </li>
+          <li title="COR:94:10">
+            Lena arbeitete <math><mn>8</mn></math> und Leon <math><mn>6</mn></math>
+            Stunden. Welchen Anteil an einem Trinkgeld von <math><mn>70</mn></math> Euro
+            erhält Lena bei Aufteilung entsprechend der Arbeitszeit?
+            <span class="loesung">(8/14) * 70 = 40</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:168:0">
+            Die Gurkenernte dauert mit <math><mn>18</mn></math> Erntehelfern auf
+            dem Gurkenflieger
+             <math><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>.
+             Wie lange würde sie dauern mit nur <math><mn>12</mn></math> Erntehelfern?
+            <span class="loesung">(18 * 6) / 12 = 9</span>
+          </li>
+          <li title="SP7:169:5">
+            Ein Baugebiet für <math><mn>22</mn></math> Grundstücke von je
+             <math><mn>360</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+             wird neu geplant für <math><mn>24</mn></math> Grundstücke.
+             Wie groß ist jedes Grundstück jetzt?
+            <span class="loesung">(22 * 360) / 24 = 330</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="SP7:199:31">
+            Ein Elefant hat ein Geburtsgewicht von etwa
+            <math><mn>100</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math> und
+            nimmt
+            <math><mn>2,9</mn><mi mathvariant="normal" class="MathML-Unit">t</mi></math>
+            zu, bis er erwachsen ist. Mit wie viel Prozent seines Erwachsenengewichts kommt ein
+            Elefant zur Welt?
+            <span class="loesung">(100 / 3000) * 100 = 3,3333</span>
+          </li>
+          <li title="SP7:201:1">
+            Für ein <math><mn>37500</mn></math> Euro teures Auto werden
+            <math><mn>3,5</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Skonto geboten. Wie hoch ist jetzt der Verkaufspreis?
+            <span class="loesung">37500 * 0,965 = 36187,50</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="???" style="position:relative;">
+            Wie vergrößert sich die Fläche eines Quadrates, wenn die Seitenlängen
+            verdoppelt werden?
+            <span class="loesung">A = (2a)² = <strong>4</strong>a²</span>
+          </li>
+          <li title="???" style="position:relative;">
+            Ein Rechteck mit ganzzahlig meterlangen Seiten
+            hat einen Umfang von
+            <math><mn>20</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>.
+            Wie viele formverschiedene solcher Rechtecke gibt es? Was ist die größte Fläche?
+            <span class="loesung">5, 25m²</span>
+          </li>
+        </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 7 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 8                                                     -->
+    <!-- 2025/03/03, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/03">Übungsblatt 8, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="SP7:41:21a">
+            <math>
+              <mn>7</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>14</mn>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mn>7</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>6</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>140</mn></math>
+            </span>
+          </li>
+          <li title="SP7:41:21b">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>4</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>29</mn>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>4</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>11</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>160</mn></math></span>
+          </li>
+          <li title="SP7:41:21c">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>5</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>45</mn>
+                <mo>+</mo>
+                <mn>24</mn>
+                <mo>&times;</mo>
+                <mo>(</mo>
+                  <mo form="prefix">&minus;</mo>
+                  <mn>2</mn>
+                <mo>)</mo>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>2</mn></math>
+            </span>
+          </li>
+          <li title="SP7:41:21d">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo>
+                <mn>1</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo>(</mo>
+                  <mo form="prefix">&minus;</mo>
+                  <mn>78</mn>
+                  <mo>+</mo>
+                  <mn>63</mn>
+                <mo>)</mo>
+                <mo>&div;</mo>
+                <mo>(</mo>
+                  <mo form="prefix">&minus;</mo>
+                  <mn>5</mn>
+                <mo>)</mo>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>4</mn></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="COR:34:3"> <!--  -->
+            <math>
+              <mfrac><mn>6</mn><mn>7</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>1</mn><mn>4</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>24</mn><mn>7</mn></mfrac>
+                <mo>=</mo>
+                <mn>3</mn><mfrac><mn>3</mn><mn>7</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li title="COR:34:5">
+            <math>
+              <mfrac><mn>2</mn><mn>5</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>1</mn><mn>10</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>4</mn></math></span>
+          </li>
+          <li title="COR:32:11+">
+            <math>
+              <mfrac><mn>1</mn><mn>10</mn></mfrac>
+              <mo>&minus;</mo>
+              <mfrac><mn>1</mn><mn>5</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mo form="prefix">&minus;</mo>
+                <mfrac><mn>1</mn><mn>10</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li title="COR:33:10">
+            <math>
+              <mfrac><mn>6</mn><mn>7</mn></mfrac>
+              <mo>&times;</mo>
+              <mfrac><mn>1</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>2</mn><mn>7</mn></mfrac></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:43:21">
+            <math>
+              <mfrac><mn>4</mn><mn>20</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>0,2</mn></math></span>
+
+          </li>
+          <li title="COR:43:35">
+            <math>
+              <mfrac><mn>5</mn><mn>8</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>0,625</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:93:2a+">
+            <math>
+              <mn>8</mn><mi>r</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>3</mn><mi>r</mi> <mo>+</mo> <mn>11</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>5</mn><mi>r</mi> <mo>&minus;</mo> <mn>11</mn>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:93:2d+"> <!--  -->
+            <math>
+              <mo form="prefix">&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>2</mn><mi>y</mi>
+                <mo>+</mo>
+                <mn>5</mn>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mi>y</mi>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mn>3</mn><mi>y</mi> <mo>&minus;</mo> <mn>5</mn>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:93:2h+">
+            <math>
+              <mn>2</mn><mi>z</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>10</mn>
+                <mo>&minus;</mo>
+                <mn>4</mn><mi>z</mi>
+              <mo>)²</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mo form="prefix">&minus;</mo>
+                <mo>(</mo>
+                  <mn>100</mn> <mo>+</mo> <mn>78</mn><mi>z</mi>
+                  <mo>+</mo>
+                  <msup><mi>z</mi><mn>2</mn></msup>
+                <mo>)</mo>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:93:2g+">
+            <math>
+              <mn>8</mn><mi>a</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>1</mn> <mo>+</mo> <mi>b</mi> <mo>+</mo> <mn>7</mn><mi>c</mi>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mi>a</mi>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mo>(</mo>
+                  <mn>7</mn><mi>a</mi> <mo>&minus;</mo> <mi>a</mi><mi>b</mi>
+                <mo>)</mo>
+                <mo>&minus;</mo>
+                <mn>7</mn><mi>a</mi><mi>c</mi>
+              </math>
+            </span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/03">Übungsblatt 8, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:163:6">
+            Es soll Tiramisu für <math><mn>14</mn></math> Personen bereitet werden anhand
+            folgenden Rezeptes für acht Personen:
+            vier Eigelb,
+            <math><mn>100</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>
+              feiner Zucker,
+            eine Zitrone,
+            <math><mn>500</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>
+              Mascarpone,
+            <math><mn>150</mn><mi mathvariant="normal" class="MathML-Unit">ml</mi></math>
+              Espresso,
+            <math><mn>225</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>
+            Löffelbiskuits,
+            zwei Esslöffel Kakaopulver.
+            <span class="loesung">
+              <math>
+                <mfrac><mn>14</mn><mn>8</mn></mfrac> <mo>&times;</mo>
+                <mo>[</mo>
+                <mn>4</mn> <mo>,</mo>
+                <mn>100</mn> <mo>,</mo>
+                <mn>1</mn> <mo>,</mo>
+                <mn>500</mn> <mo>,</mo>
+                <mn>150</mn> <mo>,</mo>
+                <mn>225</mn> <mo>,</mo>
+                <mn>2</mn> <mo>,</mo>
+                <mo>]</mo>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:163:8a">
+            Herr Tok verdient an einem 8-Stunden Tag <math><mn>108</mn></math> Euro.
+            Wie viel verdient er in einer 38-Stunden Woche?
+            <span class="loesung"><math><mn>513</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:169:6">
+            Zum Schulfest hat Linda einen Kuchen gebacken und plante
+            <math><mn>18</mn></math> Stücke zu je ein Euro, aber Josef
+            schneidet den Kuchen in <math><mn>15</mn></math> Stücke.
+            Wieviel kostet jetzt ein Stück ?
+            <span class="loesung">1,20 Euro</span>
+          </li>
+          <li title="SP7:169:B">
+            Wenn <math><mn>24</mn></math> Schülerinnen am Verkaufsstand arbeiten,
+            muss jede
+            <math><mn>60</mn><mi mathvariant="normal" class="MathML-Unit">min</mi></math>
+            da sein. Und bei <math><mn>30</mn></math> Schülerinnen?
+            <span class="loesung">48min</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="COR:139:3">
+            Eine Bank zahlt
+            <math><mn>3</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Jahreszins. Wie hoch sind die Zinsen für
+            <math><mn>4200</mn></math> Euro?
+            <span class="loesung">126 Euro</span>
+          </li>
+          <li title="COR:140:4">
+            Wie hoch ist ein Kredit mit
+            <math><mn>2040</mn></math> Jahreszins bei einem Zinssatz von
+            <math><mrow><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></mrow></math>?
+            <span class="loesung"><math><mn>34000</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="COR:140:6">
+            Ein Kontostand erhöht sich in einem Jahr von
+            <math><mn>1534</mn></math> Euro auf <math><mn>1564,68</mn></math> Euro
+            inklusive Zinsen. Wie hoch ist der Zinssatz?
+            <span class="loesung">
+              <math><mn>2</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="COR:164:14">
+            Wie hoch ist ein Dreieck mit
+            <math><mrow><mn>5,6</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow></math>
+            Grundseite und
+            <math><mrow><mn>16,8</mn><mi mathvariant="normal" class="MathML-Unit">cm²</mi></mrow></math>
+            Fläche?
+            <span class="loesung">
+              <math><mrow><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">cm</mi></mrow></math>
+            </span>
+          </li>
+          <li title="COR:177:1">
+            Wie groß ist der Umfang eines Quadrates mit
+            <math><mrow><mn>2500</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></mrow></math>
+            Fläche?
+            <span class="loesung">200m</span>
+          </li>
+        </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 8 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 9                                                     -->
+    <!-- 2025/03/03, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/03">Übungsblatt 9, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="SP7:41:15e">
+            <math>
+              <mn>160</mn>
+              <mo>&div;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>8</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>20</mn></math></span>
+          </li>
+          <li title="SP7:41:20a">
+            <math>
+              <mn>5</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>50</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mn>4</mn>
+              <mo>&times;</mo>
+              <mn>20</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>20000</mn></math></span>
+          </li>
+          <li title="SP7:41:20b">
+            <math>
+              <mn>20</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>4</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>5</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>25</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>10000</mn></math></span>
+          </li>
+          <li title="SP7:41:21b">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>4</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>29</mn>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>4</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>11</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>160</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="COR:32:3">
+            <math>
+              <mfrac><mn>3</mn><mn>5</mn></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>3</mn><mn>10</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>9</mn><mn>10</mn></mfrac></math></span>
+          </li>
+          <li title="COR:32:11">
+            <math>
+              <mfrac><mn>3</mn><mn>10</mn></mfrac>
+              <mo>&minus;</mo>
+              <mfrac><mn>1</mn><mn>5</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>1</mn><mn>10</mn></mfrac></math></span>
+          </li>
+          <li title="COR:33:3">
+            <math>
+              <mfrac><mn>7</mn><mn>20</mn></mfrac>
+              <mo>&times;</mo>
+              <mfrac><mn>4</mn><mn>5</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>7</mn><mn>25</mn></mfrac></math></span>
+          </li>
+          <li title="COR:34:7">
+            <math>
+              <mfrac><mn>3</mn><mn>4</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>4</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mfrac><mn>9</mn><mn>16</mn></mfrac></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf zwei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:43:26">
+            <math>
+              <mfrac><mn>56</mn><mn>80</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>0.7</mn></math></span>
+          </li>
+          <li title="COR:43:36">
+            <math>
+              <mfrac><mrow><mo form="prefix">&minus;</mo><mn>7</mn></mrow><mn>25</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>0.28</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:93:1b+">
+            <math>
+              <mn>8</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>4</mn><mi>x</mi> <mo>+</mo> <mn>12</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>4</mn><mi>x</mi> <mo>&minus;</mo> <mn>12</mn></math>
+            </span>
+          </li>
+          <li title="SP7:93:1h+">
+            <math>
+              <mo>(</mo>
+                <mn>4</mn><mi>x</mi> <mo>&minus;</mo> <mn>3</mn><mi>z</mi>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mi>z</mi>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>4</mn><mi>x</mi> <mo>&minus;</mo> <mn>2</mn><mi>z</mi></math>
+            </span>
+          </li>
+          <li title="SP7:93:1i">
+            <math>
+              <mo form="prefix">&minus;</mo><mn>4</mn>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>3</mn><mi>x</mi> <mo>+</mo> <mn>11</mn><mi>y</mi>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mn>9</mn><mi>z</mi>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mo form="prefix">&minus;</mo><mn>4</mn>
+                <mo>&minus;</mo>
+                <mn>3</mn><mi>x</mi>
+                <mo>+</mo> <mn>11</mn><mi>y</mi>
+                <mo>&minus;</mo>
+                <mn>9</mn><mi>z</mi></math>
+            </span>
+          </li>
+          <li title="SP7:93:3f">
+            <math>
+              <mn>11</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>9</mn><mi>x</mi> <mo>&minus;</mo> <mn>10</mn><mi>y</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>20</mn><mi>x</mi> <mo>+</mo> <mn>10</mn><mi>y</mi></math>
+            </span>
+            <span class="loesung"></span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/04">Übungsblatt 9, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:175:27a+">
+            Hauke tauscht für eine Sprachreise nach London
+            <math><mn>125</mn></math> Euro ein und erhält
+            <math><mn>85</mn><mi>&pound;</mi></math>.
+            Wie viel Britische Pfund erhält Nele für <math><mn>100</mn></math> Euro?
+            <span class="loesung"><math><mn>68</mn><mi>&pound;</mi></math></span>
+          </li>
+          <li title="SP7:175:27b+">
+            Julius erhält <math><mn>102</mn></math>&pound;. Wie viel Euro hat er
+            eingetauscht?
+            <span class="loesung"><math><mn>150</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="SP7:175:27c+">
+            Hauke kauft ein Souvenir für <math><mn>10,20</mn></math>&pound;.
+            Wie viel Euro ist es wert?
+            <span class="loesung">
+              <math><mn>15</mn><mi>&nbsp;Euro</mi></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+         </p>
+         <ol type="a">
+          <li title="SP7:174:21a">
+            Lara hat für ihre <math><mn>6</mn></math> Hasen einen Vorrat an Heu gekauft,
+            der für <math><mn>12</mn></math> Wochen ausreicht. Sie übernimmt von ihrer Freundin
+            Mia drei weitere Hasen. Wann ist der Vorrat aufgebraucht?
+            <span class="loesung">
+              <math><mn>8</mn><mi>&nbsp;Wochen</mi></math>
+            </span>
+          </li>
+          <li title="SP7:176:5a">
+            Für eine Klassenfahrt muss jeder der <math><mn>30</mn></math>
+            Schüler:innen <math><mn>336</mn></math> Euro bezahlen.
+            Wie viel muss jede(r) zahlen, wenn sich kurzfristig zwei Schüler
+            krank melden?
+            <span class="loesung">
+              <math><mn>360</mn><mi>&nbsp;Euro</mi></math>
+            </span>
+          </li>
+          <li title="SP7:175:5b">
+            Wie viele Teilnehmer:innen sind es, wenn jede(r)
+            <math><mn>315</mn></math> Euro zahlen muss?
+            <span class="loesung"><math><mn>32</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="COR:147:18+" data-keywords="Vermehrter Grundwert;">
+            Ein Drucker kostet inklusive
+            <math><mn>19</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Umsatzsteuer <math><mn>259,42</mn></math> Euro. Wie viel beträgt die
+            Umsatzsteuer?
+            <span class="loesung">
+              <math>
+                <mn>41,42</mn><mi>&nbsp;Euro</mi>
+              </math>
+            </span>
+            <span class="loesung channel-one">
+              <math>
+                <mo>=</mo>
+                <mo>(</mo>
+                  <mo>(</mo>
+                    <mn>259,42</mn><mo>&div;</mo><mn>1,19</mn>
+                  <mo>)</mo>
+                  <mo>&times;</mo>
+                  <mn>0.19</mn>
+                <mo>)</mo>
+                <mi>&nbsp;Euro</mi>
+              </math>
+            </span>
+          </li>
+          <li title="COR:147:16" data-keywords="Verminderter Grundwert;">
+            Ein Kunde erhält aufgrund einer Reklamation
+            <math><mn>20</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Nachlass und zahlt nur noch <math><mn>130</mn></math> Euro. Wie hoch war
+            der ursprüngliche Rechnungsbetrag?
+            <span class="loesung"><math><mn>162,50</mn><mi>&nbsp;Euro</mi></math></span>
+            <span class="loesung channel-one">
+              <math><mo>=</mo>
+                <mo>(</mo><mn>130</mn><mo>&div;</mo> <mn>0.80</mn> <mo>)</mo>
+                <mi>&nbsp;Euro</mi>
+              </math>
+            </span>
+          </li>
+          <li title="COR:147:14a">
+            Mit der BahnCard 25 erhält man
+            <math><mn>25</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Preisnachlass auf den normalen Fahrpreis.
+            Was kostet eine <math><mn>145,60</mn></math> Euro teure Fahrkarte mit
+            BahnCard 25?
+            <span class="loesung"><math><mn>109,20</mn><mi>&nbsp;Euro</mi></math></span>
+            <span class="loesung channel-one">
+              <math><mo>=</mo>
+                <mo>(</mo> <mn>145,60</mn><mo>&times;</mo> <mn>0.75</mn> <mo>)</mo>
+                <mi>&nbsp;Euro</mi>
+              </math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie von Dreiecken &ndash; berechnen Sie die jeweils fehlenden Angaben.</p>
+        <ol type="a">
+          <li title="COR:164:10">
+            <math>
+              <mi>g</mi><mo>=</mo>
+              <mn>6,4</mn><mi mathvariant="normal" class="MathML-Unit">dm</mi>
+            </math>,
+            <math>
+              <mi>h</mi><mo>=</mo>
+              <mn>3</mn><mi mathvariant="normal" class="MathML-Unit">dm</mi>
+              <mi>,&nbsp;</mi><mi>A</mi><mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>9,6</mn><mi>dm²</mi></math></span>
+          </li>
+          <li title="COR:164:11">
+            <math>
+              <mi>h</mi><mo>=</mo>
+              <mn>15</mn><mi mathvariant="normal" class="MathML-Unit">dm</mi>
+            </math>,
+            <math>
+              <mi>A</mi><mo>=</mo>
+              <mn>30</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi>
+              <mi>,&nbsp;</mi> <mi>g</mi> <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>40</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            </span>
+          </li>
+          <li title="COR:164:13">
+            <math>
+              <mi>g</mi><mo>=</mo>
+              <mn>8</mn><mi mathvariant="normal" class="MathML-Unit">m</mi>
+            </math>,
+            <math>
+              <mi>A</mi><mo>=</mo>
+              <mn>24</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi>
+              <mi>,&nbsp;</mi> <mi>h</mi> <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>6</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            </span>
+          </li>
+        </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 9 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 10                                                    -->
+    <!-- 2025/03/05, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/05">Übungsblatt 10, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="SP7:41:20c">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>4</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mn>3</mn>
+              <mo>&times;</mo>
+              <mn>5</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>25</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>20</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo> <mn>30000</mn></math></span>
+          </li>
+          <li title="SP7:41:20d">
+            <math>
+             <mn>125</mn>
+             <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>40</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>3</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>8</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mn>5</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo> <mn>600000</mn></math></span>
+          </li>
+          <li title="SP7:41:21c">
+            <math>
+              <mn>3</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>100</mn>
+                <mo>+</mo>
+                <mn>12</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo> <mn>264</mn></math></span>
+          </li>
+          <li title="SP7:41:21d">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>50</mn>
+                <mo>+</mo>
+                <mn>9</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>20</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>820</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="COR:33:5">
+            <math>
+              <mfrac><mn>3</mn><mn>5</mn></mfrac>
+              <mo>&times;</mo>
+              <mfrac><mn>5</mn><mn>7</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>3</mn><mn>7</mn></mfrac></math>
+            </span>
+          </li>
+          <li title="COR:32:5">
+            <math>
+              <mfrac><mn>1</mn><mn>3</mn></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>7</mn><mn>9</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>10</mn><mn>9</mn></mfrac>
+                <mo>=</mo>
+                <mn>1</mn><mfrac><mn>1</mn><mn>9</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li title="COR:32:12">
+            <math>
+              <mfrac><mn>7</mn><mn>3</mn></mfrac>
+              <mo>&minus;</mo>
+              <mfrac><mn>3</mn><mn>14</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>89</mn><mn>42</mn></mfrac></math>
+            </span>
+          </li>
+          <li title="COR:33:8+">
+            <math>
+              <mfrac><mrow><mo form="prefix">&minus;</mo><mn>4</mn></mrow><mn>9</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>8</mn><mn>3</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:43:34">
+            <math>
+              <mfrac><mrow><mo form="prefix">&minus;</mo><mn>7</mn></mrow><mn>8</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>0,875</mn></math>
+            </span>
+          </li>
+          <li title="COR:43:30">
+            <math>
+              <mfrac><mn>80</mn><mn>2000</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mo form="prefix">&minus;</mo><mn>0,04</mn></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:93:2e+">
+            <math>
+              <mo form="prefix">&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>4</mn><mi>a</mi>
+                <mo>&minus;</mo>
+                <mn>5</mn><mi>b</mi>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mi>a</mi>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>5</mn><mi>a</mi> <mo>+</mo> <mn>5</mn><mi>b</mi></math></span>
+          </li>
+          <li title="SP7:93:2i+">
+            <math>
+              <mo form="prefix">&minus;</mo><mn>5</mn><mi>y</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>9</mn><mi>x</mi>
+                <mo>+</mo>
+                <mn>3</mn><mi>y</mi>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mn>2</mn><mi>z</mi>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mo form="prefix">&minus;</mo><mn>8</mn><mi>y</mi>
+                <mo>+</mo> <mn>9</mn><mi>x</mi>
+                <mo>+</mo> <mn>2</mn><mi>z</mi>
+              </math>
+            </span>
+          </li>
+          <li title="SP7:93:2h+">
+            <math>
+              <mn>2</mn><mi>xy</mi>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>4</mn><mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>5</mn><mi>y</mi>
+              <mo>)²</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+            <math>
+              <mn>16</mn><msup><mi>x</mi><mn>2</mn></msup> <mo>+</mo>
+              <mn>42</mn><mi>x</mi><mi>y</mi> <mo>+</mo>
+              <mn>25</mn><msup><mi>y</mi><mn>2</mn></msup>
+            </math>
+            </span>
+          </li>
+          <li title="SP7:93:1b+">
+            <math>
+              <mn>2</mn><mi>x</mi>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mn>4</mn><mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>3</mn><mi>y</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mn>6</mn><mi>x</mi> <mo>&minus;</mo> <mn>3</mn><mi>y</mi></math>
+            </span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/17">Übungsblatt 10, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:162:4b">
+            <math><mn>125</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>
+            eines Gewürzes kosten <math><mn>5</mn></math> Euro.
+            Wieviel kosten
+            <math><mn>50</mn><mi mathvariant="normal" class="MathML-Unit">g</mi></math>?
+            <span class="loesung"><math><mn>2</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="SP7:162:4d">
+            <math><mn>2</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Birnen kosten <math><mn>4,50</mn></math> Euro.
+            Wieviel kosten
+            <math><mn>3</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>?
+            <span class="loesung"><math><mn>6,75</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="SP7:163:9">
+            Es sollen Wände von insgesamt
+            <math><mn>800</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            gestrichen werden bei einem Verbrauch von Farbe von
+            <math><mn>2</mn><mi mathvariant="normal" class="MathML-Unit">l</mi></math>
+            für jeweils
+            <math><mn>10</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>.
+            Die Farbe wird angeboten zu <math><mn>21</mn></math> Euro im
+            <math><mn>10</mn><mi mathvariant="normal" class="MathML-Unit">l</mi></math>
+            Eimer und für <math><mn>29</mn></math> Euro im
+            <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">l</mi></math>
+            Eimer. Was kostet die notwendige Farbe?
+            <span class="loesung">10x15l, 1x10l: 311 Euro</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="COR:103:2">
+            Um Kies zu transportieren, fahren <math><mn>6</mn></math> LKWs
+            <math><mn>4</mn></math>-mal. Wie oft müssen <math><mn>8</mn></math> LKWs
+            fahren?
+            <span class="loesung">3 mal</span>
+          </li>
+          <li title="COR:103:4">
+            <math><mn>9</mn></math> Maschinen erledigen einen Auftrag in
+            <math><mn>5</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>.
+            Wie lange brauchen <math><mn>6</mn></math> Maschinen
+            <span class="loesung">7,5h</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="COR:139:5">
+            Alexander nimmt einen Kredit in Höhe von
+            <math><mn>450</mn></math> Euro auf. Der Zinssatz beträgt
+            <math><mn>7,2</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Wie viel Zins muss er bezahlen?
+            <span class="loesung">32,40 Euro</span>
+          </li>
+          <li title="COR:147:22">
+            Ein Kredit von
+            <math><mn>1350</mn></math> Euro muss am Jahresende mit
+            <math><mn>1566</mn></math> Euro getilgt werden.
+            Wie hoch war der Zinssatz?
+            <span class="loesung">16%</span>
+          </li>
+          <li title="wd" data-keywords="Vermehrter Grundwert">
+            Nach einer Verteuerung von
+            <math><mn>150</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            beträgt der Gaspreis
+            <math><mn>15</mn><mi>ct</mi></math> pro <math><mi>kWh</mi></math>.
+            Wie teuer war Gas vorher?
+            <span class="loesung"><math><mn>6</mn><mi>ct</mi></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="COR:163:19">
+            Berechnen Sie die fehlende Seitenlänge und die Fläche eines Rechtecks mit
+            Seitenlänge
+            <math><mn>20</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            und Umfang
+            <math><mn>64</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>.
+            <span class="loesung">
+              <math><mn>12</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>,
+              <math><mn>240</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>.
+            </span>
+          </li>
+          <li title="COR:163:22">
+            Berechnen Sie die fehlende Seitenlänge und den Umfang eines Rechtecks mit
+            Seitenlänge
+            <math><mn>12</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>,
+            und einer Fläche von
+            <math><mn>96</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>.
+            <span class="loesung">
+              <math><mn>8</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>,
+              <math><mn>40</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>.
+            </span>
+
+            <span class="loesung"></span>
+          </li>
+        </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 10 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 11                                                    -->
+    <!-- 2025/03/05, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/03/05">Übungsblatt 11, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="SP7:46:7a">
+            <math>
+              <mo>(</mo>
+               <mo form="prefix">&minus;</mo><mn>27</mn>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mn>11</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+               <mo form="prefix">&minus;</mo><mn>3</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mn>40</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>100</mn></math></span>
+          </li>
+          <li title="SP7:46:8a">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>2</mn>
+                <mo>+</mo>
+                <mn>4</mn>
+                <mo>&times;</mo>
+                <mo>(</mo>
+                  <mo form="prefix">&minus;</mo><mn>6</mn>
+                <mo>)</mo>
+              <mo>)</mo>
+              <mo>&div;</mo>
+              <mn>2</mn>
+              <mo>&minus;</mo>
+              <mn>2</mn> <mo>&times;</mo> <mn>5</mn>
+              <mn></mn><mo></mo><mn></mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>23</mn></math></span>
+          </li>
+          <li title="SP7:46:9">
+            <math>
+              <mn>8</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>13</mn>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mn>8</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>7</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>160</mn></math></span>
+          </li>
+          <li title="SP7:46:8b+">
+            <math>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>36</mn>
+              <mo>)</mo>
+              <mo>&div;</mo>
+              <mo>(</mo>
+                <mn>31</mn> <mo>&minus;</mo> <mn>37</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>44</mn> <mo>&minus;</mo> <mn>37</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>1</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="COR:32:10">
+            <math>
+              <mfrac><mn>7</mn><mn>8</mn></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>4</mn><mn>5</mn></mfrac>
+            <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>67</mn><mn>40</mn></mfrac></math>
+            </span>
+          </li>
+          <li title="COR:33:4+">
+            <math>
+              <mfrac><mn>4</mn><mn>9</mn></mfrac>
+              <mo>&times;</mo>
+              <mfrac><mn>3</mn><mn>4</mn></mfrac>
+              <mo>&times;</mo>
+              <mn>9</mn>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>3</mn></math></span>
+          </li>
+          <li title="COR:34:10">
+            <math>
+              <mfrac><mn>1</mn><mn>10</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>1</mn><mn>5</mn></mfrac></math>
+            </span>
+          </li>
+          <li title="COR:32:18">
+            <math>
+              <mfrac><mn>1</mn><mn>6</mn></mfrac>
+              <mo>&minus;</mo>
+              <mfrac><mn>1</mn><mn>7</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math><mfrac><mn>1</mn><mn>42</mn></mfrac></math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf zwei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:58:1b">
+            <math>
+              <mn>12</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>12,5</mn></math></span>
+          </li>
+          <li title="COR:43:36">
+            <math>
+              <mfrac><mn>7</mn><mn>25</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>0,28</mn></math></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:43:38a">
+            <math>
+              <mn>4</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>29</mn>
+                <mo>+</mo>
+                <mn>48</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>25</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>101</mn></math></span>
+          </li>
+          <li title="SP7:43:38b">
+            <math>
+              <mn>12</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>5</mn>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>24</mn>
+              <mo>)</mo>
+              <mo>&div;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>8</mn>
+              <mo>)</mo>
+              <mo></mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>63</mn></math></span>
+          </li>
+          <li title="SP7:43:38c">
+            <math>
+              <mo form="prefix">&minus;</mo> <mn>22</mn>
+              <mo>+</mo>
+              <mo>(</mo>
+                <mn>17</mn>
+                <mo>&minus;</mo>
+                <mn>20</mn>
+                <mo>&div;</mo>
+                <mo>(</mo>
+                  <mo form="prefix">&minus;</mo> <mn>5</mn>
+                <mo>)</mo>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mo form="prefix">&minus;</mo><mn>1</mn></math></span>
+          </li>
+          <li title="SP7:43:38d">
+            <math>
+              <mn>84</mn>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>85</mn>
+                <mo>&div;</mo>
+                <mo>(</mo>
+                  <mo form="prefix">&minus;</mo> <mn>17</mn>
+                <mo>)</mo>
+                <mo>&minus;</mo>
+                <mn>7</mn>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo> <mn>2</mn>
+              <mo>)</mo>
+              <mo>=</mo>
+            </math>
+            <span class="loesung"><math><mn>60</mn></math></span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/29">Übungsblatt 11, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="SP7:162:4b">
+            <math><mn>6</mn></math> Eier kosten <math><mn>2,70</mn></math> Euro.
+            Wie viel kosten <math><mn>10</mn></math> Eier?
+            <span class="loesung"><math><mn>4,50</mn><mi>&nbsp;Euro</mi></math></span>
+          </li>
+          <li title="wd">
+            <math><mn>10</mn></math> Kühe brauchen etwa
+            <math><mn>36</mn><mi mathvariant="normal" class="MathML-Unit">t</mi></math>
+            Heu über Winter. Wie viel Heu brauchen <math><mn>22</mn></math> Kühe?
+            <span class="loesung">79,2t</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="COR:104:3">
+            Eine Fahrt dauert bei
+            <math><mn>90</mn><mi mathvariant="normal" class="MathML-Unit">km/h</mi></math> insgesamt
+            <math><mn>5</mn><mi mathvariant="normal" class="MathML-Unit">h</mi></math>.
+            Wie lange dauert sie
+            <math><mn>75</mn><mi mathvariant="normal" class="MathML-Unit">km/h</mi></math>?
+            <span class="loesung">(90 x 5) / 75 = 6</span>
+          </li>
+          <li title="COR:104:4">
+            Eine Fahrgemeinschaft aus drei Arbeitskolleg:innen berechnet einen
+            Monatsbeitrag von <math><mn>52</mn></math> Euro. Wie hoch wird der Beitrag
+            bei vier Kolleg:innen?
+            <span class="loesung">(3 x 52) / 4 = 39</span>
+          </li>
+          <li title="SP7:168:5">
+            Eine Werbeanzeige kostet die <math><mn>6</mn></math> Betreiber
+            <math><mn>400</mn></math> Euro. Ein Betreiber sagt ab. Wieviel muss
+            jetzt jeder Einzelne bezahlen?
+            <span class="loesung">(6 * 400/6) / 5 = 80</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="COR:147:21">
+            Jahreszins für ein Guthaben von
+            <math><mn>6250</mn></math> Euro bei einem Zinssatz von
+            <math><mn>2,7</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>?
+            <span class="loesung">176,04</span>
+          </li>
+          <li title="COR:138:12">
+            Die Preise für Damenstiefel werden erst um
+            <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            dann nochmals um
+            <math><mn>20</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            Prozent gesenkt. Der resultierende Preis für ein Paar Stiefel ist
+            dann <math><mn>44,20</mn></math> Euro. Wie teuer waren die Stiefel vor
+            den Ermäßigungen?
+            <span class="loesung">65 = (44,20) : 0,80) : 0,85</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="COR:162:3">
+            Fläche eines Dreiecks mit Seiten
+            <math><mi>a</mi> <mo>=</mo> <mn>3,5cm</mn></math>,
+            <math><mi>b</mi> <mo>=</mo> <mn>3,2cm</mn></math>,
+            und Höhe
+            <math><msub><mi>h</mi><mi>b</mi></msub> <mo>=</mo> <mn>3,1cm</mn></math>
+            zur Seite <math><mi>b</mi></math>?
+            <span class="loesung">
+              <math><mn>4,96</mn><mi mathvariant="normal" class="MathML-Unit">cm²</mi></math>
+            </span>
+          </li>
+          <li title="COR:162:1">
+            Fläche eines Quadrates mit Umfang von
+            <math><mn>32</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>?
+            <span class="loesung">
+              <math><mn>64</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
+            </span>
+          </li>
+        </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 11 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Uebungsblatt 12                                                    -->
+    <!-- 2025/01/18, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/18">Übungsblatt 12, Teil A</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content ">
+        <p>Berechnen Sie den Wert der folgenden Ausdrücke.</p>
+        <ol type="a">
+          <li title="SP7:43:38e">
+            <math>
+              <mo form="prefix">&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>88</mn>
+                <mo>&div;</mo>
+                <mo>(</mo>
+                  <mn>13</mn>
+                  <mo>+</mo>
+                  <mn>5</mn>
+                  <mo>&times;</mo>
+                  <mo>(</mo>
+                    <mo form="prefix">&minus;</mo><mn>7</mn>
+                  <mo>)</mo>
+                <mo>)</mo>
+                <mo>&minus;</mo>
+                <mn>5</mn>
+              <mo>)</mo>
+              <mn></mn><mo></mo><mn></mn>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="SP7:43:41a">
+            <math>
+              <mn>5</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mn>4</mn>
+                <mo>&minus;</mo>
+                <mn>3</mn> <mo>&times;</mo> <mn>2</mn>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+              <mo>)</mo>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="SP7:43:41b">
+            <math>
+              <mn>5</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mn>4</mn>
+                <mo>&minus;</mo>
+                <mn>3</mn>
+                <mo>&times;</mo>
+                <mo>(</mo>
+                  <mn>2</mn>
+                  <mo>&minus;</mo>
+                  <mn>1</mn>
+                <mo>)</mo>
+              <mo>)</mo>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="SP7:43:41c">
+            <math>
+              <mn>5</mn>
+              <mo>&times;</mo>
+              <mo>(</mo>
+                <mn>4</mn>
+                <mo>&minus;</mo>
+                <mo>(</mo>
+                  <mn>3</mn>
+                  <mo>&times;</mo>
+                  <mn>2</mn>
+                <mo>)</mo>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mn>1</mn>
+            </math>
+            <span class="loesung"></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
+        <ol type="a">
+          <li title="COR:32:16">
+            <math>
+              <mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>&minus;</mo>
+              <mfrac><mn>2</mn><mn>5</mn></mfrac>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="COR:32:6">
+            <math>
+              <mfrac><mn>1</mn><mn>2</mn></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>5</mn><mn>6</mn></mfrac>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="COR:33:7">
+            <math>
+              <mfrac><mn>4</mn><mn>10</mn></mfrac>
+              <mo>&times;</mo>
+              <mfrac><mn>3</mn><mn>8</mn></mfrac>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="COR:34:9">
+            <math>
+              <mfrac><mn>7</mn><mn>10</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>2</mn><mn>5</mn></mfrac>
+            </math>
+            <span class="loesung"></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Wie lautet die jeweilige Dezimaldarstellung auf drei Dezimalstellen genau?
+        </p>
+        <ol type="a">
+          <li title="COR:43:17">
+            <math>
+              <mfrac><mn>1</mn><mn>500</mn></mfrac>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="COR:43:12">
+            <math>
+              <mfrac><mn>3</mn><mn>50</mn></mfrac>
+            </math>
+            <span class="loesung"></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Vereinfachen Sie die folgenden Terme.</p>
+        <ol type="a">
+          <li title="SP7:93:1g+">
+            <math>
+              <mo>(</mo>
+                <mi>x</mi> <mo>+</mo> <mi>y</mi>
+              <mo>)</mo>
+              <mo>+</mo>
+              <mn>19y</mn>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="SP7:93:3e">
+            <math>
+              <mn>11</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>9</mn><mi>x</mi>
+                <mo>+</mo>
+                <mn>10</mn><mi>y</mi>
+              <mo>)</mo>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="SP7:93:2f+">
+            <math>
+              <mn>3</mn><mi>a</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mn>6</mn> <mo>&minus;</mo> <mn>4</mn><mi>b</mi>
+              <mo>)</mo>
+              <mo>&times;</mo>
+              <mi>a</mi>
+            </math>
+            <span class="loesung"></span>
+          </li>
+          <li title="SP7:94:7c">
+            <math>
+              <mo form="prefix">&minus;</mo><mn>3</mn><mi>x</mi>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mn>9</mn><mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>9</mn><mi>y</mi>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo>
+                <mo form="prefix">&minus;</mo><mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>2</mn><mi>y</mi>
+              <mo>)</mo>
+              <mo>&minus;</mo>
+              <mn>10</mn><mi>x</mi>
+            </math>
+            <span class="loesung"></span>
+          </li>
+        </ol>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/01/29">Übungsblatt 12, Teil B</h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p>
+          Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch
+          mit Kontrolle anhand der zeilenweise Invarianz des Quotienten
+          <math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>.
+        </p>
+        <ol type="a">
+          <li title="COR:100:7">
+            <math><mn>80,5</mn><mi mathvariant="normal" class="MathML-Unit">m³</mi></math>
+            Wasser füllen <math><mn>7</mn></math> Becken. Wie viel Wasser benötigt man
+            für <math><mn>4</mn></math> Becken?
+            <span class="loesung">(80,5 / 7) * 4 = 46</span>
+          </li>
+          <li title="COR:106:7">
+            Aus
+            <math><mn>240</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Rohkaffee lassen sich
+            <math><mn>225</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Röstkaffee herstellen. Wie viel
+            <math><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Röstkaffee lassen sich aus
+            <math><mn>600</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
+            Rohkaffee herstellen?
+            <span class="loesung">(225 / 240) * 600 = 562,50</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>
+          Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch mit
+          Kontrolle anhand der zeilenweisen Invarianz des Produktes
+          <math><mi>a</mi><mo>&times;</mo><mi>b</mi></math>.
+        </p>
+        <ol type="a">
+          <li title="COR:104:5">
+            Ein Florist hat <math><mn>10</mn></math> Rosensträuße gebunden aus je
+            <math><mn>9</mn></math> Rosen. Wie viele Sträuße erhält er bei
+            <math><mn>15</mn></math> Rosen pro Strauß?
+            <span class="loesung">6</span>
+          </li>
+          <li title="COR:106:10">
+            Eine Kundin kauft <math><mn>20</mn></math> Tassen zu einem Preis
+            von je <math><mn>7</mn></math> Euro. Wie viele Tassen erhält sie
+            beim Umtausch gegen Tassen von je <math><mn>5,60</mn></math> Euro?
+            <span class="loesung">(20 * 7) / 5,60 = 25</span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Prozentrechnung &ndash; Lösung bitte auch tabellarisch.</p>
+        <ol type="a">
+          <li title="COR:146:10">
+            Die Heizkosten einer Schule stiegen von
+            <math><mn>1250</mn></math> Euro auf <math><mn>1600</mn></math> Euro?
+            Wie groß ist diese Erhöhung in Prozent?
+            <span class="loesung">(350 / 1250) * 100 = 28</span>
+          </li>
+          <li title="COR:146:6">
+            <math><mn>4</mn></math> Monitore einer Lieferung sind defekt.
+            Das sind
+            <math><mn>5</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
+            der gesamten Lieferung. Wie viele Monitore wurden geliefert?
+            <span class="loesung">80 = 4 * (100/5)</span>
+          </li>
+          <li title="SP7:?:?">
+            Wie verändert sich der Prozentsatz, wenn man den Prozentwert bzw. den
+            Grundwert verdoppelt?
+            <span class="loesung"></span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Geometrie.</p>
+        <ol type="a">
+          <li title="COR:164:11">
+            Länge der Grundseite eines Dreiecks mit Höhe
+            <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
+            und Fläche
+            <math><mn>30</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>?
+            <span class="loesung">4m</span>
+          </li>
+          <li title="COR:146:">
+            Fläche eines Dreiecks mit Grundseite von
+            <math><mn>2,5</mn><mi mathvariant="normal" class="MathML-Unit">dm</mi></math>
+            und Höhe von
+            <math><mn>30</mn><mi mathvariant="normal" class="MathML-Unit">mm</mi></math>?
+            <math>
+            </math>
+            <span class="loesung"></span>
+          </li>
+        </ol>
+       </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Uebungsblatt 12 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    <!-- -->
+  </body>
+  <!-- -->
+</html>
+<!-- Eof -->

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- Datei: lucanlearn.github.io/Probepruefungen/index.html                  -->
+<!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
+<!-- Beschreibung: Probeprüfungen Mathematik; local github repo              -->
+<!-- Status: w3-checked: 2025/03/07                                          -->
+<!-- Revision: 2025/03/07 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"     content="width=device-width,initial-scale=1">
+    <!-- -->
+    <meta name="description"  content="LuCanLearn Mathematik Prüfung Muster">
+    <meta name="keywords"     content="LuCanLearn">
+    <meta name="keywords"     content="Mathematik">
+    <meta name="keywords"     content="Uebungsblatt">
+    <meta name="keywords"     content="Muster">
+    <!-- -->
+    <base target="_blank">
+    <link href="../builds/vendor/start/jquery-ui.custom.css" rel="stylesheet">
+    <link href="../builds/vendor/start/customizer.css" rel="stylesheet">
+    <link href="../builds/combined.css" rel="stylesheet">
+    <link href="../builds/media.css" rel="stylesheet">
+
+    <!-- with HACKs ??? - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <link href="../css/lcl.css" rel="stylesheet">
+
+    <style>
+      body > section > header > h2 > span { font-size:x-small!important; }
+
+      table.grid { border-collapse:collapse; margin-top:0.25rem; margin-bottom:0.5rem; }
+      table.grid, table.grid th, table.grid td { border:1pt solid black; }
+      table.grid tr.separator td { height:0.25em; padding:0em; border-left:hidden; border-right:hidden; }
+      table.grid.proportional caption { text-align:left; }
+      table.grid.proportional tr:first-of-type td { border-bottom:2pt solid black; }
+      table.grid.proportional tr td:nth-of-type(8) { border-right:2pt solid black; }
+      table.grid#geometrie tr td:nth-of-type(2) { vertical-align:middle; text-align:center; }
+
+      span.ll { display:inline-block; width:5em; border-bottom:1pt solid black; margin-right:2em; position:relative; }
+      span.ll.wide { width:12em; }
+
+      tr.loesung, td.loesung { color:red; }
+      body:not(.sbm) table.grid tr.loesung td { visibility:hidden; }
+      body:not(.sbm) table.grid tr td.loesung { visibility:hidden; }
+
+      ol li { margin-top:0.25em; margin-bottom:0.5em; }
+      dl dd { margin-top:0.5em; }
+
+      .vis-hidden { visibility:hidden; }
+    </style>
+
+    <!-- utilities -->
+    <script src="../js/lcl.js" defer></script>
+
+    <!-- -->
+    <title>Probeprüfungen</title>
+  </head>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- body                                                                 -->
+  <!-- 2025/02/20, wd                                                       -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- class sbm zeigt die Lösungen an -->
+  <body class="ui-helper-reset" data-display="content">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- h1 für Suchmaschinen ???                                           -->
+    <!-- 2025/02/20, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <h1>LuCanLearn</h1>
+    <h1>Mathematik</h1>
+    <h1>Probeprüfungen</h1>
+    <h1>Probepruefungen</h1>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Inhalt data aus den sections pro "Seite"                           -->
+    <!-- 2025/02/20, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    <!-- button -->
+    <button type="button" class="ui-state-active" title="Lösungen anzeigen" data-js="sbm">
+      &nbsp;<strong>L</strong><span id="plus">+</span><span id="minus">&minus;</span>&nbsp;
+    </button>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Probeprüfung 1                                                     -->
+    <!-- 2025/02/24, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/02/28">Probeprüfung 1, Teil A 1|2
+          <span class="channel-one">(ohne Taschenrechner)</span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <p><strong>Grundrechenarten (Schriftliche Rechnung)</strong></p>
+        <table class="grid">
+          <tbody>
+            <tr>
+              <td></td><td>2</td><td>7,</td><td>5</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td>
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td>+</td><td>5</td><td>3,</td><td>8</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr class="loesung">
+              <td></td><td>8</td><td>1,</td><td>3</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+            </tr>
+            <!-- &minus; -->
+            <tr class="separator">
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td> <td>7</td><td>3</td><td>5,</td><td>4</td>
+              <td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&minus;</td><td></td> <td>5</td><td>1,</td><td>8</td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr class="loesung">
+              <td></td><td>6</td><td>8</td><td>3,</td><td>6</td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+            </tr>
+            <!-- &times; -->
+            <tr class="separator">
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td><span class="vis-hidden">&minus;</span></td>  <!-- secure width of 1st column -->
+              <td>7</td><td>1,</td><td>3</td>
+              <td>&times;</td>
+              <td>8</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr class="loesung">
+              <td>5</td><td>7</td><td>0,</td><td>4</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+            </tr>
+            <!-- &div; -->
+            <tr class="separator">
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td><span class="vis-hidden">&minus;</span></td>
+              <td>0,</td><td>7</td><td>1</td><td>2</td>
+              <td>&div;</td>
+              <td>4</td>
+              <td>=</td>
+              <td class="loesung">0,</td><td class="loesung">1</td><td class="loesung">7</td><td class="loesung">8</td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td class="loesung">0</td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td class="loesung">0</td><td class="loesung">7</td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td class="loesung">4</td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td class="loesung">3</td><td class="loesung">1</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td class="loesung">2</td><td class="loesung">8</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td></td><td class="loesung">3</td><td class="loesung">2</td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td></td><td class="loesung">3</td><td class="loesung">2</td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td></td><td></td><td class="loesung">0</td>
+              <td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- Probeprüfung 1, Teil a 2|2 - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">
+           Probeprüfung 1, Teil A 2|2
+          <span class="channel-one">(ohne Taschenrechner)</span>
+         </h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <dl>
+          <dt>Bruchrechnung</dt>
+          <dd>
+            <math><mfrac><mn>7</mn><mn>9</mn></mfrac>
+              <mo>+</mo>
+              <mfrac><mn>2</mn><mn>9</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="ll">
+              <math class="vis-hidden"><mfrac><mn>7</mn><mn>8</mn></mfrac></math>
+              <span class="loesung">&nbsp;
+                <math><mn>1</mn></math>
+              </span>
+            </span>
+            <!-- -->
+            <math><mfrac><mn>7</mn><mn>9</mn></mfrac>
+              <mo>&minus;</mo>
+              <mfrac><mn>2</mn><mn>9</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="ll">
+              <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+              <span class="loesung">
+                <math><mfrac><mn>5</mn><mn>9</mn></mfrac></math>
+              </span>
+            </span>
+          </dd>
+          <dd>
+            <math>
+              <mfrac><mn>7</mn><mn>9</mn></mfrac>
+              <mo>&times;</mo>
+              <mfrac><mn>2</mn><mn>9</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="ll">
+              <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+              <span class="loesung">
+                <math><mfrac><mn>14</mn><mn>81</mn></mfrac></math>
+              </span>
+            </span>
+            <!-- -->
+            <math>
+              <mfrac><mn>7</mn><mn>9</mn></mfrac>
+              <mo>&div;</mo>
+              <mfrac><mn>2</mn><mn>9</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="ll">
+              <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+              <span class="loesung">
+                <math><mfrac><mn>7</mn><mn>2</mn></mfrac></math>
+              </span>
+            </span>
+          </dd>
+          <dd>
+            Das kleinste Ergebnis ist: &nbsp;
+            <span class="ll">
+              <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+              <span class="loesung">
+                <math><mfrac><mn>14</mn><mn>81</mn></mfrac></math>
+              </span>
+            </span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>Rationale Zahlen</dt>
+          <dd>
+            <p>
+              Frau Müller hat -375€ auf ihrem Konto. Zu ihrem Geburtstag bekommt sie
+              400€ geschenkt. Wie hoch ist ihr Kontostand jetzt?
+            </p>
+          </dd>
+          <dd>
+            <p>
+              Rechnung:
+              <span class="ll wide">&nbsp;
+                <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                <span class="loesung">-375€ + 400€</span>
+              </span>
+            </p>
+            <p>&nbsp;</p>
+            <p>
+              Antwort:&nbsp;
+              <span class="ll wide">&nbsp;
+                <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                <span class="loesung">25€</span>
+              </span>
+            </p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>Terme</dt>
+          <dd>
+            Fassen Sie soweit wie möglich zusammen:
+            <ol type="a">
+              <li>
+                <math>
+                  <mn>2</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mn>16</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mn>31</mn><mi>x</mi>
+                  <mo>=</mo>
+                </math>
+                <span class="ll wide">&nbsp;
+                  <math class="vis-hidden"><mfrac><mn>7</mn><mn>7</mn></mfrac></math>
+                  <span class="loesung"><math><mn>49</mn><mi>x</mi></math></span>
+                </span>
+              </li>
+              <li>
+                <math>
+                  <mn>41</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mn>12</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mn>23</mn> <mo>-</mo> <mn>8</mn>
+                  <mo>=</mo>
+                </math>
+                <span class="ll wide">&nbsp;
+                  <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
+                  <span class="loesung">
+                    <math><mn>53</mn><mi>x</mi> <mo>+</mo> <mn>15</mn></math>
+                  </span>
+                </span>
+              </li>
+              <li>
+                <math>
+                  <mn>16</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mn>4</mn>
+                  <mo>+</mo>
+                  <mn>4</mn><mi>x</mi> <mo>-</mo> <mn>7</mn><mi>x</mi>
+                  <mo>+</mo>
+                  <mn>25</mn>
+                  <mo>=</mo>
+                </math>
+                <span class="ll wide">&nbsp;
+                  <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
+                  <span class="loesung">
+                    <math><mn>16</mn><mi>x</mi> <mo>+</mo> <mn>29</mn></math>
+                  </span>
+                </span>
+              </li>
+            </ol>
+          </dd>
+        </dl>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!--- Probeprüfung 1, Teil A 2|2 -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    <!-- Probeprüfung 1, Teil B 1|3 - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">Probeprüfung 1, Teil B 1|3 <span>(mit Taschenrechner und Formelsammlung)</span> </h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <dl>
+          <dt>Proportionale Zuordnungen</dt>
+          <dd>
+            <ol type="a" class="embedded">
+              <li>
+                <span>Bei einer proportionalen Zuordnung gilt:</span>
+                <ul>
+                  <li>
+                    <span>Je mehr, desto &nbsp;</span>
+                    <span class="ll wide">&nbsp;
+                      <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
+                      <span class="loesung">
+                        mehr
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>Je weniger, desto &nbsp;</span>
+                    <span class="ll wide">&nbsp;
+                      <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
+                      <span class="loesung">
+                        <math><mi>weniger</mi></math>
+                      </span>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <!-- VHS, Tafeln -->
+                <span>Die VHS bezahlt für 5 Tafeln 375€. Wie teuer sind 11 Tafeln?</span>
+                <table class="grid proportional">
+                  <caption>Rechnung</caption>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;&nbsp;</td><td>A</td><td>n</td><td>z</td>
+                      <td>a</td><td>h</td><td>l</td><td></td>
+                      <td></td><td>€</td><td></td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>5</td><td></td>
+                      <td></td><td></td> <td></td><td></td>
+                      <td></td><td>3</td> <td>7</td><td>5</td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>1</td><td></td>
+                      <td></td><td></td><td></td><td></td>
+                      <td></td><td>7</td><td>5</td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>1</td><td>1</td>
+                      <td></td><td></td><td></td><td></td>
+                      <td></td><td>8</td><td>2</td><td>5</td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <span>Antwort:</span>
+                <span class="ll">
+                  <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                  <span class="loesung">825</span>
+                </span>
+              </li>
+              <!-- -->
+              <li>
+                <!-- Kopierer, Druckleistung -->
+                <span>Ein Kopierer druckt in 14 Sekunden 28 Seiten. Wie lange braucht er für 48 Seiten?</span>
+                <table class="grid proportional">
+                  <caption>Rechnung</caption>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;&nbsp;</td><td>S</td><td>e</td><td>i</td>
+                      <td>t</td><td>e</td><td>n</td><td></td>
+                      <td></td><td>S</td><td>e</td><td>k</td>
+                      <td>.</td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>2</td><td>8</td>
+                      <td></td><td></td> <td></td><td></td>
+                      <td></td><td>1</td> <td>4</td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>1</td><td></td>
+                      <td></td><td></td><td></td><td></td>
+                      <td></td><td>0,</td><td>5</td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>4</td><td>8</td>
+                      <td></td><td></td><td></td><td></td>
+                      <td></td><td>2</td><td>4</td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <span>Antwort:</span>
+                <span class="ll">
+                  <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                  <span class="loesung">24</span>
+                </span>
+              </li>
+            </ol>
+          </dd>
+        </dl>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- Probeprüfung 1, Teil B 2|3 - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">Probeprüfung 1, Teil B 2|3 <span>(mit Taschenrechner und Formelsammlung)</span> </h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <dl>
+          <dt>Prozentrechnung</dt>
+          <dd>
+            <ol type="a" class="embedded">
+              <li>
+                Berechne den jeweils fehlenden Wert. Der Rechenweg muss klar erkennbar sein.
+                <table class="grid">
+                   <tr>
+                     <td>Grundwert (100%)</td><td>830€</td><td>150€</td><td class="loesung">100€</td>
+                   </tr>
+                   <tr>
+                     <td>Prozentsatz (%)</td> <td>5%</td><td class="loesung">20%</td><td>45%</td>
+                   </tr>
+                   <tr>
+                     <td>Prozentwert</td>    <td class="loesung">41,50€</td><td>30€</td><td>45€</td>
+                   </tr>
+                </table>
+              </li>
+              <!-- -->
+              <li>
+                <p> Für das gleiche Auto liegen folgende zwei Angebote vor:</p>
+                <p>  1) 4550€ und 2) 5320€ mit 19% Rabatt beim Kauf</p>
+                <span>Welches Angebot ist günstiger?</span>
+                <span>Antwort:</span>
+                <span class="ll">
+                  <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                  <span class="loesung">2</span>
+                </span>
+              </li>
+            </ol>
+          </dd>
+          <!-- -->
+          <dt>Antiproportionale Zuordnungen</dt>
+          <dd>
+            <ol type="a" class="embedded">
+              <li>
+                <span>Bei einer proportionalen Zuordnung gilt:</span>
+                <ul>
+                  <li>
+                    <span>Je mehr, desto &nbsp;</span>
+                    <span class="ll wide">&nbsp;
+                      <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
+                      <span class="loesung">
+                        weniger
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>Je weniger, desto &nbsp;</span>
+                    <span class="ll wide">&nbsp;
+                      <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
+                      <span class="loesung">
+                        <math><mi>mehr</mi></math>
+                      </span>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <!-- -->
+              <li>
+                <p>
+                  Die VHS renoviert ihre Räume. 10 Helfer:innen streichen einen Raum in 4 Tagen.
+                  Wie lange brauchen 8 Helfer:innen?
+                </p>
+                <table class="grid proportional">
+                  <caption>Rechnung</caption>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;&nbsp;</td><td>H</td><td>e</td><td>l</td>
+                      <td>f</td><td>e</td><td>r</td><td>.</td>
+                      <td></td><td>T</td><td>a</td><td>g</td>
+                      <td>e</td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>1</td><td>0</td>
+                      <td></td><td></td> <td></td><td></td>
+                      <td></td><td>4</td> <td></td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>1</td><td></td>
+                      <td></td><td></td><td></td><td></td>
+                      <td></td><td>4</td><td>0</td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr class="loesung">
+                      <td></td><td></td> <td>8</td><td></td>
+                      <td></td><td></td><td></td><td></td>
+                      <td></td><td>5</td><td></td><td></td>
+                      <td></td><td></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <span>Antwort:</span>
+                <span class="ll">
+                  <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                  <span class="loesung">5</span>
+                </span>
+              </li>
+            </ol>
+          </dd>
+        </dl>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- Probeprüfung 1, Teil B 3|3 - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+         <h2 data-version="2025/02/28">Probeprüfung 1, Teil B 3|3 <span>(mit Taschenrechner und Formelsammlung)</span></h2>
+       </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <dl>
+          <dt>Flächeninhalt und Umfang</dt>
+          <dd>
+            <ol type="a" class="embedded">
+              <li>
+                <p>Ergänze die jeweils fehlenden Einträge:</p>
+                <table class="grid" id="geometrie">
+                  <tr>
+                    <th>Name</th> <th>Zeichnung</th> <th>Seiten</th> <th>Fläche bzw. Umfang</th>
+                  </tr>
+                   <tr>
+                     <td>Quadrat</td>
+                     <td class="loesung">
+                       <span style="border:2pt solid red; width:1.5em; height:1.5em; display:inline-block;">&nbsp;</span>
+                     </td>
+                     <td>
+                       <span class="channel-one">a =</span>
+                       <span class="ll">
+                         <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                         <span class="loesung">7cm</span>
+                       </span>
+                     </td>
+                     <td>U = 28cm</td>
+                   </tr>
+                   <tr>
+                     <td class="loesung">Rechteck</td>
+                     <td>
+                       <span style="border:2pt solid black; width:5em; height:1.5em; display:inline-block;">&nbsp;</span>
+                     </td>
+                     <td>a = 7cm, b = 9cm</td>
+                     <td>
+                       <span class="channel-one">A =</span>
+                       <span class="ll">
+                         <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                         <span class="loesung"><math><mn>63</mn><msup><mi>cm</mi><mn>2</mn></msup></math></span>
+                       </span>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>Dreieck</td>
+                     <td class="loesung">
+                       <span style="font-weight:900; font-size:150%;">&bigtriangleup;</span>
+                     </td>
+                     <td>c = 5km, h<sub>c</sub> = 8km</td>
+                     <td>
+                       A =
+                       <span class="ll">
+                         <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                         <span class="loesung"><math><mn>20</mn><msup><mi>km</mi><mn>2</mn></msup></math></span>
+                       </span>
+                     </td>
+                   </tr>
+                </table>
+                <p>&nbsp;</p>
+              </li>
+              <!-- -->
+              <li>
+                <p>
+                  Zeichne ein Rechteck mit Angabe der Seitenlängen, und berechne
+                  Fläche und Umfang.
+                </p>
+              </li>
+            </ol>
+          </dd>
+        </dl>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+    <!-- Probeprüfung 1 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Probeprüfung 2                                                     -->
+    <!-- 2025/02/28, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <!-- Probeprüfung 2 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- -->
+  </body>
+  <!-- -->
+</html>
+<!-- Eof -->
