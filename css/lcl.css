@@ -4,17 +4,26 @@
 // +  AutorIn: w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: CSS Ergänzung für LuCanLearn
 // +  KorrektorIn:
-// +  Status: 2025/03/07 jigsaw.w3.org/css-validator/validator as CSS3
-// +  Revision: 2025/03/07 - Details am Ende der Datei
+// +  Status: 2025/03/17 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2025/03/17 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
+
 /*
-// +-------------------------------------------------------------------------
-// + generelle Voreinstellungen
-// + 2025/02/19, wd
-// +-------------------------------------------------------------------------
+// +---------------------------------------------------------------------------
+// + Font Lato - code copied from google page
+// + 2025/03/17, wd
+// +---------------------------------------------------------------------------
 */
-math { font-family:lato,sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/*
+// +--------------------------------------------------------------------------
+// + generelle Voreinstellungen
+// + 2025/03/17, wd
+// +--------------------------------------------------------------------------
+*/
+body, .ui-widget, math { font-family:lato,verdana,arial,sans-serif; }
 
 /* --- Übungsblätter Liste ------------------------------------------------- */
 ol { list-style-position:inside; }
@@ -23,11 +32,10 @@ ol { list-style-position:inside; }
 dd > ol.embedded { list-style-position:outside; }
 
 /* --- Lösungen; Einblenden über "sbm" in body ----------------------------- */
-span.loesung {
-  border:none; color:red;
-  white-space:nowrap; overflow:hidden;
-}
-/*   padding:0.15em; padding-left:0.5em; padding-right:0.5em; */
+span.loesung { white-space:nowrap; overflow:hidden; }
+span.loesung math {  color:red; }
+
+/*  border:none; padding:0.15em; padding-left:0.5em; padding-right:0.5em; */
 
 /* --- math und weitere not wrapping --------------------------------------- */
 math, math * { white-space:nowrap; }

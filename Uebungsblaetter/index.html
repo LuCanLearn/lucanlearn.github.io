@@ -5,7 +5,7 @@
 <!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
 <!-- Beschreibung: Übungsblätter Mathematik; local github repo               -->
 <!-- Status: w3-checked: 2025/03/07                                          -->
-<!-- Revision: 2025/03/07 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Revision: 2025/03/13 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -85,42 +85,104 @@
           </li>
           <li>
             <math><mn>177</mn><mo>&minus;</mo><mn>35</mn> <mo>=</mo></math>
-            <span class="loesung">142</span>
+            <span class="loesung"><math><mn>142</mn></math></span>
           </li>
           <li>
             <math><mn>19</mn><mo>&times;</mo><mn>42</mn> <mo>=</mo></math>
-            <span class="loesung">798</span>
+            <span class="loesung"><math><mn>798</mn></math></span>
           </li>
           <li>
             <math><mn>108</mn><mo>&div;</mo><mn>12</mn> <mo>=</mo></math>
-            <span class="loesung">9</span>
+            <span class="loesung"><math><mn>9</mn></math></span>
           </li>
         </ol>
         <p>&nbsp;</p>
-        <p>
-          Erweitern Sie
-          <math><mfrac><mn>2</mn><mn>3</mn></mfrac></math>
-          auf den Nenner
-          <math><mn>15</mn></math> bzw. <math><mn>57</mn></math>
-          <span class="loesung">
-            <math><mo>=</mo></math>
-            <math><mfrac><mn>10</mn><mn>15</mn></mfrac></math> bzw.
-            <math><mfrac><mn>38</mn><mn>57</mn></mfrac></math>
-          </span>
-        </p>
-        <p>
-          Kürzen Sie soweit wie möglich:
-         <!-- bevelled="true" for a/b display??? -->
-          <math><mfrac bevelled="true"><mn>36</mn><mn>48</mn></mfrac></math>,
-          <math><mfrac><mn>17</mn><mn>48</mn></mfrac></math>,
-          <math><mfrac><mn>51</mn><mn>34</mn></mfrac></math>
-          <span class="loesung">
-            <math><mo>=</mo></math>
-            <math><mfrac bevelled="true"><mn>3</mn><mn>4</mn></mfrac></math>,
-            <math><mfrac><mn>17</mn><mn>48</mn></mfrac></math>,
-            <math><mfrac><mn>3</mn><mn>2</mn></mfrac></math>
-          </span>
-        </p>
+        <p>Erweitern Sie</p>
+        <ol type="a">
+          <li>
+            <math><mfrac><mn>2</mn><mn>3</mn></mfrac></math>
+            auf den Nenner
+            <math><mn>15</mn></math><span class="loesung">:</span>
+            <span class="loesung">
+             <math>
+               <mfrac><mn>2</mn><mn>3</mn></mfrac>
+               <mo>=</mo>
+               <mfrac>
+                 <mrow><mn>2</mn><mo>&times;</mo><mn>5</mn></mrow>
+                 <mrow><mn>3</mn><mo>&times;</mo><mn>5</mn></mrow>
+               </mfrac>
+               <mo>=</mo>
+               <mfrac><mn>10</mn><mn>15</mn></mfrac>
+             </math>
+            </span>
+          </li>
+          <li>
+            <math><mfrac><mn>2</mn><mn>3</mn></mfrac></math>
+            auf den Nenner
+            <math><mn>57</mn></math><span class="loesung">:</span>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>2</mn><mn>3</mn></mfrac>
+                <mo>=</mo>
+                <mfrac>
+                  <mrow><mn>2</mn><mo>&times;</mo><mn>19</mn></mrow>
+                  <mrow><mn>3</mn><mo>&times;</mo><mn>19</mn></mrow>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac><mn>38</mn><mn>57</mn></mfrac>
+              </math>
+            </span>
+          </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Kürzen Sie soweit wie möglich.</p>
+        <ol type="a">
+          <li>
+           <!-- bevelled="true" for a/b display??? -->
+            <math>
+              <mfrac bevelled="true"><mn>36</mn><mn>48</mn></mfrac>
+              <mo>=</mo>
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac>
+                  <mrow><mn>3</mn><mo>&times;</mo><mn>12</mn></mrow>
+                  <mrow><mn>4</mn><mo>&times;</mo><mn>12</mn></mrow>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac><mn>3</mn><mn>4</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li>
+            <math>
+              <mfrac bevelled="true"><mn>17</mn><mn>48</mn></mfrac>
+              <mo>=</mo>              
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac><mn>17</mn><mn>48</mn></mfrac>
+              </math>
+            </span>
+          </li>
+          <li>
+           <!-- bevelled="true" for a/b display??? -->
+            <math>
+              <mfrac bevelled="true"><mn>51</mn><mn>34</mn></mfrac>
+              <mo>=</mo>              
+            </math>
+            <span class="loesung">
+              <math>
+                <mfrac>
+                  <mrow><mn>3</mn><mo>&times;</mo><mn>17</mn></mrow>
+                  <mrow><mn>2</mn><mo>&times;</mo><mn>17</mn></mrow>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac><mn>3</mn><mn>2</mn></mfrac>
+              </math>
+            </span>
+          </li>
+        </ol>
         <p>&nbsp;</p>
         <p>Berechnen Sie den jeweils resultierenden Bruch in gekürzter Form.</p>
         <ol type="a">
@@ -228,65 +290,99 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <section class="ui-widget ">
       <header class="ui-widget-header">
-         <h2 data-version="2025/01/05">Übungsblatt 1, Teil B</h2>
+         <h2 data-version="2025/03/13">Übungsblatt 1, Teil B</h2>
        </header>
       <!-- -->
       <div class="ui-widget-content">
         <p>Ergänzen Sie passend zu proportionalen Zuordnungen.</p>
         <ol type="a">
-          <li>Je mehr, desto: <span class="loesung">mehr</span>
+          <li>
+            Je mehr, desto:
+            <span class="loesung"><math><mi mathvariant="normal">mehr</mi></math></span>
           </li>
-          <li>Je weniger, desto: <span class="loesung">weniger</span>
+          <li>
+            Je weniger, desto:
+            <span class="loesung"><math><mi mathvariant="normal">weniger</mi></math></span>
           </li>
         </ol>
         <p>&nbsp;</p>
         <p>Proportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
         <ol type="a">
           <li>
-            <math><mn>2</mn></math>
-            Dosen Lack reichen für
+            Zwei Dosen Lack reichen für
             <math><mn>15</mn><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
             Fläche. Für wie viele <math><mi mathvariant="normal" class="MathML-Unit">m²</mi></math>
             reichen <math><mn>7</mn></math> Dosen?
-            <span class="loesung">(7 / 2) * 15 = 52,5</span>
+            <span class="loesung">
+              <math>
+                <mo>(</mo><mn>7</mn> <mo>&div;</mo> <mn>2</mn><mo>)</mo>
+                <mo>&times;</mo>
+                <mn>15</mn>
+                <mo>=</mo>
+                <mn>52,5</mn>
+              </math>                
+            </span>
           </li>
           <li>
             <math>
               <mn>0,8</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi>
             </math>
-            Mehl reichen für
-            <math><mn>4</mn></math>
-            Pizzen.
+            Mehl reichen für vier Pizzen.
             Für wie viele Pizzen reichen
-            <math>
-              <mn>2,6</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi>
-            </math>
+            <math><mn>2,6</mn><mi mathvariant="normal" class="MathML-Unit">kg</mi></math>
             Mehl?
-            <span class="loesung">(4 / 0,8) * 2,6 = 13</span>
+            <span class="loesung">
+              <math>
+                <mo>(</mo><mn>2,6</mn> <mo>&div;</mo> <mn>0,8</mn> <mo>)</mo>
+                <mo>&times;</mo>
+                <mn>4</mn>
+                <mo>=</mo>
+                <mn>13</mn>
+              </math>
+            </span>
           </li>
         </ol>
         <p>&nbsp;</p>
         <p>Ergänzen Sie passend zu antiproportionalen Zuordnungen.</p>
         <ol type="a">
-          <li>Je mehr, desto: <span class="loesung">weniger</span>
+          <li>
+            Je mehr, desto:
+            <span class="loesung"><math><mi mathvariant="normal">weniger</mi></math></span>
           </li>
-          <li>Je weniger, desto: <span class="loesung">mehr</span>
+          <li>
+            Je weniger, desto:
+            <span class="loesung"><math><mi mathvariant="normal">mehr</mi></math></span>
           </li>
         </ol>
         <p>&nbsp;</p>
         <p>Antiproportionale Zuordnungen &ndash; Lösung bitte auch tabellarisch.</p>
         <ol type="a" class="outside">
           <li>
-            <math><mn>4</mn></math> An&shy;gestellte erledigen ihre Aufgabe in
-            <math><mn>6</mn></math> Stunden. Wie lange brauchen
-            <math><mn>6</mn></math> An&shy;gestellte?
-            <span class="loesung">(4 * 6) / 6 = 4</span>
+            Vier An&shy;gestellte erledigen ihre Aufgabe in sechs Stunden. Wie lange brauchen
+            sechs An&shy;gestellte?
+            <span class="loesung">
+              <math>
+                <mo>(</mo><mn>4</mn> <mo>&div;</mo> <mn>6</mn> <mo>)</mo>
+                <mo>&times;</mo>
+                <mn>6</mn>
+                <mo>=</mo>
+                <mn>4</mn>
+              </math>
+            </span>
           </li>
           <li>
             Bei einem Tagesverbrauch von <math><mn>12</mn></math> Paketen Papier
             reicht der Vorrat <math><mn>36</mn></math> Tage. Wie lange reicht er
             bei einem Verbrauch von <math><mn>16</mn></math> Paketen pro Tag?
-            <span class="loesung">(12 * 36) / 16 = 27</span>
+            <span class="loesung">
+              <math>
+                <mo>(</mo><mn>12</mn> <mo>&div;</mo> <mn>16</mn> <mo>)</mo>
+                <mo>&times;</mo>
+                <mn>36</mn>
+                <mo>=</mo>
+                <mn>27</mn>
+              </math>
+            </span>
           </li>
          </ol>
         <p>&nbsp;</p>
@@ -311,8 +407,8 @@
             <math><mn>70</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math>
             von
             <math><mn>200</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>
-            <span class="loesung">&nbsp; GW: <math><mn>200</mn></math> Euro,</span>
-            <span class="loesung">PW: <math><mn class="strong">140</mn></math> Euro,</span>
+            <span class="loesung">&nbsp; GW: <math><mn>200</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>,</span>
+            <span class="loesung">PW: <math><mn class="strong">140</mn><mi mathvariant="normal" class="MathML-Unit">m</mi></math>,</span>
             <span class="loesung">ps: <math><mn>70</mn><mi mathvariant="normal" class="MathML-Unit">&percnt;</mi></math></span>
           </li>
           <li>

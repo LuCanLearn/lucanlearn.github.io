@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS für "channel one" - Details siehe channels.css
 // +  KorrektorIn:
-// +  Status:   2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2018/02/25 - Details am Ende der Datei
+// +  Status:   2025/03/17 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2025/03/17 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 .channel-zero-term { display:none!important; }
@@ -33,7 +33,7 @@ body[data-debugCSS]::before { content:"channel-one"; }
 // +  Datei: css/lectures-layout-channel-one.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Ergänzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status: 2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/01/28 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
@@ -59,6 +59,11 @@ h2 span.lsf { display:inline-block; } /* Kommentar ein */
 section footer > img { left:1em; }
 
 
+/* --- LuCanLearn ???? --- */
+body.sbm tr.loesung td p span  { top:0.25em; }
+body.sbm tr.loesung td.left p span { right:-0.75rem; }
+body.sbm tr.loesung td.right p span  { left:-0.75rem;  }
+
 /*
 // +---------------------------------------------------------------------------
 // +  Liste der Aenderungen
@@ -73,7 +78,7 @@ section footer > img { left:1em; }
 // +  Datei: css/lectures-content-channel-one.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Ergänzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status: 2015/05/01 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/05/91 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
@@ -147,7 +152,7 @@ ul.toc.exam > li > span:first-of-type { position:absolute; font-size:50%; left:2
 // +  Datei: Internet/css/internet-channel-zero.css
 // +  AutorIn: w dot doeringer ( at fh-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Erg�nzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status:   2017/01/30 jigsaw.w3.org/css-validator/validator as CSS3
 // +  Revision: 2017/01/30 - Details am Ende der Datei
 // +----------------------------------------------------------------------------
@@ -158,7 +163,7 @@ table.command td[data-comment] { display:none; }
 table.command td.comment { display:none; }
 
 /* --- customized FIB representatiion -------------------------------------- */
-table.customFIB th:nth-of-type(2), 
+table.customFIB th:nth-of-type(2),
 table.customFIB td:nth-of-type(2) { display:none; }
 
 /* --- 01 ------------------------------------------------------------------ */
@@ -174,9 +179,9 @@ table#durfreq td, table#durfreq th { padding:0.2em 0.2em; text-align:center; }
 table#leds td, table#leds th { padding:0.2em 0.2em; text-align:center; }
 table#t568a { display:none; }
 img[src*=ethernet] { width:100%; }      /* ??? */
-table.v24 tbody tr td, table.v24 tbody tr th { width:0.5em!important; }  
+table.v24 tbody tr td, table.v24 tbody tr th { width:0.5em!important; }
 table.v24.compact tbody tr td, table.v24.compact tbody tr th { width:0.5em!important; padding:0.1em 0.8em; }
-table#baseT > tbody > tr > td:nth-of-type(n+4) { padding:0em!important; }  
+table#baseT > tbody > tr > td:nth-of-type(n+4) { padding:0em!important; }
 table#baseT > tbody > tr > td:nth-of-type(3) { padding:0em!important; }
 
 table.hexdec td.comment { display:none; }
@@ -220,7 +225,7 @@ table.dump { margin-left:-0.5em; }
 
 /* --- toc ----------------------------------------------------------------- */
 ul.toc > li > p[class*=ui-state] { margin-left:-0.85em; }
-ul.toc > li > p#architektur { margin-left:-1.25em; } 
+ul.toc > li > p#architektur { margin-left:-1.25em; }
 ul.toc:nth-of-type(4) li:nth-of-type(1) { background-color:#2ecc71; }
 ul.toc:nth-of-type(4) li:nth-of-type(1) p { background:#2ecc71; }
 ul.toc:nth-of-type(4) li:nth-of-type(2) { background-color:#0066ff; }
@@ -229,7 +234,7 @@ ul.toc:nth-of-type(4) li:nth-of-type(3) { background-color:#e67e22; }
 ul.toc:nth-of-type(4) li:nth-of-type(3) p { background:#e67e22; }
 
 /* --- ntools -------------------------------------------------------------- */
-body.ntools ul.toc > li:nth-of-type(1) > p[class*=ui-state] { margin-left:-1em; } 
+body.ntools ul.toc > li:nth-of-type(1) > p[class*=ui-state] { margin-left:-1em; }
 
 /*
 // +----------------------------------------------------------------------------

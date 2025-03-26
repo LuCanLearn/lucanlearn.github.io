@@ -267,6 +267,13 @@ ul.toc:nth-of-type(4) li:nth-of-type(3) p { background:#e67e22; }
 /* --- ntools -------------------------------------------------------------- */
 body.ntools ul.toc > li:nth-of-type(1) > p[class*=ui-state] { margin-left:-1em; }
 
+
+/* --- LuCanLearn ???? --- */
+body.sbm tr.loesung td p span  { top:0.25em; }
+body.sbm tr.loesung td.left p span { right:-0.25rem; }
+body.sbm tr.loesung td.right p span  { left:-0.25rem;  }
+
+
 /*
 // +----------------------------------------------------------------------------
 // +  Liste der Aenderungen

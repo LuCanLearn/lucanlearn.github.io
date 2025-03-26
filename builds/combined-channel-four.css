@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS für "channel four" - Details in channels.css
 // +  KorrektorIn:
-// +  Status:   2025/02/05 jigsaw.w3.org/css-validator/validator as CSS3 + SVG
-// +  Revision: 2025/02/05 - Details am Ende der Datei
+// +  Status:   2025/03/17 jigsaw.w3.org/css-validator/validator as CSS3 + SVG
+// +  Revision: 2025/03/19 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
@@ -173,6 +173,13 @@ table#zipcode tr th { font-size:560%!important; }
 
 /* --- Hinweise: Testat1 --------------------------------------------------- */
 section#testat1 div.container { font-size:85%!important; }
+
+
+/* --- LuCanLearn : arrow für Probeprüfung --- */
+body.sbm tr.loesung td p span  { top:0.25em; }
+body.sbm tr.loesung td.left p span { right:-0.75rem; }
+body.sbm tr.loesung td.right p span  { left:-0.75rem;  }
+
 
 /*
 // +----------------------------------------------------------------------------

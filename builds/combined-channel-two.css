@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS für "channel two" - Details in channels.css
 // +  KorrektorIn:
-// +  Status:   2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2018/02/25 - Details am Ende der Datei
+// +  Status:   2025/03/17 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2025/03/17 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 .channel-zero-term { display:none!important; }
@@ -33,7 +33,7 @@ body[data-debugCSS]::before { content:"channel-two"; }
 // +  Datei: css/lectures-layout-channel-two.css
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Ergänzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status: 2015/01/26 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/01/28 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
@@ -64,7 +64,7 @@ section footer > img { left:1em; }
 // +  Beschreibung: CSS Style-Sheet für Vorlesungsfolien - Ideen auch nach
 // +    "www.AListAPart.com" und "jQueryUi.com" - die Inhalte
 // +    "mobile first"
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status: 2015/01/27 jigsaw.w3.org/css-validator/validator as CSS3 (-)
 // +  Revision: 2015/01/27 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
@@ -122,6 +122,13 @@ ul.toc.exam li > p[class*="ui-state"] ~ p { display:none; }
 ul.toc.exam li span { display:none; }
 ul.toc.exam > li > span:first-of-type { position:absolute; font-size:50%; left:2em; top:0.4em; display:inline-block; }
 
+
+/* --- LuCanLearn --- */
+body.sbm tr.loesung td p span  { top:0.25em; }
+body.sbm tr.loesung td.left p span { right:-0.75rem; }
+body.sbm tr.loesung td.right p span  { left:-0.75rem;  }
+
+
 /*
 // +---------------------------------------------------------------------------
 // +  Liste der Aenderungen
@@ -136,7 +143,7 @@ ul.toc.exam > li > span:first-of-type { position:absolute; font-size:50%; left:2
 // +  Datei: Internet/css/internet-channel-two.css
 // +  AutorIn: w dot doeringer ( at hs-worms dot de)
 // +  Beschreibung: CSS Style-Sheet Erg�nzung
-// +  KorrektorIn: 
+// +  KorrektorIn:
 // +  Status:   2016/11/02 jigsaw.w3.org/css-validator/validator as CSS3
 // +  Revision: 2016/11/02 - Details am Ende der Datei
 // +----------------------------------------------------------------------------
@@ -146,7 +153,7 @@ ul.toc.exam > li > span:first-of-type { position:absolute; font-size:50%; left:2
 section#solar-system div:nth-of-type(1) { height:36em; }
 section#milky-way div:nth-of-type(1) { height:36em; }
 table#zipcode tr th { font-size:560%!important; }
-                                                      
+
 /*
 // +----------------------------------------------------------------------------
 // +  Liste der Aenderungen

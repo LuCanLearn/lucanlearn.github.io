@@ -4,8 +4,8 @@
 <!-- Datei: lucanlearn.github.io/Probepruefungen/index.html                  -->
 <!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
 <!-- Beschreibung: Probeprüfungen Mathematik; local github repo              -->
-<!-- Status: w3-checked: 2025/03/07                                          -->
-<!-- Revision: 2025/03/07 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Status: w3-checked: 2025/03/26                                          -->
+<!-- Revision: 2025/03/26 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -22,25 +22,43 @@
     <link href="../builds/combined.css" rel="stylesheet">
     <link href="../builds/media.css" rel="stylesheet">
 
+    <!-- Lato font - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=lato:100,400,700" rel="stylesheet" type="text/css">
+    -->
+
     <!-- with HACKs ??? - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <link href="../css/lcl.css" rel="stylesheet">
 
     <style>
       body > section > header > h2 > span { font-size:x-small!important; }
 
+
+/*      table.grid { border-collapse:collapse; margin-top:0.25rem; margin-bottom:0.5rem; table-layout:fixed; width:90%; }  */
       table.grid { border-collapse:collapse; margin-top:0.25rem; margin-bottom:0.5rem; }
-      table.grid, table.grid th, table.grid td { border:1pt solid black; }
+      table.grid, table.grid th, table.grid td { border:1pt solid; }
       table.grid tr.separator td { height:0.25em; padding:0em; border-left:hidden; border-right:hidden; }
       table.grid.proportional caption { text-align:left; }
-      table.grid.proportional tr:first-of-type td { border-bottom:2pt solid black; }
-      table.grid.proportional tr td:nth-of-type(8) { border-right:2pt solid black; }
+      table.grid.proportional thead tr td { border-bottom:2pt solid; }
+      table.grid.proportional tr td:nth-of-type(8) { border-right:2pt solid; }
       table.grid#geometrie tr td:nth-of-type(2) { vertical-align:middle; text-align:center; }
+      table.grid#geometrie caption { font-size:x-small; text-align:left; caption-side:bottom; }
 
-      span.ll { display:inline-block; width:5em; border-bottom:1pt solid black; margin-right:2em; position:relative; }
+      span.ll { display:inline-block; width:5em; border-bottom:1pt solid; margin-right:2em; position:relative; }
       span.ll.wide { width:12em; }
 
-      tr.loesung, td.loesung { color:red; }
+      body.sbm tr.loesung td:not(.op) > *, body.sbm td.loesung:not(.op) > * { color:red; }
+      body.sbm tr.loesung td.left { border-left:hidden; }
+      body.sbm tr.loesung td.right { border-right:hidden; }
+      body.sbm tr.loesung td.op { font-size:75%; vertical-align:bottom; padding:0em; }
+      body.sbm tr.loesung td.op > math { color:purple; }
+      body.sbm tr.loesung td.op p[class^="ui-state-"] { height:100%; border:none!important; padding-top:0.5em; }
+      body.sbm tr.loesung td.op p[class^="ui-state-"] math { font-weight:bold!important; }
+      body.sbm tr.loesung td p { position:relative; }
+      body.sbm tr.loesung td p span { position:absolute; color:purple; font-weight:bold; font-size:1.5em; font-weight:100; opacity:0.5; }
+
       body:not(.sbm) table.grid tr.loesung td { visibility:hidden; }
+      body:not(.sbm) table.grid tr.loesung td[class] * { display:none; }
       body:not(.sbm) table.grid tr td.loesung { visibility:hidden; }
 
       ol li { margin-top:0.25em; margin-bottom:0.5em; }
@@ -61,7 +79,7 @@
   <!-- 2025/02/20, wd                                                       -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <!-- class sbm zeigt die Lösungen an -->
-  <body class="ui-helper-reset" data-display="content">
+  <body class="ui-helper-reset" data-display="content" data-debugCSS="yes">
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <!-- h1 für Suchmaschinen ???                                           -->
@@ -97,7 +115,8 @@
         <table class="grid">
           <tbody>
             <tr>
-              <td></td><td>2</td><td>7,</td><td>5</td>
+              <td></td>
+              <td>2</td><td>7,</td><td>5</td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td>
@@ -106,13 +125,17 @@
               </td>
             </tr>
             <tr>
-              <td>+</td><td>5</td><td>3,</td><td>8</td>
+              <td><math><mo>+</mo></math></td>
+              <td>5</td><td>3,</td><td>8</td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr class="loesung">
-              <td></td><td>8</td><td>1,</td><td>3</td>
+              <td></td>
+              <td><math><mn>8</mn></math></td>
+                <td><math><mn>1,</mn></math></td>
+                <td><math><mn>3</mn></math></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
@@ -129,19 +152,26 @@
               <td></td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;</td> <td>7</td><td>3</td><td>5,</td><td>4</td>
+              <td>&nbsp;&nbsp;</td>
+              <td>7</td><td>3</td><td>5,</td><td>4</td>
               <td></td><td></td><td></td><td></td><td></td>
               <td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <td>&minus;</td><td></td> <td>5</td><td>1,</td><td>8</td>
+              <td>&minus;</td>
+              <td></td>
+              <td>5</td><td>1,</td><td>8</td>
               <td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr class="loesung">
-              <td></td><td>6</td><td>8</td><td>3,</td><td>6</td>
+              <td></td>
+              <td><math><mn>6</mn></math></td>
+                <td><math><mn>8</mn></math></td>
+                <td><math><mn>3,</mn></math></td>
+                <td><math><mn>6</mn></math></td>
               <td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
@@ -167,7 +197,10 @@
               <td></td><td></td>
             </tr>
             <tr class="loesung">
-              <td>5</td><td>7</td><td>0,</td><td>4</td>
+              <td><math><mn>5</mn></math></td>
+                <td><math><mn>7</mn></math></td>
+                <td><math><mn>0,</mn></math></td>
+                <td><math><mn>4</mn></math></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
@@ -184,58 +217,76 @@
               <td></td><td></td><td></td><td></td><td></td><td></td>
             </tr>
             <tr>
-              <td><span class="vis-hidden">&minus;</span></td>
+              <td><span class="vis-hidden">&minus;</span></td>  <!-- secure width of 1st column -->
               <td>0,</td><td>7</td><td>1</td><td>2</td>
               <td>&div;</td>
               <td>4</td>
               <td>=</td>
-              <td class="loesung">0,</td><td class="loesung">1</td><td class="loesung">7</td><td class="loesung">8</td>
+              <td class="loesung"><math><mn>0,</mn></math></td>
+                <td class="loesung"><math><mn>1</mn></math></td>
+                <td class="loesung"><math><mn>7</mn></math></td>
+                <td class="loesung"><math><mn>8</mn></math></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;</td><td class="loesung">0</td><td></td><td></td>
-              <td></td><td></td><td></td><td></td>
-              <td></td><td></td><td></td><td></td>
-              <td></td><td></td>
-            </tr>
-            <tr>
-              <td>&nbsp;&nbsp;</td><td class="loesung">0</td><td class="loesung">7</td><td></td>
-              <td></td><td></td><td></td><td></td>
-              <td></td><td></td><td></td><td></td>
-              <td></td><td></td>
-            </tr>
-            <tr>
-              <td>&nbsp;&nbsp;</td><td></td><td class="loesung">4</td><td></td>
+              <td>&nbsp;&nbsp;</td>
+              <td class="loesung"><math><mn>0</mn></math></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;</td><td></td><td class="loesung">3</td><td class="loesung">1</td>
+              <td>&nbsp;&nbsp;</td>
+              <td class="loesung"><math><mn>0</mn></math></td>
+                <td class="loesung"><math><mn>7</mn></math></td>
+              <td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;</td><td></td><td class="loesung">2</td><td class="loesung">8</td>
+              <td>&nbsp;&nbsp;</td><td></td>
+              <td class="loesung"><math><mn>4</mn></math></td>
+              <td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;</td><td></td><td></td><td class="loesung">3</td><td class="loesung">2</td>
+              <td>&nbsp;&nbsp;</td><td></td>
+              <td class="loesung"><math><mn>3</mn></math></td>
+                <td class="loesung"><math><mn>1</mn></math></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td>
+              <td class="loesung"><math><mn>2</mn></math></td>
+                <td class="loesung"><math><mn>8</mn></math></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td><td></td>
+              <td></td><td></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;</td><td></td><td></td>
+              <td class="loesung"><math><mn>3</mn></math></td>
+                <td class="loesung"><math><mn>2</mn></math></td>
               <td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;</td><td></td><td></td><td class="loesung">3</td><td class="loesung">2</td>
+              <td>&nbsp;&nbsp;</td><td></td><td></td>
+              <td class="loesung"><math><mn>3</mn></math></td>
+                <td class="loesung"><math><mn>2</mn></math></td>
               <td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;</td><td></td><td></td><td></td><td class="loesung">0</td>
+              <td>&nbsp;&nbsp;</td><td></td><td></td><td></td>
+              <td class="loesung"><math><mn>0</mn></math></td>
               <td></td><td></td><td></td>
               <td></td><td></td><td></td><td></td>
               <td></td><td></td>
@@ -340,7 +391,9 @@
               Rechnung:
               <span class="ll wide">&nbsp;
                 <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
-                <span class="loesung">-375€ + 400€</span>
+                <span class="loesung">
+                <math><mo form="prefix">-</mo><mn>375</mn><mi>€</mi> <mo>+</mo> <mn>400</mn><mi>€</mi></math>
+                </span>
               </span>
             </p>
             <p>&nbsp;</p>
@@ -348,7 +401,7 @@
               Antwort:&nbsp;
               <span class="ll wide">&nbsp;
                 <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
-                <span class="loesung">25€</span>
+                <span class="loesung"><math><mn>25</mn><mi>€</mi></math></span>
               </span>
             </p>
           </dd>
@@ -435,7 +488,7 @@
                     <span class="ll wide">&nbsp;
                       <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
                       <span class="loesung">
-                        mehr
+                        <math><mi>mehr</mi></math>
                       </span>
                     </span>
                   </li>
@@ -455,44 +508,62 @@
                 <span>Die VHS bezahlt für 5 Tafeln 375€. Wie teuer sind 11 Tafeln?</span>
                 <table class="grid proportional">
                   <caption>Rechnung</caption>
+                  <thead>
+                    <tr>
+                      <td>&nbsp;&nbsp;</td>
+                      <td>A</td><td>n</td><td>z</td><td>a</td><td>h</td><td>l</td>
+                      <td></td>
+                      <td></td>
+                      <td>€</td><td></td><td></td><td></td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <!-- -->
                   <tbody>
-                    <tr>
-                      <td>&nbsp;&nbsp;</td><td>A</td><td>n</td><td>z</td>
-                      <td>a</td><td>h</td><td>l</td><td></td>
-                      <td></td><td>€</td><td></td><td></td>
-                      <td></td><td></td>
+                    <tr class="loesung">
+                      <td class="op"><p class="ui-state-highlight"><math><mo form="prefix">&div;</mo><mn>5</mn></math></p></td> <!-- operator left -->
+                      <td class="left"><p><span>&larrpl;</span></p></td>                                                        <!-- arrow left -->
+                      <td><math><mn>5</mn></math></td><td></td><td></td><td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>3</mn></math></td><td><math><mn>7</mn></math></td><td><math><mn>5</mn></math></td>
+                      <td class="right"><p><span>&cudarrl;</span></p></td>                                                      <!-- arrow right -->
+                      <td class="op"><p class="ui-state-highlight"><math><mo>&div;</mo><mn>5</mn></math></p></td>               <!-- operator right -->
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>5</td><td></td>
-                      <td></td><td></td> <td></td><td></td>
-                      <td></td><td>3</td> <td>7</td><td>5</td>
-                      <td></td><td></td>
+                      <td class="op"><p class="ui-state-active"><math><mo>&times;</mo><mn>11</mn></math></p></td>               <!-- operator left -->
+                      <td class="left"><p><span>&larrpl;</span></p></td>                                                        <!-- arrow left -->
+                      <td><math><mn>1</mn></math></td><td></td><td></td><td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>7</mn></math></td><td><math><mn>5</mn></math></td><td></td>
+                      <td class="right"><p><span>&cudarrl;</span></p></td>                                                      <!-- arrow right -->
+                      <td class="op"><p class="ui-state-active"><math><mo>&times;</mo><mn>11</mn></math></p></td>               <!--- operator right -->
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>1</td><td></td>
-                      <td></td><td></td><td></td><td></td>
-                      <td></td><td>7</td><td>5</td><td></td>
-                      <td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>1</mn></math></td><td><math><mn>1</mn></math></td><td></td><td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>8</mn></math></td><td><math><mn>2</mn></math></td><td><math><mn>5</mn></math></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>1</td><td>1</td>
-                      <td></td><td></td><td></td><td></td>
-                      <td></td><td>8</td><td>2</td><td>5</td>
-                      <td></td><td></td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td class="op"><p class="vis-hidden"><math><mo>&times;</mo><mn>11</mn></math></p></td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
                       <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
                       <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
                       <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
                     </tr>
                   </tbody>
                 </table>
-
+                <!-- -->
                 <span>Antwort:</span>
                 <span class="ll">
                   <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
-                  <span class="loesung">825</span>
+                  <span class="loesung"><math><mn>825</mn></math></span>
                 </span>
               </li>
               <!-- -->
@@ -509,25 +580,39 @@
                       <td>.</td><td></td>
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>2</td><td>8</td>
-                      <td></td><td></td> <td></td><td></td>
-                      <td></td><td>1</td> <td>4</td><td></td>
-                      <td></td><td></td>
+                      <td class="op"><p class="ui-state-highlight"><math><mo>&div;</mo><mn>28</mn></math></p></td>              <!-- operator left -->
+                      <td class="left"><p><span>&larrpl;</span></p></td>                                                        <!-- arrow left -->
+                      <td><math><mn>2</mn></math></td><td><math><mn>8</mn></math></td>
+                      <td></td><td></td> <td></td><td></td><td></td>
+                      <td><math><mn>1</mn></math></td><td><math><mn>4</mn></math></td>
+                      <td class="right"><p><span>&cudarrl;</span></p></td>                                                      <!-- arrow right -->
+                      <td class="op"><p class="ui-state-highlight"><math><mo>&div;</mo><mn>28</mn></math></p></td>              <!-- operator right -->
+                      <td></td>
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>1</td><td></td>
-                      <td></td><td></td><td></td><td></td>
-                      <td></td><td>0,</td><td>5</td><td></td>
-                      <td></td><td></td>
+                      <td class="op"><p class="ui-state-active"><math><mo>&times;</mo><mn>48</mn></math></p></td>               <!-- operator left -->
+                      <td class="left"><p><span>&larrpl;</span></p></td>                                                        <!-- arrow left -->
+                      <td><math><mn>1</mn></math></td><td></td>
+                      <td></td><td></td><td></td><td></td><td></td>
+                      <td><math><mn>0,</mn></math></td><td><math><mn>5</mn></math></td>
+                      <td class="right"><p><span>&cudarrl;</span></p></td>                                                      <!-- arrow right -->
+                      <td class="op"><p class="ui-state-active"><math><mo>&times;</mo><mn>48</mn></math></p></td>               <!--- operator right -->
+                      <td></td>
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>4</td><td>8</td>
-                      <td></td><td></td><td></td><td></td>
-                      <td></td><td>2</td><td>4</td><td></td>
-                      <td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>4</mn></math></td><td><math><mn>8</mn></math></td><td></td><td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>2</mn></math></td><td><math><mn>4</mn></math></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr>
-                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td>
+                      <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
                       <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
                       <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
                       <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
@@ -538,7 +623,7 @@
                 <span>Antwort:</span>
                 <span class="ll">
                   <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
-                  <span class="loesung">24</span>
+                  <span class="loesung"><math><mi>24</mi></math></span>
                 </span>
               </li>
             </ol>
@@ -564,13 +649,18 @@
                 Berechne den jeweils fehlenden Wert. Der Rechenweg muss klar erkennbar sein.
                 <table class="grid">
                    <tr>
-                     <td>Grundwert (100%)</td><td>830€</td><td>150€</td><td class="loesung">100€</td>
+                     <td>Grundwert (100%)</td>
+                     <td>830€</td><td>150€</td>
+                     <td class="loesung"><math><mn>100</mn><mi>€</mi></math></td>
                    </tr>
                    <tr>
-                     <td>Prozentsatz (%)</td> <td>5%</td><td class="loesung">20%</td><td>45%</td>
+                     <td>Prozentwert</td>
+                     <td class="loesung"><math><mn>41,50</mn><mi>€</mi></math></td>
+                     <td>30€</td><td>45€</td>
                    </tr>
                    <tr>
-                     <td>Prozentwert</td>    <td class="loesung">41,50€</td><td>30€</td><td>45€</td>
+                     <td>Prozentsatz (%)</td> <td>5%</td>
+                     <td class="loesung"><math><mn>20</mn><mi>%</mi></math></td><td>45%</td>
                    </tr>
                 </table>
               </li>
@@ -582,7 +672,7 @@
                 <span>Antwort:</span>
                 <span class="ll">
                   <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
-                  <span class="loesung">2</span>
+                  <span class="loesung"><math><mn>2</mn></math></span>
                 </span>
               </li>
             </ol>
@@ -598,9 +688,7 @@
                     <span>Je mehr, desto &nbsp;</span>
                     <span class="ll wide">&nbsp;
                       <math class="vis-hidden"><mfrac><mn>7</mn><mn>49</mn></mfrac></math>
-                      <span class="loesung">
-                        weniger
-                      </span>
+                      <span class="loesung"><math><mi>weniger</mi></math></span>
                     </span>
                   </li>
                   <li>
@@ -624,28 +712,44 @@
                   <caption>Rechnung</caption>
                   <tbody>
                     <tr>
-                      <td>&nbsp;&nbsp;</td><td>H</td><td>e</td><td>l</td>
-                      <td>f</td><td>e</td><td>r</td><td>.</td>
-                      <td></td><td>T</td><td>a</td><td>g</td>
-                      <td>e</td><td></td>
+                      <td>&nbsp;&nbsp;</td>
+                      <td>H</td><td>e</td><td>l</td><td>f</td><td>e</td><td>r</td><td>.</td>
+                      <td></td>
+                      <td>T</td><td>a</td><td>g</td><td>e</td>
+                      <td></td>
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>1</td><td>0</td>
-                      <td></td><td></td> <td></td><td></td>
-                      <td></td><td>4</td> <td></td><td></td>
-                      <td></td><td></td>
+                      <td class="op"><p class="ui-state-highlight"><math><mo form="prefix">&div;</mo><mn>10</mn></math></p></td>    <!-- operator left -->
+                      <td class="left"><p><span>&larrpl;</span></p></td>                          <!-- arrow left -->
+                      <td><math><mn>1</mn></math></td><td><math><mn>0</mn></math></td><td></td><td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>4</mn></math></td><td></td>
+                      <td class="right"><p><span>&cudarrl;</span></p></td>                        <!-- arrow right -->
+                      <td class="op"><p class="ui-state-active"><math><mo>&times;</mo><mn>10</mn></math></p></td>                <!-- operator right -->
+                      <td></td>
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>1</td><td></td>
-                      <td></td><td></td><td></td><td></td>
-                      <td></td><td>4</td><td>0</td><td></td>
-                      <td></td><td></td>
+                      <td class="op"><p class="ui-state-active"><math><mo>&times;</mo><mn>8</mn></math></p></td>                 <!-- operator left -->
+                      <td class="left"><p><span>&larrpl;</span></p></td>                          <!-- arrow left -->
+                      <td><math><mn>1</mn></math></td><td></td><td></td><td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>4</mn></math></td><td><math><mn>0</mn></math></td>
+                      <td class="right"><p><span>&cudarrl;</span></p></td>                        <!-- arrow right -->
+                      <td class="op"><p class="ui-state-highlight" style="height:100%;"><math><mo form="prefix">&div;</mo><mn>8</mn></math></p></td>     <!--- operator right -->
+                      <td></td>
                     </tr>
                     <tr class="loesung">
-                      <td></td><td></td> <td>8</td><td></td>
-                      <td></td><td></td><td></td><td></td>
-                      <td></td><td>5</td><td></td><td></td>
-                      <td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>8</mn></math></td><td></td><td></td><td></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td><math><mn>5</mn></math></td><td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr>
                       <td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td>
@@ -659,7 +763,7 @@
                 <span>Antwort:</span>
                 <span class="ll">
                   <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
-                  <span class="loesung">5</span>
+                  <span class="loesung"><math><mn>5</mn></math></span>
                 </span>
               </li>
             </ol>
@@ -684,6 +788,7 @@
               <li>
                 <p>Ergänze die jeweils fehlenden Einträge:</p>
                 <table class="grid" id="geometrie">
+                  <caption>U: Umfang, A: Fläche</caption>
                   <tr>
                     <th>Name</th> <th>Zeichnung</th> <th>Seiten</th> <th>Fläche bzw. Umfang</th>
                   </tr>
@@ -696,7 +801,7 @@
                        <span class="channel-one">a =</span>
                        <span class="ll">
                          <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
-                         <span class="loesung">7cm</span>
+                         <span class="loesung"><math><mn>7</mn><mi>cm</mi></math></span>
                        </span>
                      </td>
                      <td>U = 28cm</td>
