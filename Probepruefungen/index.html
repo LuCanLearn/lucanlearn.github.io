@@ -4,8 +4,8 @@
 <!-- Datei: lucanlearn.github.io/Probepruefungen/index.html                  -->
 <!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
 <!-- Beschreibung: Probeprüfungen Mathematik; local github repo              -->
-<!-- Status: w3-checked: 2025/03/26                                          -->
-<!-- Revision: 2025/03/26 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Status: w3-checked: 2025/03/29                                          -->
+<!-- Revision: 2025/03/29 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -56,7 +56,6 @@
       body.sbm tr.loesung td.op p[class^="ui-state-"] math { font-weight:bold!important; }
       body.sbm tr.loesung td p { position:relative; }
       body.sbm tr.loesung td p span { position:absolute; color:purple; font-weight:bold; font-size:1.5em; font-weight:100; opacity:0.5; }
-
       body:not(.sbm) table.grid tr.loesung td { visibility:hidden; }
       body:not(.sbm) table.grid tr.loesung td[class] * { display:none; }
       body:not(.sbm) table.grid tr td.loesung { visibility:hidden; }
@@ -318,14 +317,18 @@
           <dt>Bruchrechnung</dt>
           <dd>
             <math><mfrac><mn>7</mn><mn>9</mn></mfrac>
-              <mo>+</mo>
+              <mo>&plus;</mo>
               <mfrac><mn>2</mn><mn>9</mn></mfrac>
               <mo>=</mo>
             </math>
             <span class="ll">
               <math class="vis-hidden"><mfrac><mn>7</mn><mn>8</mn></mfrac></math>
               <span class="loesung">&nbsp;
-                <math><mn>1</mn></math>
+                <math>
+                  <mfrac><mrow><mn>7</mn><mo>+</mo><mn>2</mn></mrow><mn>9</mn></mfrac>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                 </math>
               </span>
             </span>
             <!-- -->
@@ -337,7 +340,11 @@
             <span class="ll">
               <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
               <span class="loesung">
-                <math><mfrac><mn>5</mn><mn>9</mn></mfrac></math>
+                <math>
+                  <mfrac><mrow><mn>7</mn><mo>&minus;</mo><mn>2</mn></mrow><mn>9</mn></mfrac>
+                  <mo>=</mo>
+                  <mfrac><mn>5</mn><mn>9</mn></mfrac>
+                </math>
               </span>
             </span>
           </dd>
@@ -349,9 +356,16 @@
               <mo>=</mo>
             </math>
             <span class="ll">
-              <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
               <span class="loesung">
-                <math><mfrac><mn>14</mn><mn>81</mn></mfrac></math>
+                <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                <math>
+                  <mfrac>
+                      <mrow><mn>7</mn><mo>&times;</mo><mn>2</mn></mrow>
+                      <mrow><mn>9</mn><mo>&times;</mo><mn>9</mn></mrow>
+                    </mfrac>
+                  <mo>=</mo>
+                  <mfrac><mn>14</mn><mn>81</mn></mfrac>
+                </math>
               </span>
             </span>
             <!-- -->
@@ -361,15 +375,28 @@
               <mfrac><mn>2</mn><mn>9</mn></mfrac>
               <mo>=</mo>
             </math>
-            <span class="ll">
-              <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+            <span class="ll" style="width:10em;">
               <span class="loesung">
-                <math><mfrac><mn>7</mn><mn>2</mn></mfrac></math>
+                <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
+                <math>
+                  <mfrac><mn>7</mn><mn>9</mn></mfrac>
+                  <mo>&times;</mo>
+                  <mfrac><mn>9</mn><mn>2</mn></mfrac>
+                  <mo>=</mo>
+                  <mfrac>
+                      <mrow><mn>7</mn><mo>&times;</mo><mn>9</mn></mrow>
+                      <mrow><mn>9</mn><mo>&times;</mo><mn>2</mn></mrow>
+                  </mfrac>
+                  <mo>=</mo>
+                  <mfrac><mn>63</mn><mn>18</mn></mfrac>
+                  <mo>=</mo>
+                  <mfrac><mn>7</mn><mn>2</mn></mfrac>
+                </math>
               </span>
             </span>
           </dd>
           <dd>
-            Das kleinste Ergebnis ist: &nbsp;
+            Das kleinste Ergebnis ist: &nbsp;   <!-- Moschner: wie herausfinden??? -->
             <span class="ll">
               <math class="vis-hidden"><mfrac><mn>1</mn><mn>1</mn></mfrac></math>
               <span class="loesung">
@@ -852,6 +879,24 @@
       <footer class="ui-widget-content"></footer>
     </section>
     <!-- Probeprüfung 1 - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!--
+      Moschner:
+        Nicht in der Prüfung
+          Kürzen und Erweitern von Brüchen
+          Unechte Brüche in/aus gemischten Zahlen
+          Teilen durch nicht-natürliche Zahlen (mit mehr als 2 Ziffern) -
+            Division ist ganzzahlig - auch im Ergebnis?
+       Viel Tafelarbeit mit aktuellen Aufgaben
+       Sprache teilsweise ein Problem; 1x1 auch
+       Begriffe üben, Brüche vorlesen (Zähler, Nenner benennen)
+       Sehr mechanisches/formales Vorgehen - strenger Regelablauf
+
+
+       Die LNs (Leistungsnachweise) kopieren und verteilen - auch online??
+
+    -->
+
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <!-- Probeprüfung 2                                                     -->
