@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: CSS Ergänzung für LuCanLearn
 // +  KorrektorIn:
-// +  Status: 2025/03/17 jigsaw.w3.org/css-validator/validator as CSS3
-// +  Revision: 2025/03/17 - Details am Ende der Datei
+// +  Status: 2025/09/22 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2025/09/22 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
@@ -40,7 +40,7 @@ span.loesung math {  color:red; }
 /* --- math und weitere not wrapping --------------------------------------- */
 math, math * { white-space:nowrap; }
 
-
+/* buttons toggle ---------------------------------------------------------- */
 body:not(.sbm) span.loesung { display:none; }
 body.sbm span.loesung:empty { display:none; }
 
@@ -49,6 +49,16 @@ h2::after {
   content: attr(data-version); font-size:x-small!important; opacity:0.5;
   position:absolute; right:0em;
 }
+
+/* --- levels  ------------------ ------------------------------------------ */
+body:not(.display-advanced) *.advanced { opacity:0.5; }
+li.advanced::marker { content:"#. "; font-size:110%; }
+
+/* --- misc --------------------------------------------- ------------------ */
+abbr { font-style:italic; color:chocolate; }
+math.strong, mrow.strong, mfrac.strong, mn.strong, mi.strong, mo.strong { font-weight:bold; }
+mn.em, mo.em { font-weight:bold; color:red; }
+math ~ span.comment { opacity:0.5; margin-left:3em; }
 
 /* --- a Elemente gleich behandeln - buttons (bisher??) -------------------- */
 /* --- min-* for UI --- */

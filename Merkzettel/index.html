@@ -4,8 +4,8 @@
 <!-- Datei: lucanlearn.github.io/Merkzettel/index.html                       -->
 <!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
 <!-- Beschreibung: Merkzettel (cheat sheets)  Mathematik; local github repo  -->
-<!-- Status: w3-checked: 2025/03/06                                          -->
-<!-- Revision: 2025/03/06 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Status: w3-checked: 2025/09/21                                          -->
+<!-- Revision: 2025/09/21 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -28,9 +28,11 @@
     <!-- HACKs ?? -->
     <style>
       dl > dd { margin-left:0.5em; }
-      mn.em, mo.em { font-weight:bold; color:red; }
-      math ~ span.comment { opacity:0.5; margin-left:3em; }
     </style>
+
+    <!-- utilities -->
+    <script src="../js/lcl.js" defer></script>
+
     <!-- -->
     <title>Merkzettel</title>
   </head>
@@ -51,6 +53,182 @@
     <h1>Prüfung</h1>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Ganze Zahlen: Arithmetik auch mit negativen Zahlen                 -->
+    <!-- 2025/09/15, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/09/15">Ganze Zahlen</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <dl>
+          <dt title="COR:17">Negative Zahlen addieren</dt>
+          <dd class="text">
+            Die &bdquo;Gegenzahl&rdquo; subtrahieren
+            &ndash; etwa <math><mn>2</mn></math> für
+            <math><mo>(</mo><mo form="prefix">-</mo><mn>2</mn><mo>)</mo></math>
+          </dd>
+          <dd class="beispiel" title="COR:17">
+            <math>
+              <mn>4</mn>
+              <mo>&plus;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">2</mn><mo>)</mo>
+              <mo>=</mo>
+              <mn>4</mn> <mo class="em">&minus;</mo> <mn class="em">2</mn>
+            </math>
+            <p></p>
+            <math>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">4</mn><mo>)</mo>
+              <mo>&plus;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">5</mn><mo>)</mo>
+              <mo>=</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">4</mn><mo>)</mo>
+                <mo class="em">&minus;</mo> <mn class="em">5</mn>
+              <mo>=</mo>
+              <mo form="prefix" class="em">&minus;</mo>
+                <mo>(</mo><mn class="em">4</mn> <mo class="em">&plus;</mo> <mn class="em">5</mn><mo>)</mo>
+            </math>
+          </dd>
+          <!-- -->
+          <dt>Negative Zahlen subtrahieren</dt>
+          <dd class="text">
+            Die &bdquo;Gegenzahl&rdquo; addieren
+            &ndash; etwa <math><mn>5</mn></math> für
+            <math><mo>(</mo><mo form="prefix">-</mo><mn>5</mn><mo>)</mo></math>
+          </dd>
+          <dd class="beispiel" title="COR:17">
+            <math>
+              <mn>4</mn>
+              <mo>&minus;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">5</mn><mo>)</mo>
+              <mo>=</mo>
+              <mn>4</mn> <mo class="em">&plus;</mo> <mn class="em">5</mn>
+            </math>
+            <p></p>
+            <math>
+              <mo>(</mo> <mo form="prefix">&minus;</mo> <mn>4</mn>  <mo>)</mo>
+              <mo>&minus;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">5</mn><mo>)</mo>
+              <mo>=</mo>
+              <mo>(</mo> <mo form="prefix">&minus;</mo> <mn>4</mn>  <mo>)</mo>
+              <mo class="em">&plus;</mo> <mn class="em">5</mn>
+              <mo>=</mo>
+              <mn>5</mn>
+              <mo>&plus;</mo>
+              <mo>(</mo> <mo form="prefix">&minus;</mo> <mn>4</mn>  <mo>)</mo>
+            </math>
+          </dd>
+          <!-- -->
+          <dt>Differenzen mit negativem Ergebnis</dt>
+          <dd class="text" title="SP:20">
+            Die betragsgrößere Zahl von der betragskleineren Zahl subtrahieren; das
+            Ergebnis erhält das Vorzeichen der betragsgrößeren Zahl
+          </dd>
+          <dd class="beispiel" title="COR:17">
+            <math>
+              <mn>4</mn>
+              <mo>&plus;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">5</mn><mo>)</mo>
+              <mo>=</mo>
+              <mn>4</mn> <mo class="em">&minus;</mo> <mn class="em">5</mn>
+              <mo>=</mo>
+              <mo form="prefix" class="em">&minus;</mo>
+               <mo>(</mo> <mn class="em">5</mn> <mo>&minus;</mo> <mn class="em">4</mn><mo>)</mo>
+            </math>
+          </dd>
+          <!-- -->
+          <dt>Produkte mit negativen Zahlen</dt>
+          <dd class="beispiel" title="COR:18">
+            <math>
+              <mn>4</mn>
+              <mo>&times;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">5</mn><mo>)</mo>
+              <mo>=</mo>
+              <mo>(</mo>
+                <mo class="em">&minus;</mo>
+                  <mo>(</mo><mn>4</mn> <mo>&times;</mo> <mn class="em">5</mn><mo>)</mo>
+              <mo>)</mo>
+              <mo>=</mo>
+               <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn>20</mn><mo>)</mo>
+            </math>
+            <span class="comment"> # Eine negative Zahl</span>
+            <p></p>
+            <math>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">4</mn><mo>)</mo>
+              <mo>&times;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">5</mn><mo>)</mo>
+              <mo>=</mo>
+              <mn class="em">4</mn> <mo>&times;</mo> <mn class="em">5</mn>
+              <mo>=</mo>
+              <mn>20</mn>
+            </math>
+            <span class="comment"> # Zwei negative Zahlen</span>
+          </dd>
+          <!-- -->
+          <dt>Quotienten mit negativen Zahlen</dt>
+          <dd class="beispiel" title="COR:18">
+            <math>
+              <mn>4</mn>
+              <mo>&div;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">2</mn><mo>)</mo>
+              <mo>=</mo>
+              <mo>(</mo>
+                <mo class="em">&minus;</mo>
+                  <mo>(</mo><mn>4</mn> <mo>&div;</mo> <mn class="em">2</mn><mo>)</mo>
+              <mo>)</mo>
+            </math>
+            <span class="comment"> # Eine negative Zahl</span>
+            <p></p>
+            <math>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">4</mn><mo>)</mo>
+              <mo>&div;</mo>
+              <mo>(</mo><mo form="prefix" class="em">&minus;</mo><mn class="em">2</mn><mo>)</mo>
+              <mo>=</mo>
+              <mn class="em">4</mn> <mo>&div;</mo> <mn class="em">2</mn>
+            </math>
+            <span class="comment"> # Zwei negative Zahlen</span>
+          </dd>
+          <!-- Wurzeln -->
+          <dt class="advanced">Wurzeln</dt>
+          <dd class="beispiel advanced" title="COR:22">
+            <math>
+              <msup>
+                <mrow><mo>(</mo> <mroot><mi>x</mi><mi>y</mi></mroot> <mo>)</mo></mrow>
+                <mi>y</mi>
+              </msup>
+              <mo>=</mo>
+              <mi>x</mi>
+            </math>
+            <span class="comment"> # Invarianz für alle Wurzeln (Definition)</span>
+            <p></p>
+            <math>
+              <msup>
+                <mrow><mo>(</mo> <mroot><mn>16</mn><mi>2</mi></mroot> <mo>)</mo></mrow>
+                <mi>2</mi>
+              </msup>
+              <mo>=</mo>
+              <mi>16</mi>
+            </math>
+            <span class="comment"> #
+              <math>
+                <mroot><mn>16</mn><mn>2</mn></mroot> <mo>=</mo> <msqrt><mn>16</mn></msqrt>
+              </math>
+            </span>
+            <p></p>
+            <math>
+              <mroot><mrow><mi>a</mi><mo>&times;</mo><mi>b</mi></mrow><mi>y</mi></mroot>
+              <mo>=</mo>
+              <mroot><mi>a</mi><mi>y</mi></mroot>  <mo>&times;</mo> <mroot><mi>b</mi><mi>y</mi></mroot>
+            </math>
+          </dd>
+          <!-- -->
+        </dl>
+      </div>
+      <!-- -->
+      <footer class="ui-widget-content"></footer>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <!-- Inhalt data aus den sections pro "Seite"                           -->
     <!-- 2025/01/04, wd                                                     -->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
@@ -62,7 +240,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <!-- Bruchrechnen                                                       -->
     <!-- 2025/02/18, wd - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <section role="main" class="ui-widget ">
+    <section class="ui-widget ">
       <header class="ui-widget-header">
         <h2 data-version="2025/02/20">Bruchrechnen 1|2</h2>
       </header>
