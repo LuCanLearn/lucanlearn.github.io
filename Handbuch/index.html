@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- Datei: lucanlearn.github.io/Handbuch/index.html                         -->
+<!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
+<!-- Beschreibung: Cornelius light; local github repo                        -->
+<!-- Status: w3-checked: 2025/10/28                                          -->
+<!-- Revision: 2025/10/28 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"     content="width=device-width,initial-scale=1">
+    <!-- -->
+    <meta name="description"  content="LuCanLearn Mathematik Prüfung Muster">
+    <meta name="keywords"     content="LuCanLearn">
+    <meta name="keywords"     content="Mathematik">
+    <meta name="keywords"     content="Handbuch">
+
+    <!-- -->
+    <base target="_blank">
+    <link href="../builds/vendor/start/jquery-ui.custom.css" rel="stylesheet">
+    <link href="../builds/vendor/start/customizer.css" rel="stylesheet">
+    <link href="../builds/combined.css" rel="stylesheet">
+    <link href="../builds/media.css" rel="stylesheet">
+
+    <!-- with HACKs ??? - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <link href="../css/lcl.css" rel="stylesheet">
+    <link href="css/manual.css" rel="stylesheet">
+
+    <!-- utilities -->
+    <!-- <script src="../js/lcl.js" defer></script> -->
+
+    <!-- -->
+    <title>Handbuch Mathe</title>
+  </head>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- body                                                                 -->
+  <!-- 2025/10/10, wd                                                       -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- class mit-loesungen zeigt die Lösungen an -->
+  <body id="handbuch" class="ui-helper-reset" data-display="content">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- h1 für Suchmaschinen ???                                           -->
+    <!-- 2025/01/02, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <h1>LuCanLearn</h1>
+    <h1>Mathematik</h1>
+    <h1>Handbuch</h1>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Inhalt data aus den sections pro "Seite"                           -->
+    <!-- 2025/10/10, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version1="2025/10/19">
+          Die natürlichen Zahlen - Bedeutung von Stellen in der Notation
+          <span>Am Anfang ...</span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+       <p>TODO</p>
+      </div>
+    </section>
+
+    <!-- 2312 x 3 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version1="2025/10/10">
+          <math><mn>2312</mn> <mo>&times;</mo> <mn>3</mn></math>
+          <span>
+            todo --- Ganze Zahlen: Multiplikation - benutzt Addition und kleines 1x1
+          </span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <!-- 2312 x 3 - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <table class="example"> <!-- 1 of 4 -->
+          <!-- 1 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td>3</td> <td>1</td> <td class="ui-state-active">2</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td class="rules"> Schritt 1</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td><strong>6</strong></td>
+              <td class="rules"><math><mn>3</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn>6</mn></math></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 2 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td>3</td> <td class="ui-state-active">1</td>  <td>2</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td class="rules">Schritt 2</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td></td> <td><strong>3</strong></td> <td>6</td>
+              <td class="rules"><math><mn>3</mn> <mo>&times;</mo> <mn>1</mn> <mo>=</mo> <mn>3</mn></math></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 3 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td class="ui-state-active">3</td> <td>1</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td class="rules">Schritt 3 </td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+            <td></td> <td></td> <td></td> <td><strong>9</strong></td> <td>3</td> <td>6</td>
+            <td class="rules"><math><mn>3</mn> <mo>&times;</mo> <mn>3</mn> <mo>=</mo> <mn>9</mn></math></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 4 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td class="ui-state-active">2</td> <td>3</td> <td>1</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td class="rules">Schritt 4</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td><math><mo>=</mo></math></td> <td></td> <td><strong>6</strong></td> <td>9</td> <td>3</td> <td>6</td>
+              <td class="rules"><math><mn>3</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn>6</mn></math></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- -->
+        <p>&nbsp;</p><p>&nbsp;</p>
+        <p class="ui-state-default zumNachrechnen"></p>
+        <ul class="zumNachrechnen">
+          <li class="ui-state-hover">
+            <math><mn>2</mn> <mo>&times;</mo> <mn>3</mn> <mo>=</mo> <mn>6</mn></math>
+            <span>&#709;</span>
+            <a class="stretched" href="Aufgaben/times.2.3.html"></a>
+          </li>
+          <li>
+            <math><mn>233</mn> <mo>&times;</mo> <mn>3</mn> <mo>=</mo> <mn>699</mn></math>
+            <span>&#709;</span>
+            <a class="stretched" href="Aufgaben/times.233.3.html"></a>
+          </li>
+          <li class="ui-state-hover">
+            <math><mn>2102</mn> <mo>&times;</mo> <mn>4</mn> <mo>=</mo> <mn>8408</mn></math>
+            <span>&#709;</span>
+            <a class="stretched" href="Aufgaben/times.2102.4.html"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 172 x 5 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version1="2025/10/10">
+          <math><mn>172</mn> <mo>&times;</mo> <mn>5</mn></math>
+          <span>
+            todo --- Ganze Zahlen: Multiplikation - benutzt Addition und kleines 1x1
+          </span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+
+        <!-- 172 x 5 - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+        <table class="example">
+          <!-- 1 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td class="ui-state-active">2</td> <td><math><mo>&times;</mo></math></td> <td>5</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td>1</td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td></td> <td><strong>0</strong></td>
+              <td class="rules">
+                <math>
+                  <mn>5</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn class="em">1</mn><mn class="strong">0</mn>
+                </math>
+                <span># <math><mn>0</mn></math> übernehmen, Übertrag <math><mn class="em">1</mn></math> merken</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="6"></td></tr></tbody>
+          <!-- 2 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td class="ui-state-active">7</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>5</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td>
+              <td>3</td>  <td><p>1<span class="s">&shy;&#x0336;</span></p></td>
+              <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td><strong>6</strong></td> <td>0</td>
+              <td class="rules">
+                <math>
+                  <mn>5</mn> <mo>&times;</mo> <mn>7</mn> <mo>&plus;</mo> <mn class="em">1</mn>
+                  <mo>=</mo>
+                  <mn class="em">3</mn><mn class="strong">6</mn>
+                </math>
+                <span class="channel-one"># <math><mn>6</mn></math> übernehmen, Übertrag <math><mn class="em">3</mn></math> merken</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="6"></td></tr></tbody>
+          <!-- 3 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td class="ui-state-active">1</td> <td>7</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>5</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td>
+              <td><p>3<span class="s">&shy;&#x0336;</span></p></td><td> <p>1<span class="s">&shy;&#x0336;</span></p></td>
+              <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td><math><mo>=</mo></math></td> <td></td> <td><strong>8</strong></td> <td>6</td> <td>0</td>
+              <td class="rules">
+                <math>
+                  <mn>5</mn> <mo>&times;</mo> <mn>1</mn> <mo>&plus;</mo> <mn class="em">3</mn>
+                  <mo>=</mo>
+                  <mn class="strong">8</mn>
+                </math>
+                <span># <math><mn>8</mn></math> übernehmen</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- -->
+      </div>
+    </section>
+
+    <!-- 173 x 21 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version1="2025/10/10">
+          <math><mn>173</mn> <mo>&times;</mo> <mn>21</mn></math>
+          <span>
+            todo --- Ganze Zahlen: Multiplikation - benutzt Addition und kleines 1x1
+          </span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <table class="example">
+          <!-- 1 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td>3</td> <td><math><mo>&times;</mo></math></td> <td class="ui-state-active">2</td> <td>1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>3</td> <td>4</td> <td>6</td> <td></td>
+              <td class="rules">
+                <math><mn>173</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn>346</mn></math>
+                <span># eintragen</span>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+            -->
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 2 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td>3</td> <td><math><mo>&times;</mo></math></td>  <td>2</td> <td class="ui-state-active">1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>3</td> <td>4</td> <td class="orLeft">6</td> <td><p><span class="arrow">&swarr;</span></p></td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td>1</td> <td>7</td> <td class="orRight">3</td>
+              <td class="rules">
+                <math><mn>173</mn> <mo>&times;</mo> <mn>1</mn> <mo>=</mo> <mn>173</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                <span class="right"># eine Stelle nach rechts versetzt eintragen</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 3 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td>3</td> <td><math><mo>&times;</mo></math></td>  <td>2</td> <td>1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>3</td> <td>4</td> <td>6</td> <td class="empty">0</td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+              <td><math><mo>&plus;</mo></math></td> <td></td> <td></td> <td>1</td> <td>7</td> <td>3</td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr class="theResult">
+              <td><math><mo>=</mo></math></td> <td></td> <td>3</td> <td>6</td> <td>3</td> <td>3</td>
+              <td class="rules">
+                <math><mn>346</mn><mn class="strong">0</mn> <mo>&plus;</mo> <mn>173</mn> <mo>=</mo> <mn>3633</mn></math>
+                <span># leere Stelle als <math><mn class="strong">0</mn></math> interpretiert</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <!-- 1263 x 469 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version1="2025/10/10">
+          <math><mn>1263</mn> <mo>&times;</mo> <mn>469</mn></math>
+          <span>
+            todo --- Ganze Zahlen: Multiplikation - benutzt Addition und kleines 1x1
+          </span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <table class="example">
+          <!-- 1 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>2</td> <td>6</td> <td>3</td> <td><math><mo>&times;</mo></math></td> <td class="ui-state-active">4</td> <td>6</td> <td>9</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>5</td> <td>0</td> <td>5</td> <td>2</td> <td></td> <td></td>
+              <td class="rules">
+                <math><mn>1263</mn> <mo>&times;</mo> <mn>4</mn> <mo>=</mo> <mn>5052</mn></math>
+                <span># eintragen</span>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="9"></td></tr></tbody>
+
+          <!-- 2 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>2</td> <td>6</td> <td>3</td> <td><math><mo>&times;</mo></math></td>  <td>4 </td><td class="ui-state-active">6</td> <td>9</td>
+              <td></td>
+            </tr>
+            <tr>
+            <td></td> <td></td> <td>5</td> <td>0</td> <td>5</td> <td class="orLeft">2</td> <td><p><span class="arrow">&swarr;</span></p></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+            <td></td> <td></td> <td></td> <td>7</td> <td>5</td> <td>7</td> <td class="orRight">8</td> <td></td>
+              <td class="rules">
+                <math><mn>1263</mn> <mo>&times;</mo> <mn>6</mn> <mo>=</mo> <mn>7578</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                <span class="right"># eine Stelle nach rechts versetzt eintragen</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="9"></td></tr></tbody>
+
+          <!-- 3 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>2</td> <td>6</td> <td>3</td> <td><math><mo>&times;</mo></math></td>  <td>4</td> <td>6</td><td class="ui-state-active">9</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>5</td> <td>0</td> <td>5</td> <td>2</td> <td></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+            <td></td> <td></td> <td></td> <td>7</td> <td>5</td> <td>7</td> <td class="orLeft">8</td> <td><p><span class="arrow">&swarr;</span></p></td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td>1</td> <td>1</td> <td>3</td> <td>6</td> <td class="orRight">7</td>
+              <td class="rules">
+                <math><mn>1263</mn> <mo>&times;</mo> <mn>9</mn> <mo>=</mo> <mn>11367</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                <span class="right"># eine Stelle nach rechts versetzt eintragen</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="9"></td></tr></tbody>
+
+          <!-- 4 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>2</td> <td>6</td> <td>3</td> <td><math><mo>&times;</mo></math></td>  <td>4</td> <td>6</td><td>9</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>5</td> <td>0</td> <td>5</td> <td>2</td> <td class="empty">0</td> <td class="empty">0</td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+              <td class="zero"><math><mo>&plus;</mo></math></td> <td></td> <td></td> <td>7</td> <td>5</td> <td>7</td> <td>8</td> <td class="empty">0</td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+              <td><math><mo>&plus;</mo></math></td> <td></td> <td></td> <td>1</td> <td>1</td> <td>3</td> <td>6</td> <td>7</td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr class="theResult">
+              <td><math><mo>=</mo></math></td> <td></td> <td>5</td> <td>9</td> <td>2</td> <td>3</td> <td>4</td> <td>7</td>
+              <td class="rules">
+                <math>
+                  <mn>5052</mn><mn class="strong">00</mn> <mo>&plus;</mo> <mn>7578</mn><mn class="strong">0</mn> <mo>&plus;</mo> <mn>11367</mn>
+                  <mo>=</mo>
+                  <mn>592347</mn>
+                </math>
+                <span># leere Stellen als <math><mn>0</mn></math> interpretiert</span>
+               </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- -->
+  </body>
+  <!-- -->
+</html>
+<!-- Eof -->

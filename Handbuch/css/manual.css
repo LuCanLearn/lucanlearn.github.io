@@ -1,0 +1,52 @@
+/*
+// +---------------------------------------------------------------------------
+// +  Datei: lucanlearn.github.io/css/Handbuch/css/manual.css
+// +  AutorIn: w dot doeringer ( at protonmail dot com)
+// +  Beschreibung: CSS Ergänzung für LuCanLearn - Handbuch
+// +  KorrektorIn:
+// +  Status: 2025/10/28 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2025/10/28 - Details am Ende der Datei
+// +---------------------------------------------------------------------------
+*/
+
+h2 > span { font-size:50%!important; position:absolute; right:0em; bottom:2em; }
+
+table.example { width:100%; border:1pt solid black; border:none; }
+table.example tr td:last-child, table.example tr th:last-child { width:100%; }
+/* table.exampe tr { display:flex; align-items:stretch; }                                 */
+/* table.example tr td:last-child, table.example tr th:last-child { flex:1; width:100%; } */
+table.example tbody.separator { visibility:hidden; height:1em; }
+table.example tbody tr.theProblem td { background:rgb(110 172 44 / 0.75); }
+table.example tbody tr.theResult td:not(.rules) { border-top:1pt solid black;  }
+table.example tr td:nth-of-type(2n+1) { background:rgb(248 218 78 / 0.75); }
+table.example tbody td.rules { background:transparent; padding-left:2em; }
+table.example tbody td.rules math + span { margin-left:2em; display:inline-block; }
+
+table.example tbody tr.carry td { border-bottom:1pt dotted black; font-size:smaller; position:relative; }
+table.example tbody tr.carry td:not(:last-child) { color:red; }
+table.example tbody tr.carry td span.s { position:absolute; top:-0.25em; left:0.25em; }
+
+table.example td.empty { color:rgb(0 0 0 / 0.5); }
+table.example td p { position:relative; }
+table.example td.orLeft { border-right:2pt dotted purple;  }
+table.example td.orRight { border-top:2pt dotted purple; border-right:2pt dotted purple; }
+table.example td span.arrow { color:purple; font-size:120%; position:absolute; top:-0.25em; }
+table.example td.rules span.right { color:purple; }
+
+.rules { font-size:smaller; }
+tr:not(.theProblem) .rules { opacity:0.75;}
+
+p.ui-state-default.zumNachrechnen:before { content:"Zum Nachrechnen - Antippen zeigt jeweilige Details"}
+ul.zumNachrechnen li { border:none!important; padding:0.25em; padding-left:0.5em; position:relative; }
+ul.zumNachrechnen li span { position:absolute; right:1em; }
+ul.zumNachrechnen li a.stretched { min-height:0em; }
+
+/*
+// +---------------------------------------------------------------------------
+// +  Liste der Aenderungen
+// +  Datenelement       Datum        AutorIn       Beschreibung
+// +---------------------------------------------------------------------------
+// +  Modul              2025/10/28   w.doeringer   erste Version
+// +
+// --- Ende der Datei ---------------------------------------------------------
+*/

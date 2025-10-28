@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: CSS Ergänzung für LuCanLearn
 // +  KorrektorIn:
-// +  Status: 2025/09/22 jigsaw.w3.org/css-validator/validator as CSS3
-// +  Revision: 2025/09/22 - Details am Ende der Datei
+// +  Status: 2025/10/12 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2025/10/12 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
@@ -58,6 +58,7 @@ li.advanced::marker { content:"#. "; font-size:110%; }
 abbr { font-style:italic; color:chocolate; }
 math.strong, mrow.strong, mfrac.strong, mn.strong, mi.strong, mo.strong { font-weight:bold; }
 mn.em, mo.em { font-weight:bold; color:red; }
+mn.strong, mo.strong { font-weight:bold; }
 math ~ span.comment { opacity:0.5; margin-left:3em; }
 
 /* --- a Elemente gleich behandeln - buttons (bisher??) -------------------- */
