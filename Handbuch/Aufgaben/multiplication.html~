@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- Datei: lucanlearn.github.io/Handbuch/Aufgaben/multiplication.html       -->
+<!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
+<!-- Beschreibung: Cornelius light; local github repo                        -->
+<!-- Status: w3-checked: 2025/11/02                                          -->
+<!-- Revision: 2025/11/02 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"     content="width=device-width,initial-scale=1">
+    <!-- -->
+    <meta name="description"  content="LuCanLearn Mathematik Prüfung Muster">
+    <meta name="keywords"     content="LuCanLearn">
+    <meta name="keywords"     content="Mathematik">
+    <meta name="keywords"     content="Handbuch">
+
+    <!-- -->
+    <base target="_blank">
+    <link href="../../builds/vendor/start/jquery-ui.custom.css" rel="stylesheet">
+    <link href="../../builds/vendor/start/customizer.css" rel="stylesheet">
+    <link href="../../builds/combined.css" rel="stylesheet">
+    <link href="../../builds/media.css" rel="stylesheet">
+
+    <!-- with HACKs ??? - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <link href="../../css/lcl.css" rel="stylesheet">
+    <link href="../css/manual.css" rel="stylesheet">
+
+    <style>
+      body.url-with-fragment *[id] { opacity:0.75; }
+      body.url-with-fragment :target { opacity:1.0; }
+    </style>
+
+    <!-- utilities -->
+    <script src="../js/manual.js" defer></script>
+
+    <!-- -->
+    <title>Multiplikation</title>
+  </head>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- body                                                                 -->
+  <!-- 2025/10/29, wd                                                       -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+  <!-- class mit-loesungen zeigt die Lösungen an -->
+  <body class="ui-helper-reset" data-display="content">
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- h1 für Suchmaschinen ???                                           -->
+    <!-- 2025/10/28, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <h1>LuCanLearn</h1>
+    <h1>Mathematik</h1>
+    <h1>Handbuch</h1>
+    <h1>Aufgabe</h1>
+    <h1>Multiplikation </h1>
+
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- Inhalt data aus den sections pro "Seite"                           -->
+    <!-- 2025/10/29, wd                                                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section role="main" class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/10/29">Details 1 | 3</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <!-- 233 x 3 - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+        <table class="example" id="times.233.3">
+          <!-- 1 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td>3</td> <td class="ui-state-active">3</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td></td> <td><strong>9</strong></td>
+              <td class="rules">
+                <math>
+                  <mn>3</mn> <mo>&times;</mo> <mn>3</mn> <mo>=</mo> <mn>9</mn>
+                </math>
+                <span># <math><mn>9</mn></math> notieren</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="6"></td></tr></tbody>
+          <!-- 2 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td class="ui-state-active">3</td> <td>3</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td>  <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td><strong>9</strong></td> <td>9</td>
+              <td class="rules">
+                <math>
+                  <mn>3</mn> <mo>&times;</mo> <mn>3</mn> <mo>=</mo> <mn>9</mn>
+                </math>
+                <span class="channel-one"># <math><mn>9</mn></math> notieren</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="6"></td></tr></tbody>
+          <!-- 3 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td class="ui-state-active">2</td> <td>3</td> <td>3</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td><td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td><math><mo>=</mo></math></td> <td></td> <td><strong>6</strong></td> <td>9</td> <td>9</td>
+              <td class="rules">
+                <math>
+                  <mn>2</mn> <mo>&times;</mo> <mn>3</mn> <mo>=</mo> <mn>6</mn>
+                </math>
+                <span># <math><mn>6</mn></math> notieren</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p><p>&nbsp;</p>
+
+        <!-- 2102 x 4 - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <table class="example" id="times.2102.4">
+          <!-- 1 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td>1</td> <td>0</td> <td class="ui-state-active">2</td> <td><math><mo>&times;</mo></math></td> <td>4</td>
+              <td class="rules"> Schritt 1</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td><strong>8</strong></td>
+              <td class="rules">
+                <math><mn>4</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn>8</mn></math>
+                <span># <math><mn>8</mn></math> notieren</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 2 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td>1</td> <td class="ui-state-active">0</td>  <td>2</td> <td><math><mo>&times;</mo></math></td> <td>4</td>
+              <td class="rules">Schritt 2</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td></td> <td><strong>0</strong></td> <td>8</td>
+              <td class="rules">
+                <math><mn>4</mn> <mo>&times;</mo> <mn>0</mn> <mo>=</mo> <mn>0</mn></math>
+                <span># <math><mn>0</mn></math> notieren</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 3 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td class="ui-state-active">1</td> <td>0</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>4</td>
+              <td class="rules">Schritt 3 </td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+            <td></td> <td></td> <td></td> <td><strong>4</strong></td> <td>3</td> <td>6</td>
+            <td class="rules">
+              <math><mn>4</mn> <mo>&times;</mo> <mn>1</mn> <mo>=</mo> <mn>4</mn></math>
+                <span># <math><mn>4</mn></math> notieren</span>
+            </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 4 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td class="ui-state-active">2</td> <td>1</td> <td>0</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>4</td>
+              <td class="rules">Schritt 4</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td><math><mo>=</mo></math></td> <td></td> <td><strong>8</strong></td> <td>4</td> <td>0</td> <td>8</td>
+              <td class="rules">
+                <math><mn>4</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn>8</mn></math>
+                <span># <math><mn>8</mn></math> notieren</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/10/29">Details 2 | 3</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <!-- 2 x 3 - - - - - - - - - - - - - - - - - - - - - - - - - - -  - -->
+        <table class="example" id="times.2.3">
+          <!-- 1 of 1 -->
+          <tbody>
+            <tr class="theProblem">
+              <td class="ui-state-active">2</td> <td><math><mo>&times;</mo></math></td> <td>3</td>
+              <td class="rules"> Schritt 1</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td>=</td> <td></td> <td><strong>6</strong></td>
+              <td class="rules">
+                <math><mn>3</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn>6</mn></math>
+                <span># <math><mn>6</mn></math> notieren</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p><p>&nbsp;</p>
+
+        <!-- 172 x 5 - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+        <table class="example" id="times.172.5">
+          <!-- 1 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td class="ui-state-active">2</td> <td><math><mo>&times;</mo></math></td> <td>5</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td> <td></td> <td>1</td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td></td> <td><strong>0</strong></td>
+              <td class="rules">
+                <math>
+                  <mn>5</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn class="em">1</mn><mn class="strong">0</mn>
+                </math>
+                <span>
+                  # <math><mn>0</mn></math> notieren,
+                  <span class="channel-one">Übertrag</span> <math><mn class="em">1</mn></math> merken</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="6"></td></tr></tbody>
+          <!-- 2 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td class="ui-state-active">7</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>5</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td>
+              <td>3</td>  <td><p>1<span class="s">&shy;&#x0336;</span></p></td>
+              <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td><strong>6</strong></td> <td>0</td>
+              <td class="rules">
+                <math>
+                  <mn>5</mn> <mo>&times;</mo> <mn>7</mn> <mo>&plus;</mo> <mn class="em">1</mn>
+                  <mo>=</mo>
+                  <mn class="em">3</mn><mn class="strong">6</mn>
+                </math>
+                <span>#
+                  <math><mn>6</mn></math> notieren,
+                  <span class="channel-one">Übertrag</span> <math><mn class="em">3</mn></math> merken
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="6"></td></tr></tbody>
+          <!-- 3 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td class="ui-state-active">1</td> <td>7</td> <td>2</td> <td><math><mo>&times;</mo></math></td> <td>5</td>
+              <td></td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td></td>
+              <td><p>3<span class="s">&shy;&#x0336;</span></p></td><td> <p>1<span class="s">&shy;&#x0336;</span></p></td>
+              <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+            <td><math><mo>=</mo></math></td> <td></td> <td><strong>8</strong></td>  <td>6</td> <td>0</td>
+              <td class="rules">
+                <math>
+                  <mn>5</mn> <mo>&times;</mo> <mn>1</mn> <mo>&plus;</mo> <mn class="em">3</mn>
+                  <mo>=</mo>
+                  <mn class="strong">8</mn>
+                </math>
+                <span>
+                  # <math><mn>8</mn></math> notieren
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p><p>&nbsp;</p>
+
+        <!-- 4 x 7 - - - - - - - - - - - - - - - - - - - - - - - - - - -  - -->
+        <table class="example" id="times.4.7">
+          <!-- 1 of 2 -->
+          <tbody>
+            <tr class="theProblem">
+              <td class="ui-state-active">4</td> <td><math><mo>&times;</mo></math></td> <td>7</td>
+              <td class="rules"> Schritt 1</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td>2</td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td><strong>8</strong></td>
+              <td class="rules">
+                <math><mn>4</mn> <mo>&times;</mo> <mn>7</mn> <mo>=</mo> <mn class="em">2</mn><mn class="strong">8</mn></math>
+                <span>
+                  # <math><mn>8</mn></math> notieren,
+                  <span class="channel-one">Übertrag</span> <math><mn class="em">2</mn></math> merken
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="4"></td></tr></tbody>
+          <!-- 2 of 2 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>4</td> <td><math><mo>&times;</mo></math></td> <td>7</td>
+              <td class="rules"> Schritt 2</td>
+            </tr>
+            <tr class="carry">
+              <td></td> <td><p>2<span class="s">&shy;&#x0336;</span></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+              <td></td>  <td><strong>2</strong></td> <td>8</td>
+              <td class="rules">
+                <span>
+                  # <math><mn>2</mn></math> notieren:
+                  <span class="channel-one">restlichen</span> Übertrag übernehmen
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version="2025/10/29">Details 3 | 3</h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <!-- 173 x 21 - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <table class="example" id="times.173.21">
+          <!-- 1 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td>3</td> <td><math><mo>&times;</mo></math></td> <td class="ui-state-active">2</td> <td>1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>3</td> <td>4</td> <td>6</td> <td></td>
+              <td class="rules">
+                <math><mn>173</mn> <mo>&times;</mo> <mn>2</mn> <mo>=</mo> <mn>346</mn></math>
+                <span># eintragen</span>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+            <!--
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+            -->
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 2 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td>3</td> <td><math><mo>&times;</mo></math></td>  <td>2</td> <td class="ui-state-active">1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>3</td> <td>4</td> <td class="orLeft">6</td> <td><p><span class="arrow">&swarr;</span></p></td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td></td> <td>1</td> <td>7</td> <td class="orRight">3</td>
+              <td class="rules">
+                <math><mn>173</mn> <mo>&times;</mo> <mn>1</mn> <mo>=</mo> <mn>173</mn></math>
+                <span># eintragen</span>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                <span class="right"># eine Stelle nach rechts versetzt</span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 3 of 3 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td> <td>7</td> <td>3</td> <td><math><mo>&times;</mo></math></td>  <td>2</td> <td>1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>3</td> <td>4</td> <td>6</td> <td class="empty">0</td>
+              <td class="rules">
+                <span># leere Stelle als <math><mn class="strong">0</mn></math> interpretiert</span>
+              </td>
+            </tr>
+            <tr>
+              <td><math><mo>&plus;</mo></math></td> <td></td> <td></td> <td>1</td> <td>7</td> <td>3</td>
+              <td class="rules">
+              </td>
+            </tr>
+            <tr class="theResult">
+              <td><math><mo>=</mo></math></td> <td></td> <td>3</td> <td>6</td> <td>3</td> <td>3</td>
+              <td class="rules">
+                <math><mn>346</mn><mn class="strong">0</mn> <mo>&plus;</mo> <mn>173</mn> <mo>=</mo> <mn>3633</mn></math>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- -->
+  </body>
+  <!-- -->
+</html>
+<!-- Eof -->

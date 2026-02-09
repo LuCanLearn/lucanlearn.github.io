@@ -6,8 +6,8 @@
 <!-- Beschreibung: Übungsblätter Mathematik; local github repo               -->
 <!--   Konvention: Lösungen zu xxx-proportional entsprechend tabellarischer  -->
 <!--               Herleitung                                                -->
-<!-- Status: w3-checked: 2025/09/22                                          -->
-<!-- Revision: 2025/09/22 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Status: w3-checked: 2025/11/05                                          -->
+<!-- Revision: 2025/11/05 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -33,6 +33,8 @@
         content:attr(data-keywords); font-size:x-small;
         position:absolute; right:1rem;
       }
+      ol[type="a"] > li { position:relative; }
+      a.stretched { min-height:0em; }
 
      p[data-topic]::before { content:attr(data-topic)". "; font-weight:bold; }
     </style>
@@ -86,6 +88,7 @@
           <li>   <!-- class="ui-state-highlight" -->
             <math><mn>436</mn><mo>+</mo><mn>25</mn> <mo>=</mo></math>
             <span class="loesung" style="color:red;">461</span>
+            <a class="stretched" href="../Handbuch/index.html#plus.436.89"></a>            
           </li>
           <li>
             <math><mn>177</mn><mo>&minus;</mo><mn>35</mn> <mo>=</mo></math>
@@ -94,6 +97,7 @@
           <li>
             <math><mn>19</mn><mo>&times;</mo><mn>42</mn> <mo>=</mo></math>
             <span class="loesung"><math><mn>798</mn></math></span>
+            <a class="stretched" href="../Handbuch/index.html#times.1263.469"></a>
           </li>
           <li>
             <math><mn>108</mn><mo>&div;</mo><mn>12</mn> <mo>=</mo></math>
@@ -460,8 +464,9 @@
         </p>
         <ol type="a">
           <li>
-            <math><mn>145</mn><mo>+</mo><mn>363</mn><mo>+</mo><mn>432</mn><mo>=</mo></math>
-            <span class="loesung"><math><mn>940</mn></math></span>
+            <math></mo><mn>363</mn><mo>+</mo><mn>432</mn><mo>=</mo></math>
+            <span class="loesung"><math><mn>795</mn></math></span>
+            <a class="stretched" href="../Handbuch/index.html#plus.436.53"><span style="position:absolute; right:1em;">&#65088;</span></a>
           </li>
           <li>
             <math><mn>9386</mn><mo>&minus;</mo><mn>8735</mn> <mo>=</mo></math>
@@ -469,7 +474,8 @@
           </li>
           <li>
             <math><mn>339</mn><mo>&times;</mo><mn>409</mn> <mo>=</mo></math>
-            <span class="loesung"><math><mn>138651</mn></math></span>
+            <span class="loesung"><math><mn>138651</mn></math></span><span>&#65088;</span>
+            <a class="stretched" href="../Handbuch/index.html#times.1263.469"><span style="position:absolute; right:1em;">&arr;</span></a>
           </li>
           <li>
             <math><mn>2214</mn><mo>&div;</mo><mn>18</mn> <mo>=</mo></math>
@@ -930,6 +936,7 @@
               <mo>=</mo>
             </math>
             <span class="loesung"><math><mn>66</mn></math></span>
+            <a class="stretched" href="../Handbuch/index.html#times.372.5"></a>
           </li>
           <li>
             <math>

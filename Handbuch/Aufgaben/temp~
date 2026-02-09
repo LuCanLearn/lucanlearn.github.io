@@ -1,0 +1,56 @@
+          <!-- 3 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>4</td> <td>3</td> <td>6</td>
+              <td><math><mo>&plus;</mo></math></td>
+              <td>5</td> <td>3</td>
+              <td class="rules">Schritt 3</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td></td> <td>4</td> <td class="active">3</td> <td>6</td>
+              <td class="rules"></td>
+            </tr>
+            <tr>
+              <td><math><mo>&plus;</mo></math></td>
+              <td></td> <td></td> <td></td> <td class="active">5</td> <td>3</td>
+              <td class="rules"></td>
+            </tr>
+            <tr class="carry plus">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td> <td></td> <td></td> <td></td> <td><strong>8</strong></td> <td>9</td>
+            <td class="rules"> <math><mn>3</mn> <mo>&plus;</mo> <mn>5</mn> <mo>=</mo> <mn>8</mn></math></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+          <!-- 4 of 4 -->
+          <tbody>
+            <tr class="theProblem">
+              <td>4</td> <td>3</td> <td>6</td>
+              <td><math><mo>&plus;</mo></math></td>
+              <td>5</td> <td>3</td>
+              <td class="rules">Schritt 4</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td></td> <td class="active">4</td> <td>3</td> <td>6</td>
+              <td class="rules"></td>
+            </tr>
+            <tr>
+              <td><math><mo>&plus;</mo></math></td>
+              <td></td> <td></td> <td class="empty">0</td> <td>5</td> <td>3</td>
+              <td class="rules">Leere Stelle wird als <math><mn>0</mn></math> interpretiert</td>
+            </tr>
+            <tr class="carry plus">
+              <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Überträge</td>
+            </tr>
+            <tr>
+            <td><math><mo>=</mo></math></td>
+            <td></td> <td></td> <td><strong>4</strong></td> <td>8</td> <td>9</td>
+            <td class="rules"> <math><mn>4</mn> <mo>&plus;</mo> <mn>0</mn> <mo>=</mo> <mn>4</mn></math></td>
+            </tr>
+          </tbody>

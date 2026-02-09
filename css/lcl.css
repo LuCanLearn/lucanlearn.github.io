@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: CSS Ergänzung für LuCanLearn
 // +  KorrektorIn:
-// +  Status: 2025/10/12 jigsaw.w3.org/css-validator/validator as CSS3
-// +  Revision: 2025/10/12 - Details am Ende der Datei
+// +  Status: 2026/02/09 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2026/02/09 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
@@ -33,7 +33,7 @@ dd > ol.embedded { list-style-position:outside; }
 
 /* --- Lösungen; Einblenden über "sbm" in body ----------------------------- */
 span.loesung { white-space:nowrap; overflow:hidden; }
-span.loesung math {  color:red; }
+span.loesung math { color:red; }
 
 /*  border:none; padding:0.15em; padding-left:0.5em; padding-right:0.5em; */
 
@@ -41,8 +41,10 @@ span.loesung math {  color:red; }
 math, math * { white-space:nowrap; }
 
 /* buttons toggle ---------------------------------------------------------- */
+/*   loesung-inplace toggles highlight color */
 body:not(.sbm) span.loesung { display:none; }
 body.sbm span.loesung:empty { display:none; }
+body.sbm span.loesung-inplace { color:red; }
 
 /* --- Versionsangabe klein einblenden ------------------ ------------------ */
 h2::after {
