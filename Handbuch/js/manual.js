@@ -1,10 +1,10 @@
 // +---------------------------------------------------------------------------
-// +  Datei: LuCanLearn/lucanlearn.github.io/Handbuch/js/lcl.js
+// +  Datei: LuCanLearn/lucanlearn.github.io/Handbuch/js/manual.js
 // +  AutorIn:  w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: standalone; simple org
 // +  KorrektorIn:
 // +  Status:   2025/10/30 validiert mit js[hl]int.com
-// +  Revision: 2025/10/30 - Details am Ende der Datei
+// +  Revision: 2026/02/09 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 //
 // --- IIFE: Inmediately invoked function expression --------------------------
@@ -26,8 +26,8 @@
 // +  Liste der Aenderungen
 // +  Datenelement       Datum        AutorIn            Beschreibung
 // +---------------------------------------------------------------------------
-// +  Modul              2025/02/19   wd                 erste Version
-// +                     2025/03/06   wd                 pointerup event
+// +  Modul              2025/10/30   wd                 erste Version
+// +
 //
 //  Ende der Datei
 //

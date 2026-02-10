@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer (at fh-worms dot de)
 // +  Beschreibung: CSS für "channel zero", Details siehe channels.css
 // +  KorrektorIn:
-// +  Status:   2025/02/17 jigsaw.w3.org/css-validator/validator as CSS3 (-)
-// +  Revision: 2025/02/17 - Details am Ende der Datei
+// +  Status:   2026/02/10 jigsaw.w3.org/css-validator/validator as CSS3 (-)
+// +  Revision: 2026/02/10 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 section[class~=channel-one] * { display:none!important; }
@@ -136,7 +136,7 @@ ul.toc:nth-of-type(1) li:nth-of-type(2) { background-color:#3498db; }
 ul.toc:nth-of-type(1) li:nth-of-type(3) { background-color:#800080; }
 ul.toc:nth-of-type(1) li:nth-of-type(4) { background-color:#ffcc00; }
 
-ul.toc:nth-of-type(2) li:nth-of-type(1) { background-color:#6600cc; }
+ul.toc:nth-of-type(2) li:nth-of-type(1) { background-color:#ffcc00; } /* #6600cc */
 ul.toc:nth-of-type(2) li:nth-of-type(2) { background-color:#cc3300; }
 ul.toc:nth-of-type(2) li:nth-of-type(3) { background-color:#ff3333; }
 ul.toc:nth-of-type(2) li:nth-of-type(4) { background-color:#0066ff; }

@@ -63,9 +63,9 @@ mn.em, mo.em { font-weight:bold; color:red; }
 mn.strong, mo.strong { font-weight:bold; }
 math ~ span.comment { opacity:0.5; margin-left:3em; }
 
-/* --- a Elemente gleich behandeln - buttons (bisher??) -------------------- */
+/* --- a??????????????? Elemente gleich behandeln - buttons (bisher??) -------------------- */
 /* --- min-* for UI --- */
-a, button {
+button {
   position:fixed; z-index:1; top:3rem; right:3rem;
   padding:0em;
   min-height:1cm; min-width:1cm;
