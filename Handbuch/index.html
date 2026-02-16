@@ -4,8 +4,8 @@
 <!-- Datei: lucanlearn.github.io/Handbuch/index.html                         -->
 <!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
 <!-- Beschreibung: Cornelius light; local github repo                        -->
-<!-- Status: w3-checked: 2025/11/20                                          -->
-<!-- Revision: 2025/12/17 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Status: w3-checked: 2026/02/16                                          -->
+<!-- Revision: 2026/02/16 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -77,6 +77,13 @@
 
       table.example.div tbody.separator tr td:last-child { visibility:visible; background:transparent!important; }
 
+      p.boilerplate { /* center in middle of page */
+        font-size:500%; font-weight:bold; white-space:nowrap; color:orange;
+        position:absolute;
+        left:50%; top:50%;
+        transform: translate(-50%, -50%);
+        /* https://stackoverflow.com/questions/2005954/center-a-positionfixed-element */
+      }
 
     </style>
 
@@ -118,6 +125,7 @@
       <div class="ui-widget-content">
        <p>TODO</p>
        <p>4424 - 3969</p>
+       <p class="boilerplate">In Arbeit</p>
       </div>
     </section>
 
@@ -475,13 +483,13 @@
             </tr>
             <tr>
               <td></td>
-              <td></td> <td></td> <td>9</td> <td class="active">8</td>
+              <td></td> <td></td> <td>9</td> <td>8</td>
               <td class="rules"></td>
             </tr>
             <tr>
               <td><math><mo>&plus;</mo></math></td>
-              <td></td> <td></td> <td>7</td> <td class="active">2</td>
-              <td class="rules">
+              <td></td> <td></td> <td>7</td> <td>2</td>
+              <td class="carry plus">  <!-- rules -->
                 <math><mn>8</mn> <mo>&plus;</mo> <mn>2</mn> <mo>=</mo> <mn class="em strong">1</mn><mn>0</mn></math>
               </td>
             </tr>
@@ -944,7 +952,7 @@
     </section>
 
     <!-- 1263 x 469 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <section role="main" class="ui-widget">
+    <section class="ui-widget">
       <header class="ui-widget-header">
         <h2 data-version1="2025/10/10">
           <math><mn>1263</mn> <mo>&times;</mo> <mn>469</mn></math>
