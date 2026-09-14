@@ -1,0 +1,5 @@
+used
+npm config set loglevel=warn  # fewer messages such as 'notice'
+# then
+npx eslint <file>
+

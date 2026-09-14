@@ -1,0 +1,241 @@
+          <!-- 2 of 4 -->
+          <tbody class="alert2-4a2-3">
+            <tr class="theProblem">
+              <td>1</td> <td>1</td> <td>8</td> <td>0</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>4</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Schritt 2: Teilzahl <math><mn>11</mn></math></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>1</td> <td>1</td> <td>8</td> <td>0</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">4</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">2</td><td class="resultPending">&nbsp;</td><td class="resultPending">&nbsp;</td>
+              <td class="rules">
+                <math><mn class="em strong">8</mn></math>:&nbsp; größte Zahl aus der 4-er Reihe unterhalb 11
+              </td>
+              <td><span>3 x 4 = 12</span></td>
+            </tr>
+            <tr>
+              <td><math><mo>&minus;</mo></math></td>
+              <td></td> <td>8</td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">8</mn> <mo>=</mo> <mn class="strong">2</mn>
+                <mo>&times;</mo>
+                <mn>4</mn></math>:
+                <math><mn class="strong">2</mn></math>  im Ergebnis notieren
+              </td>
+              <td><span>4 x 4 = 16</span></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="subResult"></td> <td class="subResult">3</td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn>11</mn> <mo>&minus;</mo> <mn>8</mn> <mo>=</mo> <mn class="strong">3</mn></math>
+                : Zwischenrest
+              </td>
+              <td><span>5 x 4 = 20</span></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="12"></td><td>6 x 4 = 24</td></tr></tbody>
+
+          <!-- 3 of 4 -->
+          <tbody class="alert4-6a3-4">
+            <tr class="theProblem">
+              <td>1</td> <td>1</td> <td>8</td> <td>0</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>4</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Schritt 3: Teilzahl 38</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>1</td> <td>1</td> <td><math><mn class="em strong">8</mn></math></td> <td>0</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">4</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">2</td><td class="result">9</td><td class="resultPending">&nbsp;</td>
+              <td class="rules">
+                <math><mn class="em strong">8</mn></math> an Zwischenrest anhängen: ergibt
+                <math><mn>38</mn></math>
+              </td>
+              <td><span>7 x 4 = 28</span></td>
+            </tr>
+            <tr>
+              <td><math><mo>&minus;</mo></math></td>
+              <td></td> <td>8</td>
+                <td style="color:purple; font-weight:bold;">
+                  <p style="position:relative;"><span style="position:absolute; top:-0.25em;">&darr;</span></p>
+                </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">36</mn></math>: &nbsp; größte Zahl aus der 4-er Reihe unterhalb
+                <math><mn>38</mn></math>
+              </td>
+              <td>8 x 4 = 32</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="subResult"></td> <td class="subResult">3</td> <td><math><mn class="strong">8</mn></math></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">36</mn>
+                <mo>=</mo>
+                <mn class="strong">9</mn> <mo>&times;</mo> <mn>4</mn></math>:
+                <math><mn class="strong">9</mn></math>
+                im Ergebnis notieren
+              </td>
+              <td>9 x 4 = 36</td>
+            </tr>
+            <tr>
+              <td></td><td><math><mo>&minus;</mo></math></td>
+              <td>3</td> <td>6</td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td class="subResult"></td> <td class="subResult">2</td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn>38</mn> <mo>&minus;</mo> <mn>36</mn> <mo>=</mo> <mn class="strong">2</mn></math>
+                : Zwischenrest
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="12"></td><td></td></tr></tbody>
+
+          <!-- 4 of 4 -->
+          <tbody class="alert6-8a4-5">
+            <tr class="theProblem">
+              <td>1</td> <td>1</td> <td>8</td> <td>0</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>4</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">Schritt 4: Teilzahl 20</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>1</td> <td>1</td> <td>8</td> <td><math><mn class="em strong">0</mn></math></td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">4</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">2</td><td class="result">9</td><td class="result">5</td>
+              <td class="rules">
+                <math><mn class="em strong">0</mn></math> an Zwischenrest anhängen: ergibt
+                <math><mn>20</mn></math>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><math><mo>&minus;</mo></math></td>
+              <td></td> <td>8</td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">20</mn></math>: &nbsp; größte Zahl aus der 4-er Reihe unterhalb
+                <math><mn>20</mn></math>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="subResult"></td> <td class="subResult">3</td> <td><math><mn class="strong">8</mn></math></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">20</mn>
+                <mo>=</mo>
+                <mn class="strong">5</mn> <mo>&times;</mo> <mn>4</mn></math>:
+                <math><mn class="strong">5</mn></math>
+                im Ergebnis notieren
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td><td><math><mo>&minus;</mo></math></td>
+              <td>3</td> <td>6</td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td class="subResult"></td> <td class="subResult">2</td> <td><math><mn class="strong">0</mn></math></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules"> ###
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td> <td><math><mo>&minus;</mo></math></td> <td>2</td> <td>0</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules"> ######
+              </td>
+              <td></td>
+            </tr>
+
+
+            <tr>
+              <td></td>
+              <td></td> <td></td> <td class="subResult"></td> <td class="subResult">0</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn>20</mn> <mo>&minus;</mo> <mn>20</mn> <mo>=</mo> <mn class="strong">0</mn></math>
+                : Ende der Berechnung
+              </td>
+              <td></td>
+            </tr>
+
+            -->
+
+          </tbody>

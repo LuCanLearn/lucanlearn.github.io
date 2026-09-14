@@ -1,0 +1,22 @@
+          <tbody>
+            <tr class="theProblem">
+              <td class="active">1</td> <td class="active">2</td> <td class="active">6</td> <td class="active">3</td>
+              <td><math><mo>&times;</mo></math></td>
+              <td class="active">4</td> <td>6</td> <td>9</td>
+              <td class="rules">Schritt 1</td>
+            </tr>
+            <tr class="result">
+              <td></td> <td></td>
+              <td>5</td> <td>0</td> <td>5</td> <td>2</td> <td></td> <td></td>
+              <td class="rules">
+                <math><mn>1263</mn> <mo>&times;</mo> <mn>4</mn> <mo>=</mo> <mn>5052</mn></math>
+                <span># eintragen</span>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="9"></td></tr></tbody>

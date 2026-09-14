@@ -4,8 +4,8 @@
 // +  AutorIn: w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: CSS Ergänzung für LuCanLearn
 // +  KorrektorIn:
-// +  Status: 2026/02/09 jigsaw.w3.org/css-validator/validator as CSS3
-// +  Revision: 2026/02/09 - Details am Ende der Datei
+// +  Status: 2026/09/03 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2026/09/03 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
@@ -55,6 +55,8 @@ h2::after {
 /* --- levels  ------------------ ------------------------------------------ */
 body:not(.display-advanced) *.advanced { opacity:0.5; }
 li.advanced::marker { content:"#. "; font-size:110%; }
+body:not(.display-annotations) *.annot { display:none; }
+body.display-annotations .annot { opacity:0.75; color:orange; }
 
 /* --- misc --------------------------------------------- ------------------ */
 abbr { font-style:italic; color:chocolate; }

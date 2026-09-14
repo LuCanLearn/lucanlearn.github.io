@@ -4,41 +4,66 @@
 // +  AutorIn: w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: CSS Ergänzung für LuCanLearn - Handbuch
 // +  KorrektorIn:
-// +  Status: 2025/11/11 jigsaw.w3.org/css-validator/validator as CSS3
-// +  Revision: 2025/11/11 - Details am Ende der Datei
+// +  Status: 2026/09/09 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2026/09/09 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
+/* --- misc --*/
+
 h2 > span { font-size:50%!important; position:absolute; right:0em; bottom:2em; }
 
+
+/* --- the exercises ------------------------------------------------------- */
 table.example { width:100%; border:1pt solid black; border:none; }
 table.example tr td:last-child, table.example tr th:last-child { width:100%; }
 /* table.exampe tr { display:flex; align-items:stretch; }                                 */
 /* table.example tr td:last-child, table.example tr th:last-child { flex:1; width:100%; } */
 table.example tbody.separator { visibility:hidden; height:1em; }
-table.example tbody tr.theProblem td { background:rgb(110 172 44 / 0.75); }
+table.example tbody tr.theProblem td { background:turquoise; }   /* rgb(110 172 44 / 0.75) */
+table.example tr.theProblem td.rules math { margin-left:2em; }   /* multiplication */
 table.example tbody tr.result td:not(.rules) { border-top:1pt solid black; font-weight:bold;  }
 table.example tr td:nth-of-type(2n+1) { background:rgb(248 218 78 / 0.75); }
-table.example tbody td.rules { background:transparent; padding-left:2em; }
+table.example tbody td.rules { background:transparent; padding-left:2em; font-size:smaller; }
+table.example tr:not(.theProblem) .rules { opacity:0.75;}
+table.example tbody tr td.rules span:last-child { font-size:smaller; vertical-align:bottom; }
 /* table.example tbody td.rules > math + span { margin-left:1em; display:inline-block; } */
 /* table.example tbody td.active { outline:0pt dotted purple; color1:purple!important; font-weight:bold; } */
 /* table.example tbody td.active.empty { opacity:0.5; } */
-
 table.example tbody tr.carry td { border-bottom:1pt dotted black; border-top:1pt dotted black;}
-table.example tbody tr.carry td.new { color:fuchsia; font-weight:bold; }  /* red */
+table.example tbody tr.carry td.new { color:fuchsia; font-weight:bold; }  /* red - in a series of carries */
 /* table.example tbody tr.carry td span.s { position:absolute; top:-0.25em; left:0.25em; } */
 /* table.example tbody tr.carry.plus td {  } */
+table.example tbody tr td.active { font-weight:bold; color:fuchsia; }   /* turquoise ?? */
+table.example tbody tr td.empty { font-size:smaller; vertical-align:bottom; }
+math.em, math mn.em, math mo.em { color:fuchsia; }
+/* */
+table.example tbody tr.result:not(:last-of-type) td:not(.rules ){ border-bottom: 1pt solid; border-left-color:rgb(0 0 0 / 0.5) }
+table.example.notation tr:first-of-type td:not(:last-of-type) { border-bottom:1pt solid black; }
 
-/* table.example td.empty { color:rgb(0 0 0 / 0.5); } */
-table.example td p { position:relative; }
-table.example td.orLeft { border-right:2pt dotted purple;  }
-table.example td.orRight { border-top:2pt dotted purple; border-right:2pt dotted purple; }
-table.example td span.arrow { color:purple; font-size:120%; position:absolute; top:-0.25em; }
-table.example td.rules span.right { color:purple; }
-/* table.example tbody td mn.carry-added { font-weight:bold; color:fuchsia; } */  /* purple */
+/* marker for all active columns */
+table.example tbody.active7 tr:not(:first-child) td:nth-of-type(7),
+table.example tbody.active6 tr:not(:first-child) td:nth-of-type(6),
+table.example tbody.active5 tr:not(:first-child) td:nth-of-type(5),
+table.example tbody.active4 tr:not(:first-child) td:nth-of-type(4),
+table.example tbody.active3 tr:not(:first-child) td:nth-of-type(3),
+table.example tbody.active2 tr:not(:first-child) td:nth-of-type(2),
+table.example tbody.active1 tr:not(:first-child) td:nth-of-type(1)
+{ background-color: rgb(255 0 255 / 0.75); font-weight:bold; }
 
-.rules { font-size:smaller; }
-tr:not(.theProblem) .rules { opacity:0.75;}
+/* multiplication - partial results */
+table.example tr.partial-result td:not(:empty):not(:last-of-type) {
+  background-color:rgb(255 0 255 / 0.75);
+}
+
+
+
+
+
+
+
+
+
 
 p.ui-state-default.zumNachrechnen:before { content:"Zum Nachrechnen - Antippen zeigt jeweilige Details"}
 ul.zumNachrechnen li { border:none!important; padding:0.25em; padding-left:0.5em; position:relative; }
@@ -51,7 +76,7 @@ a.stretched { min-height:0em; }
       body.url-with-fragment :target { opacity:1.0; }
 --- */
 body.url-with-fragment *[id] { opacity:0.75; }
-*:target { outline:2pt solid orange; outline-offset:0.5rem; } /* border-radius not working on tables ... */
+*:target { outline:2pt solid orange; outline-offset:-0.5rem; } /* border-radius not working on tables ... */
 body.url-with-fragment :target { opacity:1.0; }
 
 

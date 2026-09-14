@@ -1,0 +1,7 @@
+/* table.example td.empty { color:rgb(0 0 0 / 0.5); } */
+table.example td p { position:relative; }
+table.example td.orLeft { border-right:2pt dotted purple;  }
+table.example td.orRight { border-top:2pt dotted purple; border-right:2pt dotted purple; }
+table.example td span.arrow { color:purple; font-size:120%; position:absolute; top:-0.25em; }
+table.example td.rules span.right { color:purple; }
+/* table.example tbody td mn.carry-added { font-weight:bold; color:fuchsia; } */  /* purple */

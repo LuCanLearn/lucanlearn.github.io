@@ -3,8 +3,8 @@
 // +  AutorIn:  w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: standalone; simple org
 // +  KorrektorIn:
-// +  Status:   2025/10/30 validiert mit js[hl]int.com
-// +  Revision: 2025/10/30 - Details am Ende der Datei
+// +  Status:   2026/09/03 validiert mit js[hl]int.com
+// +  Revision: 2026/09/03 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 //
 // --- IIFE: Inmediately invoked function expression --------------------------
@@ -76,11 +76,15 @@
   // --- load functions to execute before ...
   // document.addEventListener("DOMContentLoaded, f());
   //
-  const regexp = /.*adv.*/;   // advanced - add display-class
+  let regexp = /.*adv.*/;   // advanced - add display-class
   if (regexp.test(window.location.search)) {
     body.classList.add('display-advanced');
   }
   //
+  regexp = /.*annot.*/;   // annotations - add display-class
+  if (regexp.test(window.location.search)) {
+    body.classList.add('display-annotations');
+  }
   //
 }());
 //
