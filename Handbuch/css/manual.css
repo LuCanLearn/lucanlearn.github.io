@@ -4,42 +4,50 @@
 // +  AutorIn: w dot doeringer ( at protonmail dot com)
 // +  Beschreibung: CSS Ergänzung für LuCanLearn - Handbuch
 // +  KorrektorIn:
-// +  Status: 2026/09/09 jigsaw.w3.org/css-validator/validator as CSS3
-// +  Revision: 2026/09/09 - Details am Ende der Datei
+// +  Status: 2026/09/23 jigsaw.w3.org/css-validator/validator as CSS3
+// +  Revision: 2026/09/23 - Details am Ende der Datei
 // +---------------------------------------------------------------------------
 */
 
 /* --- misc --*/
-
 h2 > span { font-size:50%!important; position:absolute; right:0em; bottom:2em; }
-
+math.em, math mn.em, math mo.em { color:fuchsia; }
+span.smaller { font-size:smaller; }
 
 /* --- the exercises ------------------------------------------------------- */
 table.example { width:100%; border:1pt solid black; border:none; }
 table.example tr td:last-child, table.example tr th:last-child { width:100%; }
 /* table.exampe tr { display:flex; align-items:stretch; }                                 */
 /* table.example tr td:last-child, table.example tr th:last-child { flex:1; width:100%; } */
+table.example tbody tr td:nth-of-type(2n+1) { background:rgb(248 218 78 / 0.75); }
+table.example tbody tr td.active { font-weight:bold; color:fuchsia; }   /* turquoise ?? */
+table.example tbody tr td.empty { font-size:smaller; vertical-align:bottom; }
+
+
+table.example tr td.rules { font-size:smaller; }
+table.example tbody tr td.rules { background:transparent; padding-left:3%; }
+table.example thead tr td.rules { opacity:0.75; }
+table.example tbody tr.result:not(:last-of-type) td:not(.rules ){ border-bottom: 1pt solid; border-left-color:rgb(0 0 0 / 0.5) }
+
 table.example tbody.separator { visibility:hidden; height:1em; }
+
 table.example tbody tr.theProblem td { background:turquoise; }   /* rgb(110 172 44 / 0.75) */
-table.example tr.theProblem td.rules math { margin-left:2em; }   /* multiplication */
-table.example tbody tr.result td:not(.rules) { border-top:1pt solid black; font-weight:bold;  }
-table.example tr td:nth-of-type(2n+1) { background:rgb(248 218 78 / 0.75); }
-table.example tbody td.rules { background:transparent; padding-left:2em; font-size:smaller; }
+table.example tbody tr.theProblem td.rules math { margin-left:2em; }   /* multiplication */
 table.example tr:not(.theProblem) .rules { opacity:0.75;}
-table.example tbody tr td.rules span:last-child { font-size:smaller; vertical-align:bottom; }
+
+table.example tbody tr.result td:not(.rules) { border-top:1pt solid black; font-weight:bold;  }
+/* ???? table.example tbody tr td.rules span:last-child { font-size:smaller; vertical-align:bottom; } */
 /* table.example tbody td.rules > math + span { margin-left:1em; display:inline-block; } */
 /* table.example tbody td.active { outline:0pt dotted purple; color1:purple!important; font-weight:bold; } */
 /* table.example tbody td.active.empty { opacity:0.5; } */
 table.example tbody tr.carry td { border-bottom:1pt dotted black; border-top:1pt dotted black;}
-table.example tbody tr.carry td.new { color:fuchsia; font-weight:bold; }  /* red - in a series of carries */
+table.example tr.carry td { height:75%; font-size:75%; vertical-align:top; padding-top:0em }
+table.example tr.carry td:last-of-type { padding-left:3%; }
+
+
 /* table.example tbody tr.carry td span.s { position:absolute; top:-0.25em; left:0.25em; } */
 /* table.example tbody tr.carry.plus td {  } */
-table.example tbody tr td.active { font-weight:bold; color:fuchsia; }   /* turquoise ?? */
-table.example tbody tr td.empty { font-size:smaller; vertical-align:bottom; }
-math.em, math mn.em, math mo.em { color:fuchsia; }
 /* */
-table.example tbody tr.result:not(:last-of-type) td:not(.rules ){ border-bottom: 1pt solid; border-left-color:rgb(0 0 0 / 0.5) }
-table.example.notation tr:first-of-type td:not(:last-of-type) { border-bottom:1pt solid black; }
 
 /* marker for all active columns */
 table.example tbody.active7 tr:not(:first-child) td:nth-of-type(7),
@@ -56,29 +64,50 @@ table.example tr.partial-result td:not(:empty):not(:last-of-type) {
   background-color:rgb(255 0 255 / 0.75);
 }
 
+/* division */
+table.example.div { width:100%; border:none; }
+table.example.div tr td:last-child,
+table.example.div tr th:last-child { width:auto; }  /* override .example */
+table.example.div tbody tr td:last-child { border-left:1pt solid rgb(0 0 0 / 0.25); } /* Reihe */
+table.example.div tbody.separator tr td:only-child { border-left:hidden; }
+
+table.example.div tr td:last-child,
+table.example.div tr th:last-child span { font-size:smaller; color:rgb(0 0 0 /0.5); white-space:nowrap; }
+table.example.div tr td:nth-last-child(2),
+table.example.div tr th:nth-last-child(2) { width:100%; }
 
 
+table.example.div tbody.active2-4a2 tr:nth-of-type(-n+4):nth-of-type(n+2) td:nth-of-type(2),
+table.example.div tbody.active2-4a2-3 tr:nth-of-type(-n+4):nth-of-type(n+2) td:nth-of-type(-n+3):nth-of-type(n+2),
+
+table.example.div tbody.active4-6a2-3 tr:nth-of-type(-n+6):nth-of-type(n+4) td:nth-of-type(-n+3):nth-of-type(n+2),
+table.example.div tbody.active4-6a3-4 tr:nth-of-type(-n+6):nth-of-type(n+4) td:nth-of-type(-n+4):nth-of-type(n+3),
+table.example.div tbody.active4-6a2-4 tr:nth-of-type(-n+6):nth-of-type(n+4) td:nth-of-type(-n+4):nth-of-type(n+2),
+
+table.example.div tbody.active6-8a3-4 tr:nth-of-type(-n+8):nth-of-type(n+6) td:nth-of-type(-n+4):nth-of-type(n+3),
+table.example.div tbody.active6-8a4-5 tr:nth-of-type(-n+8):nth-of-type(n+6) td:nth-of-type(-n+5):nth-of-type(n+4) {
+  background-color:rgb(255 0 255 / 0.75);
+}
+
+table.example.div tr td.prefix { font-weight:bold; border:1pt solid fuchsia;  }
+table.example.div tr td.subResult { border-top:1pt solid black; }
+table.example.div tr td.result { font-weight:bold; }
+table.example.div tr td.resultPending { outline:1pt dotted black; }
+table.example.div tbody tr:not(.theProblem) td:last-child { background:transparent!important; }
+
+table.example.div tbody.separator tr td:last-child { visibility:visible; background:transparent!important; }
 
 
-
-
-
-
-
-p.ui-state-default.zumNachrechnen:before { content:"Zum Nachrechnen - Antippen zeigt jeweilige Details"}
-ul.zumNachrechnen li { border:none!important; padding:0.25em; padding-left:0.5em; position:relative; }
-ul.zumNachrechnen li span { position:absolute; right:1em; }
+/* Aufgaben mit optischem Hinweis: ist Link */
+ul.zumNachrechnen li { border:none!important; padding:0.25em; padding-left:0.5em; position:relative; margin-bottom:0.25em; }
+ul.zumNachrechnen li span:last-of-type { position:absolute; right:1em; font-size:smaller; vertical-align:middle; }
 ul.zumNachrechnen li a.stretched { min-height:0em; }
-
 a.stretched { min-height:0em; }
 
-/* --- :target (or not?)       body.url-with-fragment *[id] { opacity:0.75; }
-      body.url-with-fragment :target { opacity:1.0; }
---- */
+/* :target in den Aufgabenseiten */
 body.url-with-fragment *[id] { opacity:0.75; }
-*:target { outline:2pt solid orange; outline-offset:-0.5rem; } /* border-radius not working on tables ... */
 body.url-with-fragment :target { opacity:1.0; }
-
+*:target { outline:2pt solid orange; outline-offset:-0.5rem; } /* border-radius not working on tables ... */
 
 /* hr { margin-top:1em; margin-bottom:1em; } */  /* Trenner zwischen Aufgaben auf einer Seite */
 

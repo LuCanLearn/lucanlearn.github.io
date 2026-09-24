@@ -4,8 +4,8 @@
 <!-- Datei: lucanlearn.github.io/Handbuch/index.html                         -->
 <!-- AutorIn: w dot doeringer ( at protonmail dot com)                       -->
 <!-- Beschreibung: Cornelius light; local github repo                        -->
-<!-- Status: w3-checked: 2026/09/14                                          -->
-<!-- Revision: 2026/09/14 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+<!-- Status: w3-checked: 2026/09/24                                          -->
+<!-- Revision: 2026/09/24 - - - - - - - - - - - - - - - - - - - - - - - - -  -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport"     content="width=device-width,initial-scale=1">
@@ -27,52 +27,24 @@
     <link href="css/manual.css" rel="stylesheet">
 
     <style>
-      ul.zumNachrechnen li:first-child span:last-child::before { content:"Antippen zeigt Details"; }
-      ul.zumNachrechnen li:first-child span:last-child { font-size:smaller; opacity:0.75;}
-
+      /* local misc */
       dl .larger { font-size:larger; }
 
-
-      table.sequence { width:100%; border:none; }
-      table.sequence tbody tr td { border:1pt solid black;; }
-      table.sequence tr td:last-child, table.sequence tr th:last-child { width:100%; }
-
-
-      /* division */
-      table.example.div { width:100%; border:none; }
-      table.example.div tr td:last-child,
-      table.example.div tr th:last-child { width:auto; }  /* override .example */
-      table.example.div tbody tr td:last-child { border-left:1pt solid rgb(0 0 0 / 0.25); } /* Reihe */
-      table.example.div tr td:last-child,
-      table.example.div tr th:last-child span { font-size:smaller; color:rgb(0 0 0 /0.5); white-space:nowrap; }
-
-      table.example.div tr td:nth-last-child(2),
-      table.example.div tr th:nth-last-child(2) { width:100%; }
-
-      table.example.div tbody.alert2-4a2-3 tr:nth-of-type(-n+4):nth-of-type(n+2) td:nth-of-type(-n+3):nth-of-type(n+2),
-      table.example.div tbody.alert4-6a3-4 tr:nth-of-type(-n+6):nth-of-type(n+4) td:nth-of-type(-n+4):nth-of-type(n+3),
-      table.example.div tbody.alert6-8a4-5 tr:nth-of-type(-n+8):nth-of-type(n+6) td:nth-of-type(-n+5):nth-of-type(n+4) {
-        background-color:rgb(255 0 255 / 0.75);
+      /* local: Stellenbasierte Zahlendarstellung */
+      table.example.positional-notation tbody.positions tr td:not(.rules) {
+        font-weight:bold; border-bottom:1pt dotted black;
       }
 
-      table.example.div tr td.prefix { font-weight:bold; border:1pt solid fuchsia;  }
-      table.example.div tr td.subResult { border-top:1pt solid black; }
-      table.example.div tr td.result { font-weight:bold; }
-      table.example.div tr td.resultPending { outline:1pt dotted black; }
-      table.example.div tbody tr:not(.theProblem) td:last-child { background:transparent!important; }
+      /* local: Überblick Rechnungsarten: Begriffe, Eigenschaften */
+      dl.theOperation table thead th { color:fuchsia; font-weight:bold; }
+      table tbody tr.center { text-align:center; }
 
 
-      table.example.div.notthere tbody tr td:last-child { font-size:75%; color:red; padding:0em; }
-      table.example.div tbody.separator tr td:last-child {
-        visibility:visible; background:transparent!important;
-      }
-
-
-      /* in Arbeit */
+      /* local: In Arbeit */
       p.boilerplate { /* center in middle of page */
         font-size:500%; font-weight:bold; white-space:nowrap; color:orange;
-        position:absolute;
-        left:60%; top:10%;  /* left:50%; top:50% */
+        position:absolute; z-index:10;
+        left:50%;   top:10%;   /* left:50%; top:50% */
         transform: translate(-50%, -50%);
         /* https://stackoverflow.com/questions/2005954/center-a-positionfixed-element */
       }
@@ -106,7 +78,7 @@
     <!-- Inhalt data aus den sections pro "Seite"                           -->
     <!-- 2026/10/10, wd                                                     -->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-    <section role="main" class="ui-widget ">
+    <section role="main" class="ui-widget">
       <header class="ui-widget-header">
         <h2 data-version1="2026/08/31">
           Zahlen &ndash; die Wörter der Mathematik
@@ -114,7 +86,7 @@
         </h2>
       </header>
       <!-- -->
-      <div class="ui-widget-content">
+      <div class="ui-widget-content" style="overflow:hidden;">
         <dl>
           <dt>Wörter</dt>
           <dd>
@@ -153,8 +125,8 @@
           </dd>
           <dt>Tabellarische Darstellung</dt>
           <dd>
-            <table class="example notation">
-              <tbody>
+            <table class="example positional-notation"> <!-- also place-value notation -->
+              <tbody class="positions">
                 <tr>
                   <td>&nbsp;</td>
                   <td>T</td><td>H</td> <td>Z</td> <td>E</td>
@@ -163,6 +135,8 @@
                     <strong>Z</strong>ehner, <strong>E</strong>iner
                   </td>
                 </tr>
+              </tbody>
+              <tbody>
                 <tr>
                   <td></td>
                   <td></td><td>2</td> <td>5</td> <td>2</td>
@@ -200,18 +174,73 @@
           Ein chinesisches Symbol für "Erdbeben" und "Der Kaiser stirbt".
         </p>
 
-       <p class="boilerplate">In Arbeit</p>
+        <p class="boilerplate">In Arbeit</p>
       </div>
     </section>
 
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <!-- Addition - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <section class="ui-widget ">
       <header class="ui-widget-header">
-        <h2 data-version1="2025/11/04">Addition</h2>
+        <h2 data-version1="2026/09/17">Addition &ndash; das Zusammenzählen</h2>
       </header>
       <!-- -->
       <div class="ui-widget-content">
-       <p>Überblick, Terminologie, Beispiele mit Links auf folgende Rechnungen #xxxx</p>
+        <dl class="theOperation">
+          <dt>Begriffe</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr>
+                  <th>Summand</th><th>&plus;</th><th>Summand</th><th>=</th><th>Summe</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="center">
+                  <td>123</td><td>&plus;</td><td>83</td><td>=</td><td>206</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+          <dt>Eigenschaften</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr><th>kommutativ (vertauschbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mn>123</mn> <mo>&plus;</mo> <mn>23</mn> <mo>=</mo>
+                      <mn>23</mn> <mo>&plus;</mo> <mn>123</mn>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table>
+              <thead>
+                <tr><th>assoziativ (verknüpfbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mo>(</mo> <mn>123</mn> <mo>&plus;</mo> <mn>23</mn> <mo>)</mo>  <mo>&plus;</mo> <mn>42</mn>
+                      <mo>=</mo>
+                      <mn>123</mn> <mo>&plus;</mo> <mo>(</mo> <mn>23</mn>  <mo>&plus;</mo> <mn>42</mn> <mo>)</mo>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+
+        <p class="annot">Beispiele mit Links auf folgende Rechnungen #xxxx</p>
       </div>
     </section>
 
@@ -353,10 +382,9 @@
         <p>&nbsp;</p>
         <!-- -->
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
           <li class="ui-state-hover">
-          <math><mn>145</mn> <mo>&plus;</mo> <mn>653</mn> <mo>=</mo> <mn>798</mn></math>
-            <span>&#65088;</span>
+            <math><mn>145</mn> <mo>&plus;</mo> <mn>653</mn> <mo>=</mo> <mn>798</mn></math>
+            <span>Details&nbsp;&#x25B6;</span>
             <a class="stretched" href="Aufgaben/addition.html#plus.145.653"></a>
           </li>
         </ul>
@@ -421,7 +449,7 @@
             </tr>
             <tr class="carry">
               <td></td> <td></td>
-              <td></td> <td></td> <td class="new">1</td> <td></td>
+              <td></td> <td></td> <td><math><mn class="em strong">1</mn></math></td> <td></td>
               <td class="rules">Übertrag <math><mn class="em">1</mn></math> in die nächsthöhere Stelle</td>
             </tr>
             <tr class="result">
@@ -455,7 +483,7 @@
             </tr>
             <tr class="carry">
               <td><math><mo class="em">&plus;</mo></math></td>
-              <td></td> <td></td>  <td class="new">1</td> <td>1</td> <td></td>
+              <td></td> <td></td>  <td><math><mn class="em strong">1</mn></math></td> <td>1</td> <td></td>
               <td class="rules">Übertrag <math><mn class="em">1</mn></math> in die nächsthöhere Stelle</td>
             </tr>
             <tr class="result">
@@ -505,10 +533,9 @@
         <p>&nbsp;</p>
         <!-- -->
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
           <li class="ui-state-hover">
-          <math><mn>145</mn> <mo>&plus;</mo> <mn>667</mn> <mo>=</mo> <mn>812</mn></math>
-            <span>&#65088;</span>
+            <math><mn>145</mn> <mo>&plus;</mo> <mn>667</mn> <mo>=</mo> <mn>812</mn></math>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/addition.html#plus.145.667"></a>
           </li>
         </ul>
@@ -574,7 +601,7 @@
               </td>
             </tr>
             <tr class="carry">
-              <td></td> <td></td> <td></td> <td class="new">1</td> <td></td>
+            <td></td> <td></td> <td></td> <td class="active">1</td> <td></td>
               <td class="rules">Übertrag <math><mn class="em strong">1</mn></math> in die nächsthöhere Stelle</td>
             </tr>
             <tr>
@@ -612,7 +639,7 @@
             </tr>
             <tr class="carry">
               <td><math><mo class="em strong">&plus;</mo></math></td>
-              <td></td> <td><math><mn class="em">1</mn></math></td> <td>1</td> <td></td>
+              <td></td> <td><math><mn class="em strong">1</mn></math></td> <td>1</td> <td></td>
               <td class="rules">Übertrag <math><mn class="em strong">1</mn></math> in die nächsthöhere Stelle</td>
             </tr>
             <tr class="result">
@@ -667,10 +694,9 @@
         <p>&nbsp;</p>
         <!-- -->
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
           <li class="ui-state-hover">
-          <math><mn>99</mn> <mo>&plus;</mo> <mn>99</mn> <mo>=</mo> <mn>198</mn></math>
-            <span>&#65088;</span>
+            <math><mn>99</mn> <mo>&plus;</mo> <mn>99</mn> <mo>=</mo> <mn>198</mn></math>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/addition.html#plus.99.99"></a>
           </li>
         </ul>
@@ -683,14 +709,79 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <section class="ui-widget ">
       <header class="ui-widget-header">
-        <h2 data-version1="2026/09/09">Subtraktion</h2>
+        <h2 data-version1="2026/09/09">Subtraktion &ndash; das Abziehen</h2>
       </header>
       <!-- -->
       <div class="ui-widget-content">
-       <p>Überblick, Terminologie, Beispiele mit Links auf folgende Rechnungen #xxxx</p>
+        <dl class="theOperation">
+          <dt>Begriffe</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr>
+                  <th>Minuend</th><th>&minus;</th><th>Subtrahend</th><th>=</th><th>Differenz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="center">
+                  <td>123</td><td>&minus;</td><td>83</td><td>=</td><td>40</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+          <dt>Probe</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr>
+                  <th>Subtrahend</th><th>&plus;</th><th>Differenz</th><th>=</th><th>Minuend</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="center">
+                  <td>83</td><td>&plus;</td><td>40</td><td>=</td><td>123</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+          <dt>Eigenschaften</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr><th>nicht kommutativ (vertauschbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mn>123</mn> <mo>&minus;</mo> <mn>83</mn> <mo>&ne;</mo>
+                      <mn>83</mn> <mo>&minus;</mo> <mn>123</mn>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table>
+              <thead>
+                <tr><th>nicht assoziativ (verknüpfbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mo>(</mo> <mn>123</mn> <mo>&minus;</mo> <mn>23</mn> <mo>)</mo>  <mo>&minus;</mo> <mn>42</mn>
+                      <mo>&ne;</mo>
+                      <mn>123</mn> <mo>&minus;</mo> <mo>(</mo> <mn>23</mn>  <mo>&minus;</mo> <mn>42</mn> <mo>)</mo>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
 
-
-       <p class="annot">TODO: 4424 - 3969 ???</p>
+       <p class="annot">Links, TODO: 4424 - 3969 ???</p>
       </div>
     </section>
 
@@ -830,14 +921,32 @@
               </td>
             </tr>
           </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+
+          <!-- Probe -->
+          <tbody>
+            <tr class="theProblem">
+              <td>2</td> <td>3</td>
+              <td><math><mo>&plus;</mo></math></td>
+              <td>4</td> <td>1</td> <td>3</td>
+              <td class="rules">Probe &ndash; nachrechnen!</td>
+            </tr>
+            <tr class="result">
+              <td><math><mo>=</mo></math></td> <td></td> <td></td>
+              <td>4</td> <td>3</td> <td>6</td>
+              <td class="rules">
+              </td>
+            </tr>
+          </tbody>
         </table>
+
         <p>&nbsp;</p>
         <!-- -->
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
-          <li class="ui-state-hover">
+          <li class="ui-state-default" style="display:none;">Zum Nachrechnen <span></span></li>
+          <li class="ui-state-hover" title="Zum Nachrechnen">
             <math><mn>36</mn> <mo>&minus;</mo> <mn>30</mn> <mo>=</mo> <mn>6</mn></math>
-            <span>&#65088;</span>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/subtraktion.html#minus.36.30"></a>
           </li>
         </ul>
@@ -946,7 +1055,7 @@
                   <mo>=</mo>
                   <mn>9</mn>
                 </math>
-                denn (
+                (denn
                 <math>
                   <mn>8</mn><mo>&plus;</mo><mn class="em strong">1</mn>
                   <mo>&gt;</mo>
@@ -1012,15 +1121,31 @@
               </td>
             </tr>
           </tbody>
+          <tbody class="separator"><tr><td colspan="7"></td></tr></tbody>
+
+          <!-- Probe -->
+          <tbody>
+            <tr class="theProblem">
+              <td>8</td> <td>9</td>
+              <td><math><mo>&plus;</mo></math></td>
+              <td>3</td> <td>9</td> <td>7</td>
+              <td class="rules">Probe &ndash; nachrechnen!</td>
+            </tr>
+            <tr class="result">
+              <td><math><mo>=</mo></math></td> <td></td> <td></td>
+              <td>4</td> <td>8</td> <td>6</td>
+              <td class="rules">
+              </td>
+            </tr>
+          </tbody>
         </table>
 
         <!-- -->
         <p>&nbsp;</p>
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
-          <li class="ui-state-hover">
+          <li class="ui-state-hover" title="Zum Nachrechnen">
             <math><mn>200</mn> <mo>&minus;</mo> <mn>99</mn> <mo>=</mo> <mn>101</mn></math>
-            <span>&#65088;</span>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/subtraktion.html#minus.200.99"></a>
           </li>
         </ul>
@@ -1033,11 +1158,64 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <section class="ui-widget ">
       <header class="ui-widget-header">
-        <h2 data-version1="2025/11/12">Multiplikation</h2>
+        <h2 data-version1="2025/11/12">Multiplikation &ndash; das Malnehmen</h2>
       </header>
       <!-- -->
       <div class="ui-widget-content">
-       <p>Überblick, Terminologie, Beispiele mit Links auf folgende Rechnungen #xxxx</p>
+        <dl class="theOperation">
+          <dt>Begriffe</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr>
+                  <th>Faktor</th><th>&times;</th><th>Faktor</th><th>=</th><th>Produkt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="center">
+                  <td>123</td><td>&times;</td><td>83</td><td>=</td><td>10209</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+          <dt>Eigenschaften</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr><th>kommutativ (vertauschbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mn>123</mn> <mo>&times;</mo> <mn>23</mn> <mo>=</mo>
+                      <mn>23</mn> <mo>&times;</mo> <mn>123</mn>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table>
+              <thead>
+                <tr><th>assoziativ (verknüpfbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mo>(</mo> <mn>123</mn> <mo>&times;</mo> <mn>23</mn> <mo>)</mo>  <mo>&times;</mo> <mn>42</mn>
+                      <mo>=</mo>
+                      <mn>123</mn> <mo>&times;</mo> <mo>(</mo> <mn>23</mn>  <mo>&times;</mo> <mn>42</mn> <mo>)</mo>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+
+       <p class="annot">Links auf folgende Rechnungen #xxxx</p>
       </div>
     </section>
 
@@ -1167,15 +1345,14 @@
 
         <!-- Aufgaben -->
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
-          <li>
+          <li class="ui-state-hover">
             <math><mn>2102</mn> <mo>&times;</mo> <mn>4</mn> <mo>=</mo> <mn>8408</mn></math>
-            <span>&#65088;</span>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/multiplication.html#times.2102.4"></a>
           </li>
           <li class="ui-state-hover">
             <math><mn>2</mn> <mo>&times;</mo> <mn>3</mn> <mo>=</mo> <mn>6</mn></math>
-            <span>&#65088;</span>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/multiplication.html#times.2.3"></a>
           </li>
         </ul>
@@ -1322,15 +1499,14 @@
 
         <!-- Aufgaben -->
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
-          <li>
+          <li class="ui-state-hover">
             <math><mn>172</mn> <mo>&times;</mo> <mn>5</mn> <mo>=</mo> <mn>860</mn></math>
-            <span>&#65088;</span>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/multiplication.html#times.172.5"></a>
           </li>
           <li class="ui-state-hover">
             <math><mn>4</mn> <mo>&times;</mo> <mn>7</mn> <mo>=</mo> <mn>28</mn></math>
-            <span>&#65088;</span>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/multiplication.html#times.4.7"></a>
           </li>
         </ul>
@@ -1341,7 +1517,7 @@
     <!-- 1263 x 469 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <section class="ui-widget">
       <header class="ui-widget-header">
-        <h2 data-version1="2025/10/10">
+        <h2 data-version1="2026/09/17">
           <math><mn>1263</mn> <mo>&times;</mo> <mn>469</mn></math>
           <span>
             todo --- Ganze Zahlen: Multiplikation - benutzt Addition und kleines 1x1
@@ -1364,8 +1540,8 @@
               <td>5</td> <td>0</td> <td>5</td> <td>2</td> <td></td> <td></td>
               <td class="rules">
                 <math><mn>1263</mn> <mo>&times;</mo> <mn>4</mn> <mo>=</mo> <mn>5052</mn></math>
-                <span class="channel-one">als Zwischenergebnis</span>
-                <span> eintragen rechtsbündig zur <math><mn>4</mn></math></span>
+                <span class="channel-one">als Zwischenergebnis eintragen</span>
+                <span>rechtsbündig zur <math><mn>4</mn></math></span>
               </td>
             </tr>
             <tr>
@@ -1395,8 +1571,8 @@
               <td>7</td> <td>5</td> <td>7</td> <td>8</td> <td></td>
               <td class="rules">
                 <math><mn>1263</mn> <mo>&times;</mo> <mn>6</mn> <mo>=</mo> <mn>7578</mn></math>
-                <span class="channel-one">als Zwischenergebnis</span>
-                <span> eintragen rechtsbündig zur <math><mn>6</mn></math></span>
+                <span class="channel-one">als Zwischenergebnis eintragen </span>
+                <span>rechtsbündig zur <math><mn>6</mn></math></span>
               </td>
             </tr>
             <tr>
@@ -1420,7 +1596,7 @@
               </td>
             </tr>
             <tr>
-            <td></td> <td></td> <td></td> <td>7</td> <td>5</td> <td>7</td> <td>8</td> <td><p><span class="arrow11">&darr;</span></p></td>
+            <td></td> <td></td> <td></td> <td>7</td> <td>5</td> <td>7</td> <td>8</td> <td><p><span>&darr;</span></p></td>
               <td class="rules">
               </td>
             </tr>
@@ -1429,8 +1605,9 @@
               <td>1</td> <td>1</td> <td>3</td> <td>6</td> <td>7</td>
               <td class="rules">
                 <math><mn>1263</mn> <mo>&times;</mo> <mn>9</mn> <mo>=</mo> <mn>11367</mn></math>
-                <span class="channel-one">als Zwischenergebnis</span>
-                <span> eintragen rechtsbündig zur <math><mn>9</mn></math></span>
+                <span class="channel-one">als Zwischenergebnis eintragen rechtsbündig</span>
+                <span class="channel-zero-term">bündig</span>
+                zur <math><mn>9</mn></math>
               </td>
             </tr>
             <tr>
@@ -1445,7 +1622,12 @@
             <tr class="theProblem">
               <td>1</td> <td>2</td> <td>6</td> <td>3</td>
               <td><math><mo>&times;</mo></math></td>  <td>4</td> <td>6</td><td>9</td>
-              <td class="rules">Schritt 4 &nbsp; <span>(Zwischenergebnisse addieren)</span></td>
+              <td class="rules">
+                Schritt 4 &nbsp;
+                <span class="channel-zero-term">(alles</span>
+                <span class="channel-one">(Zwischenergebnisse </span>
+                addieren)
+              </td>
             </tr>
             <tr>
               <td></td> <td></td>
@@ -1486,10 +1668,9 @@
 
         <!-- Aufgaben -->
         <ul class="zumNachrechnen">
-          <li class="ui-state-default">Zum Nachrechnen <span></span></li>
           <li class="ui-state-hover">
             <math><mn>173</mn> <mo>&times;</mo> <mn>21</mn> <mo>=</mo> <mn>3633</mn></math>
-            <span>&#65088;</span>
+            <span>Details &#x25b6;</span>
             <a class="stretched" href="Aufgaben/multiplication.html#times.173.21"></a>
           </li>
         </ul>
@@ -1502,18 +1683,85 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <section class="ui-widget ">
       <header class="ui-widget-header">
-        <h2 data-version="2026/09/14">
-          Division:&nbsp;
-          <math>
-            <mn>Dividend</mn> <mo>&div;</mo> <mn>Divisor</mn>
-            <mo>=</mo>
-            <mn>Quotient</mn>
-          </math>
-        </h2>
+        <h2 data-version="2026/09/14">Division &ndash; das Teilen</h2>
       </header>
       <!-- -->
       <div class="ui-widget-content">
-       <p>Überblick, Terminologie, Beispiele mit Links auf folgende Rechnungen #xxxx</p>
+        <dl class="theOperation">
+          <dt>Begriffe</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr>
+                  <th>Dividend</th><th>&div;</th><th>Divisor</th><th>=</th><th>Quotient</th><th>&plus;</th><th>Rest</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="center">
+                  <td>357</td><td>&div;</td><td>17</td><td>=</td><td>21</td><td></td><td></td>
+                </tr>
+                <tr class="center">
+                  <td>359</td><td>&div;</td><td>17</td><td>=</td><td>21</td><td>&plus;</td><td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+          <dt>Probe</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr>
+                  <th>Divisor</th><th>&times;</th><th>Quotient</th><th>&plus;</th><th>Rest</th><th>=</th><th>Dividend</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="center">
+                  <td>17</td><td>&times;</td><td>21</td><td></td><td></td><td>=</td><td>357</td>
+                </tr>
+                <tr class="center">
+                  <td>17</td><td>&times;</td><td>21</td><td>&plus;</td><td>2</td><td>=</td><td>359</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+          <dt>Eigenschaften</dt>
+          <dd>
+            <table>
+              <thead>
+                <tr><th>nicht kommutativ (vertauschbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mn>357</mn> <mo>&div;</mo> <mn>21</mn> <mo>&ne;</mo>
+                      <mn>21</mn> <mo>&div;</mo> <mn>357</mn>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table>
+              <thead>
+                <tr><th>nicht assoziativ (verknüpfbar)</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <math>
+                      <mo>(</mo> <mn>357</mn> <mo>&div;</mo> <mn>17</mn> <mo>)</mo>  <mo>&div;</mo> <mn>21</mn>
+                      <mo>&ne;</mo>
+                      <mn>357</mn> <mo>&div;</mo> <mo>(</mo> <mn>17</mn>  <mo>&div;</mo> <mn>21</mn> <mo>)</mo>
+                    </math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+
+       <p class="annot">Links auf folgende Rechnungen #xxxx</p>
       </div>
     </section>
 
@@ -1582,7 +1830,7 @@
           </tbody>
 
           <!-- 1 of 4 -->
-          <tbody class="alert2-4a2-3">
+          <tbody class="active2-4a2-3">
             <tr class="theProblem">
               <td>1</td> <td>1</td> <td>7</td> <td>2</td>
               <td><math><mo>&div;</mo></math></td>
@@ -1657,7 +1905,7 @@
           </tbody>
 
           <!-- 2 of 4 -->
-          <tbody class="alert4-6a3-4">
+          <tbody class="active4-6a3-4">
             <tr class="theProblem">
               <td>1</td> <td>1</td> <td>7</td> <td>2</td>
               <td><math><mo>&div;</mo></math></td>
@@ -1737,7 +1985,7 @@
           <tbody class="separator"><tr><td colspan="13"></td></tr></tbody>
 
           <!-- 3 of 4 -->
-          <tbody class="alert6-8a4-5">
+          <tbody class="active6-8a4-5">
             <tr class="theProblem">
               <td>1</td> <td>1</td> <td>7</td> <td>2</td>
               <td><math><mo>&div;</mo></math></td>
@@ -1832,14 +2080,640 @@
               <td></td>
             </tr>
           </tbody>
-        </table>
-        <!-- -->
-        <p>&nbsp;</p><p>&nbsp;</p>
+          <tbody class="separator"><tr><td colspan="13"></td></tr></tbody>
 
+          <!-- Probe -->
+          <tbody>
+            <tr class="theProblem">
+              <td>4</td>
+              <td><math><mo>&times;</mo></math></td>
+              <td>2</td> <td>9</td> <td>3</td>
+              <td>=</td>
+              <td></td><td></td><td></td><td></td>
+              <td></td>
+              <td class="rules">Probe &ndash; nachrechnen!</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>1</td> <td>1</td> <td>7</td> <td>2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td>&nbsp;</td><td>&nbsp;</td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
         <!-- -->
       </div>
     </section>
 
+    <!-- 875 : 8 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version1="2026/09/22">
+          <math><mn>875</mn> <mo>&div;</mo> <mn>8</mn></math>
+          <span>
+          </span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <!-- 875 : 8 - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+        <table class="example div">
+          <!-- Vorbereitung -->
+          <tbody>
+            <tr class="theProblem">
+              <td>8</td> <td>7</td> <td>5</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>8</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                Vorbereitung&nbsp;:&nbsp; Startzahl <span class="channel-one">identifizieren</span>
+              </td>
+              <td class="channel-one">
+                <math><mn>0</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>0</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="active">8</td> <td>7</td> <td>5</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em">8</mn></math></td>
+              <td></td>
+              <td></td><td>&nbsp;</td><td>&nbsp;</td>
+              <td class="rules">Von links her Ziffern sammeln:</td>
+              <td class="channel-one mseq">
+                <math><mn>1</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>8</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">8</mn></math>
+                erste Teilzahl größer oder gleich <math><mn class="strong">8</mn></math>
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>2</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>16</mn></math>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator">
+            <tr>
+              <td colspan="11"></td>
+              <td class="channel-one mseq">
+                <math><mn>3</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>24</mn></math>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- 1 of 3 -->
+          <tbody class="active2-4a2">
+            <tr class="theProblem">
+              <td>8</td> <td>7</td> <td>5</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>8</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                Schritt 1:
+                <math>
+                  <mn class="em strong">8</mn>
+                  <mo>=</mo>
+                  <mn>1</mn><mo>&times;</mo><mn>8</mn>
+                </math>
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>4</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>32</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>8</td> <td>7</td> <td>5</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">8</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">1</td><td class="resultPending">&nbsp;</td><td class="resultPending">&nbsp;</td>
+              <td class="rules">
+                <math><mn class="em strong">8</mn></math>:&nbsp; größte Zahl aus der 4-er Reihe unterhalb 8
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>5</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>40</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td><math><mo class="strong">&minus;</mo></math></td>
+              <td>8</td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">8</mn>
+                <mo>=</mo>
+                <mn class="strong">1</mn> <mo>&times;</mo> <mn>8</mn></math>:
+                <math><mn class="strong">1</mn></math>  im Ergebnis notieren
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>6</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>48</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="subResult">0</td> <td class="subResult"></td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn>8</mn> <mo>&minus;</mo> <mn>8</mn> <mo>=</mo> <mn class="strong">0</mn></math>
+                : Zwischenrest
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>7</mn> <mo>&times;</mo> <mn>4</mn> <mo>=</mo> <mn>28</mn></math>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator">
+            <tr>
+              <td colspan="11"></td>
+              <td class="channel-one mseq">
+                <math><mn>8</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>64</mn></math>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- 2 of 3 -->
+          <tbody class="active4-6a2-3">
+            <tr class="theProblem">
+              <td>8</td> <td>7</td> <td>5</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>8</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                Schritt 2:
+                <math>
+                  <mn></mn><mn class="em strong">7</mn>
+                  <mo>=</mo>
+                  <mn>0</mn><mo>&times;</mo><mn>8</mn> <mo>&plus;</mo> <mn>7</mn>
+                </math>
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>9</mn> <mo>&times;</mo> <mn>8</mn> <mo>=</mo> <mn>72</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>8</td> <td><math><mn class="em strong">7</mn></math></td> <td>5</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">8</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">1</td><td class="result">0</td><td class="resultPending">&nbsp;</td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td>8</td> <td>&darr;</td> <td></td>
+              <td></td> <td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                Nächste Ziffer aus dem Dividenden übernehmen:
+                <math><mn class="em strong">7</mn></math>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td><span class="smaller42">0</span></td> <td>7</td> <td></td>
+              <td></td> <td></td><td></td> <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">0</mn></math>:&nbsp; größte Zahl aus der 8-er Reihe unterhalb 07
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>&minus;</td>
+              <td></td>
+              <td>0</td> <td></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <math>
+                  <mn class="em strong">0</mn> <mo>=</mo> <mn class="strong">0</mn>
+                  <mo>&times;</mo>
+                  <mn>8</mn>
+                </math>;&nbsp;
+                <math><mn class="strong">0</mn></math>  im Ergebnis notieren
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="subResult"></td> <td class="subResult">7</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <math>
+                  <mn>7</mn> <mo>&minus;</mo> <mn>0</mn> <mo>=</mo> <mn class="strong">7</mn>
+                </math>;&nbsp;
+                Zwischenrest
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="12"></td></tr></tbody>
+
+          <!-- 3 of 3 -->
+          <tbody class="active6-8a3-4">
+            <tr class="theProblem">
+              <td>8</td> <td>7</td> <td>5</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>8</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                Schritt 3:
+                <math>
+                  <mn>7</mn><mn class="em strong">5</mn>
+                  <mo>=</mo>
+                  <mn>9</mn><mo>&times;</mo><mn>8</mn>
+                  <mo>&plus;</mo>
+                  <mn>3</mn>
+                </math>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>8</td> <td>7</td> <td><math><mn class="em strong">5</mn></math></td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">8</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">1</td><td class="result">0</td><td class="result">9</td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td>8</td> <td></td> <td></td>
+              <td></td> <td></td><td></td><td></td><td></td><td></td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td>0</td> <td>7</td> <td></td>
+              <td></td> <td></td><td></td> <td></td><td></td><td></td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td>0</td> <td>&darr;</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <strong>Letzte Ziffer</strong> aus dem Dividenden übernehmen:
+                <math><mn class="em strong">2</mn></math>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td>7</td><td>5</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">72</mn></math>:
+                größte Zahl aus der 8-er Reihe unterhalb
+                <math><mn>75</mn></math>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&minus;</td>
+              <td>7</td><td>2</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <math>
+                  <mn class="em strong">72</mn> <mo>=</mo>
+                  <mn class="strong">9</mn> <mo>&times;</mo> <mn>8</mn>
+                </math>;
+                <math><mn class="strong">9</mn></math>
+                im Ergebnis notieren
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="subResult"></td><td class="subResult">3</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <math>
+                  <mn>75</mn> <mo>&minus;</mo> <mn>72</mn> <mo>=</mo> <mn class="strong">0</mn>
+                </math>;
+                Endergebnis ist
+                <math><mn class="strong">109</mn></math> mit Rest
+                <math><mn class="strong">3</mn></math>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="12"></td></tr></tbody>
+
+          <!-- Probe -->
+          <tbody>
+            <tr class="theProblem">
+              <td>8</td>
+              <td><math><mo>&times;</mo></math></td>
+              <td>1</td> <td>0</td> <td>9</td>
+              <td><math><mo>&plus;</mo></math></td>
+              <td>3</td>
+              <td>=</td><td></td>
+              <td></td>
+              <td class="rules">Probe &ndash; nachrechnen!</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>8</td> <td>7</td> <td>5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td>&nbsp;</td><td>&nbsp;</td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- -->
+      </div>
+    </section>
+
+    <!-- 452 : 13 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class="ui-widget ">
+      <header class="ui-widget-header">
+        <h2 data-version1="2026/09/24">
+          <math><mn>452</mn> <mo>&div;</mo> <mn>13</mn></math>
+          <span>
+          </span>
+        </h2>
+      </header>
+      <!-- -->
+      <div class="ui-widget-content">
+        <!-- 452 : 13 - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <table class="example div">
+          <!-- Vorbereitung -->
+          <tbody>
+            <tr class="theProblem">
+              <td>4</td> <td>5</td> <td>2</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>13</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                Vorbereitung&nbsp;:&nbsp; Startzahl <span class="channel-one">identifizieren</span>
+              </td>
+              <td class="channel-one">
+                <math><mn>0</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>0</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="active">4</td> <td class="active">5</td> <td>2</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em">1</mn></math></td>
+              <td><math><mn class="em">3</mn></math></td>
+              <td></td><td>&nbsp;</td><td>&nbsp;</td>
+              <td class="rules">Von links her Ziffern sammeln:</td>
+              <td class="channel-one mseq">
+                <math><mn>1</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>13</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">45</mn></math>
+                erste Teilzahl größer oder gleich <math><mn class="strong">13</mn></math>
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>2</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>26</mn></math>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator">
+            <tr>
+              <td colspan="11"></td>
+              <td class="channel-one mseq">
+                <math><mn>3</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>39</mn></math>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- 1 of 2 -->
+          <tbody class="active2-4a2-3">
+            <tr class="theProblem">
+              <td>4</td> <td>5</td> <td>2</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>13</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                Schritt 1:
+                <math>
+                  <mn class="em strong">45</mn>
+                  <mo>=</mo>
+                  <mn>3</mn><mo>&times;</mo><mn>13</mn>
+                  <mo>&plus;</mo>
+                  <mn>6</mn>
+                </math>
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>4</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>52</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>4</td> <td>5</td> <td>2</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">1</mn></math></td>
+              <td><math><mn class="em strong">3</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">3</td><td class="resultPending">&nbsp;</td>
+              <td class="rules">
+                <math><mn class="em strong">39</mn></math>:&nbsp; größte Zahl aus der 13-er Reihe unterhalb 45
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>5</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>65</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td><math><mo class="strong">&minus;</mo></math></td>
+              <td>3</td> <td>9</td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">39</mn>
+                <mo>=</mo>
+                <mn class="strong">3</mn> <mo>&times;</mo> <mn>13</mn></math>;&nbsp;
+                <math><mn class="strong">3</mn></math>  im Ergebnis notieren
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>6</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>78</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="subResult"></td> <td class="subResult">6</td> <td></td> <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn>45</mn> <mo>&minus;</mo> <mn>39</mn> <mo>=</mo> <mn class="strong">6</mn></math>
+                : Zwischenrest
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>7</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>91</mn></math>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="separator">
+            <tr>
+              <td colspan="11"></td>
+              <td class="channel-one mseq">
+                <math><mn>8</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>104</mn></math>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- 2 of 2 -->
+          <tbody class="active4-6a3-4">
+            <tr class="theProblem">
+              <td>4</td> <td>5</td> <td>2</td>
+              <td><math><mo>&div;</mo></math></td>
+              <td>13</td>
+              <td></td> <td></td> <td></td> <td></td> <td></td>
+              <td class="rules">
+                Schritt 2:
+                <math>
+                  <mn>6</mn><mn class="em strong">2</mn>
+                  <mo>=</mo>
+                  <mn>4</mn><mo>&times;</mo><mn>13</mn> <mo>&plus;</mo> <mn>10</mn>
+                </math>
+              </td>
+              <td class="channel-one mseq">
+                <math><mn>9</mn> <mo>&times;</mo> <mn>13</mn> <mo>=</mo> <mn>117</mn></math>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>4</td> <td>5</td> <td><math><mn class="em strong">2</mn></math></td>
+              <td><math><mo>&div;</mo></math></td>
+              <td><math><mn class="em strong">1</mn></math></td>
+              <td><math><mn class="em strong">3</mn></math></td>
+              <td><math><mo>=</mo></math></td>
+              <td class="result">3</td><td class="result">4</td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td>3</td> <td>9</td> <td>&darr;</td>
+              <td></td> <td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <strong>Letzte</strong> Ziffer aus dem Dividenden übernehmen:
+                <math><mn class="em strong">2</mn></math>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td> <td></td> <td>6</td> <td>2</td>
+              <td></td> <td></td><td></td> <td></td><td></td><td></td>
+              <td class="rules">
+                <math><mn class="em strong">52</mn></math>:&nbsp; größte Zahl aus der 13-er Reihe unterhalb 62
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>&minus;</strong></td> <td>5</td><td>2</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <math>
+                  <mn class="em strong">52</mn> <mo>=</mo> <mn class="strong">4</mn>
+                  <mo>&times;</mo>
+                  <mn>13</mn>
+                </math>;&nbsp;
+                <math><mn class="strong">4</mn></math>  im Ergebnis notieren
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="subResult">1</td> <td class="subResult">0</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td class="rules">
+                <math>
+                  <mn>62</mn> <mo>&minus;</mo> <mn>52</mn> <mo>=</mo> <mn class="strong">10</mn>
+                </math>;&nbsp;
+                Endergebnis ist
+                <math><mn class="strong">34</mn></math>
+                mit Rest
+                <math><mn class="strong">10</mn></math>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tbody class="separator"><tr><td colspan="12"></td></tr></tbody>
+
+          <!-- Probe -->
+          <tbody>
+            <tr class="theProblem">
+              <td>1</td><td>3</td>
+              <td><math><mo>&times;</mo></math></td>
+              <td>3</td> <td>4</td>
+              <td><math><mo>&plus;</mo></math></td>
+              <td>10</td>
+              <td>=</td><td></td>
+              <td></td>
+              <td class="rules">Probe &ndash; nachrechnen!</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>4</td> <td>5</td> <td>2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td><td>&nbsp;</td><td>&nbsp;</td>
+              <td class="rules"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <!-- -->
+        <ul class="zumNachrechnen">
+          <li class="ui-state-hover">
+            <math><mn>456</mn> <mo>&div;</mo> <mn>24</mn> <mo>=</mo> <mn>19</mn></math>
+            <span>Details&nbsp;&#x25B6;</span>
+            <a class="stretched" href="Aufgaben/division.html#div.456.24"></a>
+          </li>
+          <li class="ui-state-hover">
+            <math><mn>59</mn> <mo>&div;</mo> <mn>8</mn> <mo>=</mo> <mn>7</mn></math>
+            Rest
+            <math><mn>3</mn></math>
+            <span>Details&nbsp;&#x25B6;</span>
+            <a class="stretched" href="Aufgaben/division.html#div.59.8"></a>
+          </li>
+
+        </ul>
+        <!-- -->
+      </div>
+    </section>
     <!-- -->
   </body>
   <!-- -->
